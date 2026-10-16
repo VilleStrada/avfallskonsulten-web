@@ -71,10 +71,12 @@
   });
 
   /* ---------- Bokningsformulär ----------
-     PROTOTYP: formuläret har action="#" och skickas inte någonstans ännu.
-     När sajten går live kopplas det till en backend (t.ex. Cloudflare Worker/Pages Function
-     som mejlar info@avfallskonsulten.se). Då byts action och denna submit-hanterare tas bort. */
+     Live (Loopia): formuläret postas till includes/skicka.php som mejlar info@ och skickar vidare till /tack.
+     Staging (GitHub Pages, data-form="staging"): ingen PHP finns, så vi visar bara tack-rutan. */
+  var formLage = document.body.getAttribute("data-form");
   document.querySelectorAll("form.form").forEach(function (form) {
+    var t = form.querySelector('input[name="t"]');
+    if (t) t.value = String(Date.now()); /* tidsstämpel, skicka.php avvisar svar snabbare än 3 s */
     form.addEventListener("submit", function (e) {
       form.classList.remove("ar-fel");
       if (!form.checkValidity()) {
@@ -86,12 +88,17 @@
       }
       var honung = form.querySelector(".honung input");
       if (honung && honung.value) { e.preventDefault(); return; } /* spamrobot */
-      if (form.getAttribute("action") === "#") {
+      if (formLage === "staging") {
         e.preventDefault();
         form.classList.add("ar-skickad");
         form.scrollIntoView({ block: "start" });
       }
     });
+    /* skicka.php skickar tillbaka hit med ?fel=1 (fält saknas) eller ?fel=2 (mejlet gick inte) */
+    if (/[?&]fel=\d/.test(location.search)) {
+      form.classList.add("ar-fel", "ar-serverfel");
+      form.scrollIntoView({ block: "start" });
+    }
   });
 
   /* ---------- Förvald tjänst via länk ?tjanst=... ---------- */

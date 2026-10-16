@@ -232,6 +232,8 @@ def bygg():
     for p in (SRC / "bilder").glob("*.svg"):
         shutil.copy(p, UT / "bilder" / p.name)
     shutil.copy(SRC / "bilder" / "favicon.png", UT / "favicon.png")
+    shutil.copy(SRC / ".htaccess", UT / ".htaccess")            # 301, 404, headers på Loopia
+    shutil.copytree(SRC / "includes", UT / "includes", dirs_exist_ok=True)  # PHP-formulärhanterare
 
     bas = las(SRC / "mallar" / "bas.html")
     sidor = []
@@ -276,6 +278,7 @@ def bygg():
             "ar": str(date.today().year),
             "slug": slug,
             "body_klass": meta.get("body_klass", ""),
+            "form_lage": "staging" if STAGING else "live",
         }
         for k, v in ers.items():
             html = html.replace("{{" + k + "}}", v)
@@ -311,7 +314,7 @@ def bygg():
     saknade = set()
     for s in sidor:
         html = las(UT / s["fil"])
-        for href in re.findall(r'href="([^"#?]*)', html):
+        for href in re.findall(r'(?:href|action)="([^"#?]*)', html):
             if not href or re.match(r"^(https?:|mailto:|tel:|/|#)", href):
                 continue
             if href in finns or (UT / href).exists():

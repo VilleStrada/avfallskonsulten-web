@@ -3,3 +3,7 @@ __pycache__/
 tools/kallbilder/
 .DS_Store
 Thumbs.db
+.env
+src/includes/utkorg/
+docs/includes/utkorg/
+docs/includes/testlage.txt

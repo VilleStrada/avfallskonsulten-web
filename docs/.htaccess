@@ -1,0 +1,67 @@
+# avfallskonsulten.se på Loopia (Apache 2.4). Kopieras till docs/.htaccess av build.py.
+# GitHub Pages (staging) ignorerar den här filen, den gäller bara på webbhotellet.
+
+Options -Indexes -MultiViews
+AddDefaultCharset UTF-8
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# 1. http -> https (fungerar även om webbhotellet terminerar TLS i en proxy)
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://avfallskonsulten.se%{REQUEST_URI} [R=301,L]
+
+# 2. www -> utan www (i samma steg som https ovan, så http://www blir ett enda hopp)
+RewriteCond %{HTTP_HOST} ^www\.avfallskonsulten\.se$ [NC]
+RewriteRule ^ https://avfallskonsulten.se%{REQUEST_URI} [R=301,L]
+
+# 3. Gamla dubblettadresser -> en adress per sida
+RewriteRule ^atervinning/?$ /atervinning-stockholm [R=301,L]
+RewriteRule ^atervinning_brf/?$ /atervinning_fastighet_och_brf [R=301,L]
+
+# 4. index.html och .html -> rena adresser
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteCond %{THE_REQUEST} \s/([^\s?]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# 5. Avslutande snedstreck -> utan snedstreck (men inte på riktiga mappar)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# 6. Rena adresser serveras från .html-filen
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^.]+)$ /$1.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/html "access plus 1 hour"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/xml text/plain
+</IfModule>
+
+# Ingen direkt åtkomst till formulärhanterarens utkorg (används bara i testläge)
+<IfModule mod_rewrite.c>
+RewriteRule ^includes/utkorg/ - [F,L]
+</IfModule>

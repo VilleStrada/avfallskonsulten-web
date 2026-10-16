@@ -7,9 +7,10 @@
       <p class="boka__kontakt">Vill du hellre ringa?<strong><a href="tel:+46868427888">08-684 278 88</a></strong></p>
       <p class="boka__kontakt"><a href="mailto:info@avfallskonsulten.se">info@avfallskonsulten.se</a></p>
     </div>
-    <!-- PROTOTYP: action="#" betyder att formuläret inte skickas någonstans ännu.
-         Backend (mejl till info@) byggs som Cloudflare Worker/Pages Function när sajten går live. -->
-    <form class="form" action="#" method="post" novalidate>
+    <!-- Skickas av includes/skicka.php (PHP på Loopia) som mejlar info@avfallskonsulten.se.
+         På staging (GitHub Pages) finns ingen PHP, då visar site.js bara tack-rutan. -->
+    <form class="form" action="includes/skicka.php" method="post" novalidate>
+      <input type="hidden" name="t" value="">
       <div class="form__falt form__falt--bred">
         <label for="tjanst">Vad vill du ha hjälp med?</label>
         <select id="tjanst" name="tjanst" required>
@@ -55,13 +56,14 @@
         <span>Jag godkänner att Avfallskonsulten sparar mina uppgifter för att kunna svara på min förfrågan. Läs mer i vår <a href="integritetspolicy">integritetspolicy</a>.</span>
       </label>
       <p class="form__fel">Kontrollera att alla fält är ifyllda.</p>
+      <p class="form__fel form__fel--server">Något gick fel när förfrågan skulle skickas. Ring oss gärna på <a href="tel:+46868427888">08-684 278 88</a> eller mejla <a href="mailto:info@avfallskonsulten.se">info@avfallskonsulten.se</a>.</p>
       <div class="form__skicka">
         <button class="knapp knapp--stor" type="submit">Skicka förfrågan</button>
       </div>
       <div class="form__tack">
         <h3>Tack för din förfrågan!</h3>
         <p>Vi hör av oss så snart vi kan, oftast samma dag.</p>
-        <p class="notis">Prototyp: formuläret är inte kopplat till e-post ännu. Ring <a href="tel:+46868427888">08-684 278 88</a> om du vill boka direkt.</p>
+        <p class="notis">Staging: här skickas inget mejl. På den riktiga sajten tar includes/skicka.php emot formuläret.</p>
       </div>
     </form>
   </div>

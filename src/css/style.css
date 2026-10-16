@@ -213,6 +213,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .form__samtycke input { width: 20px; min-height: 20px; height: 20px; margin-top: 0.2rem; flex: 0 0 auto; }
 .form__fel { display: none; color: #b3261e; font-weight: 700; }
 .form.ar-fel .form__fel { display: block; }
+.form .form__fel--server, .form.ar-fel .form__fel--server { display: none; }
+.form.ar-serverfel .form__fel { display: none; }
+.form.ar-serverfel .form__fel--server { display: block; }
 .form__tack { display: none; }
 .boka .form p, .boka .form h3, .boka .form label, .boka .form small { color: var(--ink); }
 .boka .form a { color: var(--gron-text); }
