@@ -222,6 +222,12 @@ def bygg():
     # statiska filer
     for mapp in ("css", "js", "typsnitt"):
         shutil.copytree(SRC / mapp, UT / mapp, dirs_exist_ok=True)
+    # typsnittets @font-face läggs in direkt i style.css (sparar en nätverksrunda)
+    css = las(SRC / "css" / "style.css")
+    fonts = las(SRC / "typsnitt" / "roboto-lokal.css")
+    css = css.replace('@import url("../typsnitt/roboto-lokal.css");', fonts.strip())
+    (UT / "css" / "style.css").write_text(css, encoding="utf-8")
+    (UT / "typsnitt" / "roboto-lokal.css").unlink()
     (UT / "bilder").mkdir(exist_ok=True)
     for p in (SRC / "bilder").glob("*.svg"):
         shutil.copy(p, UT / "bilder" / p.name)

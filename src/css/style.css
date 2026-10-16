@@ -117,7 +117,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .meny__under a { padding: 0.55rem 0.75rem; border-radius: 8px; }
   .meny__under a:hover { background: var(--bg-mjuk); text-decoration: none; }
   .meny__cta { flex-direction: row; margin: 0; gap: 0.5rem; }
-  .meny__cta .knapp { min-height: 44px; padding: 0.5rem 1.2rem; }
+  .meny__cta .knapp { min-height: 44px; padding: 0.5rem 1.2rem; white-space: nowrap; }
+  .meny__punkt > a, .meny__grupp-knapp { white-space: nowrap; }
+}
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .meny { gap: 0.75rem; }
+  .meny__cta .knapp--tunn { display: none; }
+  .meny__punkt > a, .meny__grupp-knapp { padding: 0.5rem 0.5rem; }
 }
 
 /* Hero */
@@ -208,7 +214,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .form__fel { display: none; color: #b3261e; font-weight: 700; }
 .form.ar-fel .form__fel { display: block; }
 .form__tack { display: none; }
-.form__tack h3 { color: var(--gron-text); }
+.boka .form p, .boka .form h3, .boka .form label, .boka .form small { color: var(--ink); }
+.boka .form a { color: var(--gron-text); }
+.boka .form .form__fel { color: #b3261e; }
+.boka .form .form__tack h3 { color: var(--gron-text); }
 .form.ar-skickad > :not(.form__tack) { display: none; }
 .form.ar-skickad .form__tack { display: block; }
 .honung { position: absolute; left: -9999px; }
