@@ -247,6 +247,17 @@ def bygg():
         shutil.copytree(SRC / "video", UT / "video", dirs_exist_ok=True)  # hero-film (mp4 utan ljud)
     shutil.copytree(SRC / "includes", UT / "includes", dirs_exist_ok=True)  # PHP-formulärhanterare
 
+    # Cache-busting: kort innehållshash på css, js och film så att besökare alltid får nya filer efter publicering
+    import hashlib
+    def hash_av(p):
+        return hashlib.md5(Path(p).read_bytes()).hexdigest()[:8]
+    versioner = {
+        "css/style.css": hash_av(UT / "css" / "style.css"),
+        "js/site.js": hash_av(UT / "js" / "site.js"),
+    }
+    if (UT / "video" / "hero.mp4").exists():
+        versioner["video/hero.mp4"] = hash_av(UT / "video" / "hero.mp4")
+
     bas = las(SRC / "mallar" / "bas.html")
     sidor = []
     for fil in sorted((SRC / "sidor").glob("*.html")):
@@ -295,6 +306,8 @@ def bygg():
         }
         for k, v in ers.items():
             html = html.replace("{{" + k + "}}", v)
+        for stat_fil, v in versioner.items():
+            html = html.replace(f'"{stat_fil}"', f'"{stat_fil}?v={v}"')
         if 'id="offert"' not in body:
             html = html.replace('href="#offert"', 'href="./#offert"')  # sidor utan formulär länkar till startsidans
         rest = re.findall(r"\{\{[^}]+\}\}", html)
