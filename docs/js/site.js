@@ -101,6 +101,19 @@
     }
   });
 
+  /* ---------- Hero-film: laddas först när sidan är klar, så att den inte påverkar LCP ---------- */
+  var film = document.querySelector(".hero2__video[data-src]");
+  if (film && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var startaFilm = function () {
+      film.src = film.getAttribute("data-src");
+      film.addEventListener("playing", function () { film.classList.add("ar-igang"); });
+      var p = film.play();
+      if (p && p.catch) p.catch(function () {});
+    };
+    if (document.readyState === "complete") setTimeout(startaFilm, 300);
+    else window.addEventListener("load", function () { setTimeout(startaFilm, 300); });
+  }
+
   /* ---------- Förvald tjänst via länk ?tjanst=... ---------- */
   var m = location.search.match(/[?&]tjanst=([^&]+)/);
   if (m) {

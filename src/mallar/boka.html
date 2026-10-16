@@ -1,9 +1,14 @@
-<section class="sektion boka" id="boka">
+<section class="sektion boka" id="offert">
   <div class="wrap boka__rad">
     <div>
-      <span class="kicker" style="color:var(--gron)">Boka upphämtning</span>
-      <h2>Berätta vad du vill ha hämtat, så återkommer vi med pris</h2>
-      <p>Fyll i formuläret så hör vi av oss inom en arbetsdag, oftast samma dag. Vi lämnar alltid ett tydligt pris innan vi kommer ut.</p>
+      <span class="kicker" style="color:var(--gron)">Begär offert</span>
+      <h2>Berätta om er fastighet, så återkommer vi med pris</h2>
+      <p>Fyll i formuläret så hör vi av oss inom en arbetsdag, oftast samma dag.</p>
+      <ul class="boka__lista">
+        <li>Kostnadsfritt platsbesök</li>
+        <li>Fast pris per hämtning, kärl och skyltar ingår</li>
+        <li>Egen personal och egna bilar</li>
+      </ul>
       <p class="boka__kontakt">Vill du hellre ringa?<strong><a href="tel:+46868427888">08-684 278 88</a></strong></p>
       <p class="boka__kontakt"><a href="mailto:info@avfallskonsulten.se">info@avfallskonsulten.se</a></p>
     </div>
@@ -15,8 +20,8 @@
         <label for="tjanst">Vad vill du ha hjälp med?</label>
         <select id="tjanst" name="tjanst" required>
           <option value="">Välj tjänst</option>
+          <option value="atervinning">Hämtning av återvinning (förpackningar, löpande)</option>
           <option value="grovavfall">Hämtning av grovavfall och grovsopor</option>
-          <option value="atervinning">Hämtning av återvinning (löpande)</option>
           <option value="byggavfall">Bygg- och trädgårdsavfall</option>
           <option value="bortforsling">Bortforsling av möbler och skräp</option>
           <option value="karltvatt">Kärltvätt</option>
@@ -30,7 +35,7 @@
         <input id="adress" name="adress" type="text" autocomplete="street-address" placeholder="Gata och ort" required>
       </div>
       <div class="form__falt">
-        <label for="lagenheter">Antal lägenheter</label>
+        <label for="lagenheter">Antal lägenheter i fastigheten</label>
         <input id="lagenheter" name="lagenheter" type="number" inputmode="numeric" min="0" max="5000" placeholder="0" required>
         <small>Skriv 0 om det gäller ett företag eller en villa.</small>
       </div>

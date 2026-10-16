@@ -157,6 +157,16 @@ def x_bild(m):
     return "<img " + " ".join(delar) + ">"
 
 
+def x_bildurl(m):
+    """<x-bildurl src="namn" bredd="1600"> -> sökväg till webp-varianten (t.ex. poster på video)."""
+    res = gor_bild(m.group(1), BILD_BREDDER)
+    if not res:
+        return ""
+    onskad = int(m.group(2))
+    w, f = min(res[2], key=lambda v: abs(v[0] - onskad))
+    return f
+
+
 def gor_og_bild(namn):
     """1200x630 jpg för Open Graph/Twitter."""
     kand = [p for p in (SRC / "bilder").iterdir() if p.stem == namn and p.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp")]
@@ -233,6 +243,8 @@ def bygg():
         shutil.copy(p, UT / "bilder" / p.name)
     shutil.copy(SRC / "bilder" / "favicon.png", UT / "favicon.png")
     shutil.copy(SRC / ".htaccess", UT / ".htaccess")            # 301, 404, headers på Loopia
+    if (SRC / "video").exists():
+        shutil.copytree(SRC / "video", UT / "video", dirs_exist_ok=True)  # hero-film (mp4 utan ljud)
     shutil.copytree(SRC / "includes", UT / "includes", dirs_exist_ok=True)  # PHP-formulärhanterare
 
     bas = las(SRC / "mallar" / "bas.html")
@@ -253,6 +265,7 @@ def bygg():
             fel.append(f"{namn}: ska ha exakt en <h1>")
 
         body = inkludera(body)
+        body = re.sub(r'<x-bildurl src="([\w-]+)" bredd="(\d+)">', x_bildurl, body)
         body = re.sub(r"<x-bild\s+([^>]*?)\s*/?>", x_bild, body)
 
         canonical = f"{SITE_URL}/{slug}" if slug else f"{SITE_URL}/"
@@ -282,8 +295,8 @@ def bygg():
         }
         for k, v in ers.items():
             html = html.replace("{{" + k + "}}", v)
-        if 'id="boka"' not in body:
-            html = html.replace('href="#boka"', 'href="./#boka"')  # sidor utan formulär länkar till startsidans
+        if 'id="offert"' not in body:
+            html = html.replace('href="#offert"', 'href="./#offert"')  # sidor utan formulär länkar till startsidans
         rest = re.findall(r"\{\{[^}]+\}\}", html)
         if rest:
             fel.append(f"{namn}: okända platshållare {sorted(set(rest))}")
