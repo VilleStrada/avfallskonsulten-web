@@ -145,6 +145,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .hero2 h1 { color: #fff; max-width: 18ch; text-shadow: 0 2px 12px rgba(0,0,0,0.25); }
 .hero2__ingress { font-size: clamp(1.05rem, 1rem + 0.4vw, 1.3rem); max-width: 52ch; color: rgba(255,255,255,0.92); margin-bottom: 1.75rem; }
 .hero2 .knapp--stor { min-height: 54px; }
+.hero2__spela { position: absolute; right: var(--gutter); bottom: 1rem; z-index: 1; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 0.9rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.6); background: rgba(44,53,66,0.55); color: #fff; font: inherit; font-size: 0.9rem; font-weight: 500; cursor: pointer; backdrop-filter: blur(4px); }
+.hero2__spela:hover { background: rgba(44,53,66,0.85); }
+.hero2__spela[hidden] { display: none; }
 .hero2--sida { min-height: 60vh; }
 @media (min-width: 900px) { .hero2 { min-height: 82vh; padding: 5rem 0; } .hero2--sida { min-height: 62vh; } }
 

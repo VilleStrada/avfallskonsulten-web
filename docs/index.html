@@ -191,9 +191,12 @@
 <main id="innehall">
 <section class="hero2">
   <div class="hero2__media">
-    <video class="hero2__video" muted loop playsinline preload="none" poster="bilder/hero_video_poster-1200.webp" data-src="video/hero.mp4" aria-hidden="true"></video>
+    <video class="hero2__video" autoplay muted loop playsinline preload="none" poster="bilder/hero_video_poster-1200.webp" data-src="video/hero.mp4" aria-hidden="true"></video>
     <img src="bilder/hero_video_poster-1200.webp" srcset="bilder/hero_video_poster-480.webp 480w, bilder/hero_video_poster-800.webp 800w, bilder/hero_video_poster-1200.webp 1200w" sizes="100vw" width="1200" height="675" alt="Avfallskonsultens chaufför hämtar återvinning hos en bostadsrättsförening i Stockholm" decoding="async" fetchpriority="high" class="hero2__poster">
   </div>
+  <button class="hero2__spela" type="button" hidden aria-label="Spela filmen">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg> Spela filmen
+  </button>
   <div class="wrap hero2__inner">
     <span class="kicker kicker--ljus">Auktoriserad avfallsentreprenör i Stockholm och Lidingö</span>
     <h1>Hämtning av återvinning för bostadsrättsföreningar i Stockholm och Lidingö</h1>

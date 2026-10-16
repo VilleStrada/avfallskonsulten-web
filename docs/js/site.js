@@ -101,15 +101,35 @@
     }
   });
 
-  /* ---------- Hero-film: laddas först när sidan är klar, så att den inte påverkar LCP ---------- */
+  /* ---------- Hero-film: laddas först när sidan är klar, så att den inte påverkar LCP.
+     Spelar alltid (även med "reducerad rörelse", som är vanligt på Windows-jobbdatorer).
+     Om webbläsaren vägrar autoplay: nytt försök vid första klick/touch/scroll/tangent,
+     och en spela-knapp visas om filmen inte kommit igång inom 2 s. ---------- */
   var film = document.querySelector(".hero2__video[data-src]");
-  if (film && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    var startaFilm = function () {
-      film.src = film.getAttribute("data-src");
-      film.addEventListener("playing", function () { film.classList.add("ar-igang"); });
+  var spelaKnapp = document.querySelector(".hero2__spela");
+  if (film) {
+    film.muted = true; /* krävs för tyst autoplay, utöver attributet i HTML */
+    film.addEventListener("playing", function () {
+      film.classList.add("ar-igang");
+      if (spelaKnapp) spelaKnapp.hidden = true;
+    });
+    var forsokSpela = function () {
+      if (!film.src) film.src = film.getAttribute("data-src");
       var p = film.play();
       if (p && p.catch) p.catch(function () {});
     };
+    var vidInteraktion = function () {
+      if (film.paused) forsokSpela();
+      ["click", "touchstart", "scroll", "keydown"].forEach(function (ev) { document.removeEventListener(ev, vidInteraktion); });
+    };
+    var startaFilm = function () {
+      forsokSpela();
+      ["click", "touchstart", "scroll", "keydown"].forEach(function (ev) { document.addEventListener(ev, vidInteraktion, { passive: true }); });
+      setTimeout(function () {
+        if (film.paused && spelaKnapp) spelaKnapp.hidden = false;
+      }, 2000);
+    };
+    if (spelaKnapp) spelaKnapp.addEventListener("click", function (e) { e.stopPropagation(); forsokSpela(); });
     if (document.readyState === "complete") setTimeout(startaFilm, 300);
     else window.addEventListener("load", function () { setTimeout(startaFilm, 300); });
   }
