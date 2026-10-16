@@ -1,0 +1,23 @@
+---
+titel: Sidan finns inte | Avfallskonsulten
+beskrivning: Sidan du letade efter finns inte. Gå till startsidan eller kontakta Avfallskonsulten.
+og_bild: hero_lastbil
+sitemap: nej
+index: nej
+---
+<script>
+/* 404-sidan kan visas på vilken adress som helst. Sätt bas-adressen så att relativa länkar fungerar. */
+(function(){var p=location.pathname,r=p.indexOf("/avfallskonsulten-web/")===0?"/avfallskonsulten-web/":"/";var b=document.createElement("base");b.href=r;document.head.prepend(b);})();
+</script>
+<section class="fel-sida">
+  <div class="wrap">
+    <span class="kicker">Fel 404</span>
+    <h1>Sidan finns inte</h1>
+    <p class="ingress" style="margin-left:auto;margin-right:auto">Adressen du skrev eller klickade på leder ingenstans. Det kan vara en gammal länk eller en felstavning.</p>
+    <div class="knappar" style="justify-content:center">
+      <a class="knapp" href="./">Till startsidan</a>
+      <a class="knapp knapp--tunn" href="hamta-grovsopor-stockholm">Hämta grovsopor</a>
+    </div>
+    <p class="notis" style="max-width:560px;margin:2rem auto 0">Prototyp: just nu är bara startsidan och sidan om grovsopor byggda. Övriga sidor i menyn kommer.</p>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{titel}}</title>
+<meta name="description" content="{{beskrivning}}">
+<meta name="robots" content="{{robots}}">
+<link rel="canonical" href="{{canonical}}">
+<meta property="og:type" content="{{og_typ}}">
+<meta property="og:site_name" content="Avfallskonsulten">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:title" content="{{titel}}">
+<meta property="og:description" content="{{beskrivning}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{og_bild}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{titel}}">
+<meta name="twitter:description" content="{{beskrivning}}">
+<meta name="twitter:image" content="{{og_bild}}">
+<meta name="theme-color" content="#404c5c">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preload" href="typsnitt/roboto-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="typsnitt/roboto-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+{{ld}}
+</head>
+<body class="{{body_klass}}" data-gtm="{{gtm_id}}">
+<a class="hoppa" href="#innehall">Hoppa till innehållet</a>
+{{include header.html}}
+<main id="innehall">
+{{innehall}}
+</main>
+{{include footer.html}}
+{{include cookie.html}}
+<script src="js/site.js" defer></script>
+</body>
+</html>

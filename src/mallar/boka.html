@@ -1,0 +1,68 @@
+<section class="sektion boka" id="boka">
+  <div class="wrap boka__rad">
+    <div>
+      <span class="kicker" style="color:var(--gron)">Boka upphämtning</span>
+      <h2>Berätta vad du vill ha hämtat, så återkommer vi med pris</h2>
+      <p>Fyll i formuläret så hör vi av oss inom en arbetsdag, oftast samma dag. Vi lämnar alltid ett tydligt pris innan vi kommer ut.</p>
+      <p class="boka__kontakt">Vill du hellre ringa?<strong><a href="tel:+46868427888">08-684 278 88</a></strong></p>
+      <p class="boka__kontakt"><a href="mailto:info@avfallskonsulten.se">info@avfallskonsulten.se</a></p>
+    </div>
+    <!-- PROTOTYP: action="#" betyder att formuläret inte skickas någonstans ännu.
+         Backend (mejl till info@) byggs som Cloudflare Worker/Pages Function när sajten går live. -->
+    <form class="form" action="#" method="post" novalidate>
+      <div class="form__falt form__falt--bred">
+        <label for="tjanst">Vad vill du ha hjälp med?</label>
+        <select id="tjanst" name="tjanst" required>
+          <option value="">Välj tjänst</option>
+          <option value="grovavfall">Hämtning av grovavfall och grovsopor</option>
+          <option value="atervinning">Hämtning av återvinning (löpande)</option>
+          <option value="byggavfall">Bygg- och trädgårdsavfall</option>
+          <option value="bortforsling">Bortforsling av möbler och skräp</option>
+          <option value="karltvatt">Kärltvätt</option>
+          <option value="soprum">Renovering av soprum</option>
+          <option value="radgivning">Rådgivning</option>
+          <option value="annat">Annat</option>
+        </select>
+      </div>
+      <div class="form__falt form__falt--bred">
+        <label for="adress">Adress där hämtningen ska ske</label>
+        <input id="adress" name="adress" type="text" autocomplete="street-address" placeholder="Gata och ort" required>
+      </div>
+      <div class="form__falt">
+        <label for="lagenheter">Antal lägenheter</label>
+        <input id="lagenheter" name="lagenheter" type="number" inputmode="numeric" min="0" max="5000" placeholder="0" required>
+        <small>Skriv 0 om det gäller ett företag eller en villa.</small>
+      </div>
+      <div class="form__falt">
+        <label for="namn">Namn</label>
+        <input id="namn" name="namn" type="text" autocomplete="name" placeholder="För- och efternamn" required>
+      </div>
+      <div class="form__falt">
+        <label for="telefon">Telefon</label>
+        <input id="telefon" name="telefon" type="tel" autocomplete="tel" placeholder="07x-xxx xx xx" required>
+      </div>
+      <div class="form__falt">
+        <label for="epost">E-post</label>
+        <input id="epost" name="epost" type="email" autocomplete="email" placeholder="namn@exempel.se" required>
+      </div>
+      <div class="form__falt form__falt--bred">
+        <label for="meddelande">Meddelande <small>(frivilligt)</small></label>
+        <textarea id="meddelande" name="meddelande" placeholder="Till exempel vad som ska hämtas, ungefärlig mängd och när det passar."></textarea>
+      </div>
+      <p class="honung" aria-hidden="true"><label>Lämna tomt<input type="text" name="webbplats" tabindex="-1" autocomplete="off"></label></p>
+      <label class="form__samtycke">
+        <input type="checkbox" name="samtycke" required>
+        <span>Jag godkänner att Avfallskonsulten sparar mina uppgifter för att kunna svara på min förfrågan. Läs mer i vår <a href="integritetspolicy">integritetspolicy</a>.</span>
+      </label>
+      <p class="form__fel">Kontrollera att alla fält är ifyllda.</p>
+      <div class="form__skicka">
+        <button class="knapp knapp--stor" type="submit">Skicka förfrågan</button>
+      </div>
+      <div class="form__tack">
+        <h3>Tack för din förfrågan!</h3>
+        <p>Vi hör av oss så snart vi kan, oftast samma dag.</p>
+        <p class="notis">Prototyp: formuläret är inte kopplat till e-post ännu. Ring <a href="tel:+46868427888">08-684 278 88</a> om du vill boka direkt.</p>
+      </div>
+    </form>
+  </div>
+</section>
