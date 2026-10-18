@@ -22,6 +22,7 @@ den riktiga sajten laddas upp via FTP till Villes Loopia-webbhotell där avfalls
 | `innehall/` | **Texterna till alla sidor**, en Markdown-fil per sida i `innehall/sidor/` med title, description, H1, brödtext och bildlänkar, plus `sidfot-och-meny.md`, `oversikt.md` (tabell över alla 37 sidor) och `sidor.json`. Export från gamla sajten 2026-10-18 |
 | `site-kopia/` | Komplett HTML-kopia av gamla sajten (36 sidor + bilder som webp), tagen 2026-10-16 |
 | `build.py` | Byggskriptet |
+| `tools/md_till_sida.py` | Gjorde om textexporten till sidor i `src/sidor/` (hoppar över sidor som redan finns, `--skriv-over <slug>` för att göra om en) |
 | `Forhandsgranska.cmd` | Bygger och visar sajten lokalt i webbläsaren |
 | `Publicera.cmd` | Bygger och skickar till GitHub, staging uppdateras inom någon minut |
 | `Publicera-Loopia.cmd` | Bygger och laddar upp till Loopia via FTP (den riktiga sajten) |
@@ -102,8 +103,7 @@ Valet sparas i webbläsaren och kan ändras via Cookie-inställningar i sidfoten
 
 ## Återstår innan lansering
 
-- Bygg resterande sidor från `innehall/sidor/` (byggskriptet listar vilka länkmål som saknas, bland annat `/kontakt`).
-  Exporten har två sidor som inte fanns i sitemapen: `/hyra-container-blandat-avfall-pris` och `/tomma-dodsbo`, bygg dem också.
+- Alla 38 sidor är byggda (35 av dem automatiskt från `innehall/sidor/` 2026-10-18). Läs igenom dem, de har gamla sajtens texter rakt av med ny design.
 - Ta bort prototyp-notisen i `src/sidor/404.html` och staging-notisen i `src/mallar/boka.html`.
 - Läs igenom `src/sidor/integritetspolicy.html`, den är ett utkast.
 - FTP-uppgifter i `.env`, `STAGING = False`, `Publicera-Loopia.cmd`, Search Console.
