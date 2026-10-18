@@ -19,7 +19,8 @@ den riktiga sajten laddas upp via FTP till Villes Loopia-webbhotell där avfalls
 | `src/.htaccess` | Apache-regler för Loopia: 301-omdirigeringar, 404-sida, säkerhetsheaders, cache |
 | `src/includes/skicka.php` | Tar emot bokningsformuläret och mejlar info@avfallskonsulten.se (körs bara på Loopia) |
 | `docs/` | **Den färdiga sajten.** Skapas av `build.py`, ändra aldrig här |
-| `site-kopia/` | Komplett kopia av gamla sajten (alla 36 sidor + bilder), tagen 2026-10-16 |
+| `innehall/` | **Texterna till alla sidor**, en Markdown-fil per sida i `innehall/sidor/` med title, description, H1, brödtext och bildlänkar, plus `sidfot-och-meny.md`, `oversikt.md` (tabell över alla 37 sidor) och `sidor.json`. Export från gamla sajten 2026-10-18 |
+| `site-kopia/` | Komplett HTML-kopia av gamla sajten (36 sidor + bilder som webp), tagen 2026-10-16 |
 | `build.py` | Byggskriptet |
 | `Forhandsgranska.cmd` | Bygger och visar sajten lokalt i webbläsaren |
 | `Publicera.cmd` | Bygger och skickar till GitHub, staging uppdateras inom någon minut |
@@ -41,7 +42,9 @@ Skriv kundtext utan tankstreck, använd komma. Byggskriptet varnar om det hittar
    Undantag: `/atervinning` och `/atervinning_brf` ska inte byggas, de omdirigeras i `.htaccess`
    till `/atervinning-stockholm` respektive `/atervinning_fastighet_och_brf`.
 2. Ändra `titel`, `beskrivning` och `og_bild` längst upp, och innehållet under.
-3. Texten från gamla sidan finns i `site-kopia/<samma-namn>.html`.
+3. Texten från gamla sidan finns färdig som Markdown i `innehall/sidor/<samma-namn>.md` (startsidan heter `startsida.md`).
+   Bilderna som sidan använder ligger i `innehall/bilder/`, men 19 av dem är trasiga (se `innehall/trasiga-bilder.md`),
+   ta då webp-versionen från `site-kopia/assets/avfallskonsulten.se/images/`.
 4. Bilder: lägg originalet i `src/bilder/` och skriv `<x-bild src="filnamn-utan-ändelse" alt="beskrivning">` i sidan.
    Byggskriptet gör webp, srcset, width/height och lazy loading. Lägg till `eager` på bilden i hero.
 5. Frågor och svar skrivs som `<details class="faq"><summary>Fråga</summary><p>Svar</p></details>`.
@@ -99,7 +102,8 @@ Valet sparas i webbläsaren och kan ändras via Cookie-inställningar i sidfoten
 
 ## Återstår innan lansering
 
-- Bygg resterande sidor (byggskriptet listar vilka länkmål som saknas, bland annat `/kontakt`).
+- Bygg resterande sidor från `innehall/sidor/` (byggskriptet listar vilka länkmål som saknas, bland annat `/kontakt`).
+  Exporten har två sidor som inte fanns i sitemapen: `/hyra-container-blandat-avfall-pris` och `/tomma-dodsbo`, bygg dem också.
 - Ta bort prototyp-notisen i `src/sidor/404.html` och staging-notisen i `src/mallar/boka.html`.
 - Läs igenom `src/sidor/integritetspolicy.html`, den är ett utkast.
 - FTP-uppgifter i `.env`, `STAGING = False`, `Publicera-Loopia.cmd`, Search Console.

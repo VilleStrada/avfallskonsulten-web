@@ -1,0 +1,1462 @@
+[
+  {
+    "url": "https://avfallskonsulten.se/",
+    "fil": "sidor/startsida.md",
+    "title": "Avfallshantering Stockholm | 5/5 på Reco | Avfallskonsulten",
+    "h1": "Avfallshantering Stockholm",
+    "description": "Avfallshantering Stockholm - vi hjälper dig med effektiva och hållbara lösningar för avfallshantering och återvinning. Kontakta Avfallskonsulten idag!",
+    "ord": 1156,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/hamtning_av_atervinning_v1.jpeg",
+        "fil": "hamtning_av_atervinning_v1_b921b6.jpeg",
+        "alt": "Sopkärl utanför byggnad i Stockholm"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/hamtning_av_grovavfall_v1.jpeg",
+        "fil": "hamtning_av_grovavfall_v1_fbe344.jpeg",
+        "alt": "Grovavfall utanför kund i Stockholm"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/renovering_av_soprum_v1.jpeg",
+        "fil": "renovering_av_soprum_v1_08303e.jpeg",
+        "alt": "Nyrenoverat soprum i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/stockholmstad_v1.png",
+        "fil": "stockholmstad_v1_e299fc.png",
+        "alt": "Stockholms stad sopupphämtning"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/logo-2x.png",
+        "fil": "logo-2x_cfd070.png",
+        "alt": "Sundbybergs kommun sopupphämtning"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/jarfalla.png",
+        "fil": "jarfalla_10f917.png",
+        "alt": "Järfälla kommun sopupphämtning"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/taby_kommun.png",
+        "fil": "taby_kommun_2d9be6.png",
+        "alt": "Täby kommun sopupphämtning"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/lidingo_kommun.png",
+        "fil": "lidingo_kommun_df1ff3.png",
+        "alt": "Lidingö kommun sopupphämtning"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/sollentuna_kommun.png",
+        "fil": "sollentuna_kommun_d32679.png",
+        "alt": "Sollentuna kommun sopupphämtning"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/norrtalje_kommun.png",
+        "fil": "norrtalje_kommun_339448.png",
+        "alt": "Norrtälje kommun sopupphämtning"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/solna_kommun.png",
+        "fil": "solna_kommun_fb1474.png",
+        "alt": "Solna kommun sopupphämtning"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/danderyds_kommun.png",
+        "fil": "danderyds_kommun_3f8d9c.png",
+        "alt": "Danderyds kommun sopupphämtning"
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/atervinning-stockholm",
+    "fil": "sidor/atervinning-stockholm.md",
+    "title": "Återvinning | Hämta återvinning Stockholm | Avfallskonsulten",
+    "h1": "Hämta återvinning Stockholm",
+    "description": "Smidig & effektiv återvinning i Stockholm! Vi är experter på att sortera och hämta återvinning stockholm. Få kostnadsfri offert för din fastighet eller företag.",
+    "ord": 1736,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/atervinning_for_miljo_v1.jpg",
+        "fil": "atervinning_for_miljo_v1_32ccc8.jpg",
+        "alt": "Utsikt över bostadsområde i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/fastighet_och_brf_v1.jpg",
+        "fil": "fastighet_och_brf_v1_2d44ea.jpg",
+        "alt": "Bostadsrätter i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/kontorsatervinning_v1.jpeg",
+        "fil": "kontorsatervinning_v1_659a73.jpeg",
+        "alt": "Kontor i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/atervinning_for_foretag_och_verksamheter_v1.jpg",
+        "fil": "atervinning_for_foretag_och_verksamheter_v1_73070c.jpg",
+        "alt": "Fasadbild på byggnad i Stockholm."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/atervinning_fastighet_och_brf",
+    "fil": "sidor/atervinning_fastighet_och_brf.md",
+    "title": "Återvinning brf | Sophantering | Avfallskonsulten",
+    "h1": "Återvinning brf",
+    "description": "Smidig & effektiv återvinning för brf! Vi är experter på sortering och hämtning av avfall. Få kostnadsfri offert för ditt företag.",
+    "ord": 1633,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/fastighet_och_brf_v1.jpg",
+        "fil": "fastighet_och_brf_v1_2d44ea.jpg",
+        "alt": "Bostadshus i Stockholm"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallshantering_i_stockholm_v1.jpeg",
+        "fil": "avfallshantering_i_stockholm_v1_e77896.jpeg",
+        "alt": "Avfallskonsultens personal i akt."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/fastighetens_forutsattningar_v1.jpg",
+        "fil": "fastighetens_forutsattningar_v1_f2e2d5.jpg",
+        "alt": "Innergård vid bostadshus i Stockholm"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/inredning_och_placering_v1.jpeg",
+        "fil": "inredning_och_placering_v1_f63270.jpeg",
+        "alt": "Soprum med flera olika sopkärl för återvinning."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/atervinningsabonnemang_v1.jpg",
+        "fil": "atervinningsabonnemang_v1_a04318.jpg",
+        "alt": "Soprum med flera olika sopkärl för återvinning."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/atervinning_for_foretag_och_verksamheter",
+    "fil": "sidor/atervinning_for_foretag_och_verksamheter.md",
+    "title": "Återvinning för företag | Avfallshantering | Avfallskonsulten",
+    "h1": "Återvinning för företag",
+    "description": "Smidig & effektiv återvinning för företag! Vi är experter på sortering och hämtning av avfall. Få kostnadsfri offert för ditt företag.",
+    "ord": 679,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/atervinning_for_foretag_och_verksamheter_v1.jpg",
+        "fil": "atervinning_for_foretag_och_verksamheter_v1_73070c.jpg",
+        "alt": "Fasadbild på byggnad i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/atervinning_for_foretag_v1.jpeg",
+        "fil": "atervinning_for_foretag_v1_3c0a31.jpeg",
+        "alt": "Sopkärl bredvid lastbil från Avfallskonsulten."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/ratt_avfallslosning_v1.PNG",
+        "fil": "ratt_avfallslosning_v1_5e05e0.PNG",
+        "alt": "Återvinningsstation hos ett företag i Stockholm"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/bild_skytlar_och_dekaler_v1.jpeg",
+        "fil": "bild_skytlar_och_dekaler_v1_5aa299.jpeg",
+        "alt": "Sopkärl bredvid lastbil från Avfallskonsulten."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/atervinningsforetag-stockholm",
+    "fil": "sidor/atervinningsforetag-stockholm.md",
+    "title": "Återvinningsföretag Stockholm | Avfallskonsulten",
+    "h1": "Återvinningsföretag Stockholm",
+    "description": "Letar du efter ett pålitligt återvinningsföretag i Stockholm? Avfallskonsulten erbjuder smarta och hållbara lösningar för avfallshantering och återvinning.",
+    "ord": 1074,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/hushallsavfall_v1.jpg",
+        "fil": "hushallsavfall_v1_1c6614.jpg",
+        "alt": "Grovavfall redo för upphämtning utanför en brf i Sollentuna"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/upphamtning_av_grovavfall_pa_plats_v1.jpeg",
+        "fil": "upphamtning_av_grovavfall_pa_plats_v1_6938da.jpeg",
+        "alt": "Få hjälp att hämta grovsopor i Sollentuna ifall ditt förråd är fullt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/grovavfall_for_bostadsrattsforeningar_v1.jpg",
+        "fil": "grovavfall_for_bostadsrattsforeningar_v1_9a4d68.jpg",
+        "alt": "Avfallskonsulten hjälper brf:er att hämta grovsopor i Sollentuna"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/vind_och_gards_samt_kallarupphamtning_v1.jpg",
+        "fil": "vind_och_gards_samt_kallarupphamtning_v1_731ea1.jpg",
+        "alt": "Grovsopor reda för upphämtning på en innergård i Sollentuna."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/staddag_v1.jpg",
+        "fil": "staddag_v1_8651bd.jpg",
+        "alt": "Ifall din brf har städdag kan ni få hjälp av Avfallskonsulten att hämta grovsopor i Sollentuna."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/atervinningsguide",
+    "fil": "sidor/atervinningsguide.md",
+    "title": "Återvinningsguide | Avfallskonsulten",
+    "h1": "Återvinningsguide",
+    "description": "Upptäck Avfallskonsultens återvinningsguide – praktiska tips för effektiv sortering och hantering av avfall. Lär dig hur du bidrar till en hållbar miljö.",
+    "ord": 1238,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/bild_skytlar_och_dekaler_v1.jpg",
+        "fil": "bild_skytlar_och_dekaler_v1_83852d.jpg",
+        "alt": "Skyltar och dekaler för återvinning"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/atervinning_tidning.jpg",
+        "fil": "atervinning_tidning_bf63f2.jpg",
+        "alt": "Återvinning tidning"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/ratt_avfallslosning_v1.jpg",
+        "fil": "ratt_avfallslosning_v1_47bafb.jpg",
+        "alt": "Avfallskonsulten hjälper brf:er att hämta grovsopor i Stockholm"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/atervinning_lampor.jpg",
+        "fil": "atervinning_lampor_bdd3f6.jpg",
+        "alt": "Återvinning lampor"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/matavfall.jpg",
+        "fil": "matavfall_c6cd71.jpg",
+        "alt": "mMatavfall ska sorteras!"
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/avfallshantering-restaurang",
+    "fil": "sidor/avfallshantering-restaurang.md",
+    "title": "Avfallshantering restaurang | Avfallskonsulten",
+    "h1": "Avfallshantering restaurang",
+    "description": "Effektiv och miljövänlig avfallshantering för restauranger. Avfallskonsulten hjälper dig med återvinning och bortforsling av matavfall och förpackningar.",
+    "ord": 808,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/hushallsavfall_v1.jpg",
+        "fil": "hushallsavfall_v1_1c6614.jpg",
+        "alt": "Grovavfall redo för upphämtning utanför en brf i Täby"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/upphamtning_av_grovavfall_pa_plats_v1.jpeg",
+        "fil": "upphamtning_av_grovavfall_pa_plats_v1_6938da.jpeg",
+        "alt": "Få hjälp att hämta grovsopor i Täby ifall ditt förråd är fullt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/grovavfall_for_bostadsrattsforeningar_v1.jpg",
+        "fil": "grovavfall_for_bostadsrattsforeningar_v1_9a4d68.jpg",
+        "alt": "Avfallskonsulten hjälper brf:er att hämta grovsopor i Täby"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/vind_och_gards_samt_kallarupphamtning_v1.jpg",
+        "fil": "vind_och_gards_samt_kallarupphamtning_v1_731ea1.jpg",
+        "alt": "Grovsopor reda för upphämtning på en innergård i Täby."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/grovavfall_staden.jpg",
+        "fil": "grovavfall_staden_19d256.jpg",
+        "alt": "Ifall din brf har städdag kan ni få hjälp av Avfallskonsulten att hämta grovsopor."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/bortforsling",
+    "fil": "sidor/bortforsling.md",
+    "title": "Bortforsling av möbler och skräp | Avfallskonsulten",
+    "h1": "Bortforsling av möbler och skräp",
+    "description": "Behöver du hjälp med bortforsling av möbler och skräp? Avfallskonsulten erbjuder smidig och miljövänlig bortforsling i Stockholm. Boka enkelt idag!",
+    "ord": 1197,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/staddag_lagenhet.jpg",
+        "fil": "staddag_lagenhet_cf68ea.jpg",
+        "alt": "Grovavfall redo för upphämtning utanför en brf"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/storlastbil.jpg",
+        "fil": "storlastbil_730a47.jpg",
+        "alt": "Avfallskonsultens lastbil"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/lastbil_staden.jpg",
+        "fil": "lastbil_staden_d230d7.jpg",
+        "alt": "Avfallkonsultens lastbil i staden"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallskonsulten_bil.jpg",
+        "fil": "avfallskonsulten_bil_c7874a.jpg",
+        "alt": "Avfallskonsultens lastbil."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallshantering_i_stockholm_v1.jpg",
+        "fil": "avfallshantering_i_stockholm_v1_a38645.jpg",
+        "alt": "Ifall din brf har städdag kan ni få hjälp av Avfallskonsulten att hämta grovsopor."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/bygg-och-tradgardsavfall",
+    "fil": "sidor/bygg-och-tradgardsavfall.md",
+    "title": "Hämta byggavfall Stockholm | Gratis offert | Avfallskonsulten",
+    "h1": "Hämtning av byggavfall i Stockholm",
+    "description": "Hämta byggavfall i Stockholm med Avfallskonsulten. Vi erbjuder både avfallshämtning och containeruthyrning. Få en kostnadsfri offert idag.",
+    "ord": 628,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/tradgardsavfall_v1.jpeg",
+        "fil": "tradgardsavfall_v1_14fb76.jpeg",
+        "alt": "Trädgårdsavfall utanför bostad i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/upphamtning_pa_plats_v1.jpg",
+        "fil": "upphamtning_pa_plats_v1_e8af4c.jpg",
+        "alt": "Säckar med byggavfall på trottoar."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/byggsackar_v1.jpg",
+        "fil": "byggsackar_v1_718a23.jpg",
+        "alt": "Byggsäckar utanför fastighet i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/container_v1.jpeg",
+        "fil": "container_v1_0c48be.jpeg",
+        "alt": "hyra container i Stockholm för byggavfall och annat grovavfall"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/rullkarl_v1.jpeg",
+        "fil": "rullkarl_v1_9817a4.jpeg",
+        "alt": "Rullkärl utanför fastighet i Stockholm."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/fastighetsnara-insamling",
+    "fil": "sidor/fastighetsnara-insamling.md",
+    "title": "Fastighetsnära insamling 2027 - Ny lag för fastighetsägare",
+    "h1": "Fastighetsnära insamling 2027 - Ny lagändring",
+    "description": "Från 2027 måste förpackningsavfall hämtas nära fastigheten. Läs om lagändringen och hur Avfallskonsulten kan hjälpa fastighetsägare och BRF:er.",
+    "ord": 573,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/atervinning_for_miljo_v1.jpeg",
+        "fil": "atervinning_for_miljo_v1_87bd6b.jpeg",
+        "alt": "Ny lag för fastighetsnära insamling."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/forpackningsinsamling",
+    "fil": "sidor/forpackningsinsamling.md",
+    "title": "Förpackningsinsamling | Avfallskonsulten",
+    "h1": "Förpackningsinsamling",
+    "description": "Få expertis och effektiva lösningar för förpackningsinsamling med Avfallskonsulten. Vi erbjuder skräddarsydda tjänster för att optimera insamlingen av förpackningar!",
+    "ord": 535,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/hushallsavfall_v1.jpg",
+        "fil": "hushallsavfall_v1_1c6614.jpg",
+        "alt": "Grovavfall redo för upphämtning utanför en brf i Stockholm"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/staddag_pall_och_pase.jpg",
+        "fil": "staddag_pall_och_pase_819ea4.jpg",
+        "alt": "Få hjälp att hämta grovsopor i Stockholm ifall ditt förråd är fullt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/pasar_med_lov.jpg",
+        "fil": "pasar_med_lov_882c09.jpg",
+        "alt": "påsar med löv"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallskonsulten_bil.jpg",
+        "fil": "avfallskonsulten_bil_c7874a.jpg",
+        "alt": "Avfallkonsultens bil"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/soprum_1efter.jpg",
+        "fil": "soprum_1efter_171f15.jpg",
+        "alt": "Ett soprum efter den har blivit renoverad"
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/hamta-byggsackar",
+    "fil": "sidor/hamta-byggsackar.md",
+    "title": "Hämta Byggsäckar - Slipp allt krångel - Avfallskonsulten",
+    "h1": "Hämta byggsäckar",
+    "description": "Renoverat eller rensat i trädgården? Vi hjälper dig att hämta byggsäckar i Stockholm – enkelt, snabbt och utan krångel.",
+    "ord": 801,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/tradgardsavfall_v1.jpeg",
+        "fil": "tradgardsavfall_v1_14fb76.jpeg",
+        "alt": "Trädgårdsavfall utanför bostad i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/upphamtning_pa_plats_v1.jpg",
+        "fil": "upphamtning_pa_plats_v1_e8af4c.jpg",
+        "alt": "Säckar med byggavfall på trottoar."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/byggsackar_v1.jpg",
+        "fil": "byggsackar_v1_718a23.jpg",
+        "alt": "Byggsäckar utanför fastighet i Stockholm."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/hamta-grovsopor-jarfalla",
+    "fil": "sidor/hamta-grovsopor-jarfalla.md",
+    "title": "Hämta grovsopor Järfälla | Gratis offert | Avfallskonsulten",
+    "h1": "Hämta grovsopor Järfälla",
+    "description": "Avfallskonsulten erbjuder hantering av grovavfall i Järfälla. Vi hanterar och tar bort grovavfall på ett miljövänligt sätt. Få en kostnadsfri offert idag!",
+    "ord": 1240,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/hushallsavfall_v1.jpg",
+        "fil": "hushallsavfall_v1_1c6614.jpg",
+        "alt": "Grovavfall redo för upphämtning utanför en brf i Järfälla"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/upphamtning_av_grovavfall_pa_plats_v1.jpeg",
+        "fil": "upphamtning_av_grovavfall_pa_plats_v1_6938da.jpeg",
+        "alt": "Få hjälp att hämta grovsopor i Järfälla ifall ditt förråd är fullt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/grovavfall_for_bostadsrattsforeningar_v1.jpg",
+        "fil": "grovavfall_for_bostadsrattsforeningar_v1_9a4d68.jpg",
+        "alt": "Avfallskonsulten hjälper brf:er att hämta grovsopor i Järfälla"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/vind_och_gards_samt_kallarupphamtning_v1.jpg",
+        "fil": "vind_och_gards_samt_kallarupphamtning_v1_731ea1.jpg",
+        "alt": "Grovsopor reda för upphämtning på en innergård i Järfälla."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/staddag_v1.jpg",
+        "fil": "staddag_v1_8651bd.jpg",
+        "alt": "Ifall din brf har städdag kan ni få hjälp av Avfallskonsulten att hämta grovsopor i Järfälla."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallskonsulten_bil.jpg",
+        "fil": "avfallskonsulten_bil_c7874a.jpg",
+        "alt": "lastbil redo för upphämtning av grovsopor."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/hamta-grovsopor-lidingo",
+    "fil": "sidor/hamta-grovsopor-lidingo.md",
+    "title": "Hämta grovsopor Lidingö | Gratis offert | Avfallskonsulten",
+    "h1": "Hämta grovsopor Lidingö",
+    "description": "Avfallskonsulten erbjuder hantering av grovavfall i Lidingö. Vi hanterar och tar bort grovavfall på ett miljövänligt sätt. Få en kostnadsfri offert idag!",
+    "ord": 1240,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/hushallsavfall_v1.jpg",
+        "fil": "hushallsavfall_v1_1c6614.jpg",
+        "alt": "Grovavfall redo för upphämtning utanför en brf på Lidingö"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/upphamtning_av_grovavfall_pa_plats_v1.jpeg",
+        "fil": "upphamtning_av_grovavfall_pa_plats_v1_6938da.jpeg",
+        "alt": "Få hjälp att hämta grovsopor på Lidingö ifall ditt förråd är fullt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/grovavfall_for_bostadsrattsforeningar_v1.jpg",
+        "fil": "grovavfall_for_bostadsrattsforeningar_v1_9a4d68.jpg",
+        "alt": "Avfallskonsulten hjälper brf:er att hämta grovsopor i Lidingö"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/vind_och_gards_samt_kallarupphamtning_v1.jpg",
+        "fil": "vind_och_gards_samt_kallarupphamtning_v1_731ea1.jpg",
+        "alt": "Grovsopor reda för upphämtning på en innergård i Lidingö."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/staddag_v1.jpg",
+        "fil": "staddag_v1_8651bd.jpg",
+        "alt": "Ifall din brf har städdag kan ni få hjälp av Avfallskonsulten att hämta grovsopor i Lidingö."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallskonsulten_bil.jpg",
+        "fil": "avfallskonsulten_bil_c7874a.jpg",
+        "alt": "lastbil redo för upphämtning av grovsopor."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/hamta-grovsopor-norrtalje",
+    "fil": "sidor/hamta-grovsopor-norrtalje.md",
+    "title": "Hämta grovsopor Norrtälje | Gratis offert | Avfallskonsulten",
+    "h1": "Hämta grovsopor Norrtälje",
+    "description": "Avfallskonsulten erbjuder hantering av grovavfall i Norrtälje. Vi hanterar och tar bort grovavfall på ett miljövänligt sätt. Få en kostnadsfri offert idag!",
+    "ord": 1246,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/hushallsavfall_v1.jpg",
+        "fil": "hushallsavfall_v1_1c6614.jpg",
+        "alt": "Grovavfall redo för upphämtning utanför en brf i Norrtälje"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/upphamtning_av_grovavfall_pa_plats_v1.jpeg",
+        "fil": "upphamtning_av_grovavfall_pa_plats_v1_6938da.jpeg",
+        "alt": "Få hjälp att hämta grovsopor i Norrtälje ifall ditt förråd är fullt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/grovavfall_for_bostadsrattsforeningar_v1.jpg",
+        "fil": "grovavfall_for_bostadsrattsforeningar_v1_9a4d68.jpg",
+        "alt": "Avfallskonsulten hjälper brf:er att hämta grovsopor i Norrtälje"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/vind_och_gards_samt_kallarupphamtning_v1.jpg",
+        "fil": "vind_och_gards_samt_kallarupphamtning_v1_731ea1.jpg",
+        "alt": "Grovsopor reda för upphämtning på en innergård i Norrtälje."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/staddag_v1.jpg",
+        "fil": "staddag_v1_8651bd.jpg",
+        "alt": "Ifall din brf har städdag kan ni få hjälp av Avfallskonsulten att hämta grovsopor i Norrtälje."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallskonsulten_bil.jpg",
+        "fil": "avfallskonsulten_bil_c7874a.jpg",
+        "alt": "lastbil redo för upphämtning av grovsopor."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/hamta-grovsopor-sollentuna",
+    "fil": "sidor/hamta-grovsopor-sollentuna.md",
+    "title": "Hämta grovsopor Sollentuna | Gratis offert | Avfallskonsulten",
+    "h1": "Hämta grovsopor Sollentuna",
+    "description": "Avfallskonsulten erbjuder hantering av grovavfall i Sollentuna. Vi hanterar och tar bort grovavfall på ett miljövänligt sätt. Få en kostnadsfri offert idag!",
+    "ord": 1240,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/hushallsavfall_v1.jpg",
+        "fil": "hushallsavfall_v1_1c6614.jpg",
+        "alt": "Grovavfall redo för upphämtning utanför en brf i Sollentuna"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/upphamtning_av_grovavfall_pa_plats_v1.jpeg",
+        "fil": "upphamtning_av_grovavfall_pa_plats_v1_6938da.jpeg",
+        "alt": "Få hjälp att hämta grovsopor i Sollentuna ifall ditt förråd är fullt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/grovavfall_for_bostadsrattsforeningar_v1.jpg",
+        "fil": "grovavfall_for_bostadsrattsforeningar_v1_9a4d68.jpg",
+        "alt": "Avfallskonsulten hjälper brf:er att hämta grovsopor i Sollentuna"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/vind_och_gards_samt_kallarupphamtning_v1.jpg",
+        "fil": "vind_och_gards_samt_kallarupphamtning_v1_731ea1.jpg",
+        "alt": "Grovsopor reda för upphämtning på en innergård i Sollentuna."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/staddag_v1.jpg",
+        "fil": "staddag_v1_8651bd.jpg",
+        "alt": "Ifall din brf har städdag kan ni få hjälp av Avfallskonsulten att hämta grovsopor i Sollentuna."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallskonsulten_bil.jpg",
+        "fil": "avfallskonsulten_bil_c7874a.jpg",
+        "alt": "lastbil redo för upphämtning av grovsopor."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/hamta-grovsopor-stockholm",
+    "fil": "sidor/hamta-grovsopor-stockholm.md",
+    "title": "Hämta grovsopor Stockholm | Grovavfall | Avfallskonsulten",
+    "h1": "Hämta grovavfall & grovsopor Stockholm",
+    "description": "Avfallskonsulten erbjuder hantering av grovavfall i Stockholm. Vi hanterar och tar bort grovavfall på ett miljövänligt sätt. Få en kostnadsfri offert idag!",
+    "ord": 1471,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/hushallsavfall_v1.jpg",
+        "fil": "hushallsavfall_v1_1c6614.jpg",
+        "alt": "Grovavfall redo för upphämtning utanför en brf i Sollentuna"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/upphamtning_av_grovavfall_pa_plats_v1.jpeg",
+        "fil": "upphamtning_av_grovavfall_pa_plats_v1_6938da.jpeg",
+        "alt": "Få hjälp att hämta grovsopor i Stockholm ifall ditt förråd är fullt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/grovavfall_for_bostadsrattsforeningar_v1.jpg",
+        "fil": "grovavfall_for_bostadsrattsforeningar_v1_9a4d68.jpg",
+        "alt": "Avfallskonsulten hjälper brf:er att hämta grovsopor i Stockholm"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/vind_och_gards_samt_kallarupphamtning_v1.jpg",
+        "fil": "vind_och_gards_samt_kallarupphamtning_v1_731ea1.jpg",
+        "alt": "Grovsopor reda för upphämtning på en innergård i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/staddag_v1.jpg",
+        "fil": "staddag_v1_8651bd.jpg",
+        "alt": "Ifall din brf har städdag kan ni få hjälp av Avfallskonsulten att hämta grovsopor i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallskonsulten_bil.jpg",
+        "fil": "avfallskonsulten_bil_c7874a.jpg",
+        "alt": "lastbil redo för upphämtning av grovsopor."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/hamta-grovsopor-sundbyberg",
+    "fil": "sidor/hamta-grovsopor-sundbyberg.md",
+    "title": "Hämta grovsopor Sundbyberg | Gratis offert | Avfallskonsulten",
+    "h1": "Hämta grovsopor Sundbyberg",
+    "description": "Avfallskonsulten erbjuder hantering av grovavfall i Sundbyberg. Vi hanterar och tar bort grovavfall på ett miljövänligt sätt. Få en kostnadsfri offert idag!",
+    "ord": 1240,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/hushallsavfall_v1.jpg",
+        "fil": "hushallsavfall_v1_1c6614.jpg",
+        "alt": "Grovavfall redo för upphämtning utanför en brf i Sundbyberg"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/upphamtning_av_grovavfall_pa_plats_v1.jpeg",
+        "fil": "upphamtning_av_grovavfall_pa_plats_v1_6938da.jpeg",
+        "alt": "Få hjälp att hämta grovsopor i Sundbyberg ifall ditt förråd är fullt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/grovavfall_for_bostadsrattsforeningar_v1.jpg",
+        "fil": "grovavfall_for_bostadsrattsforeningar_v1_9a4d68.jpg",
+        "alt": "Avfallskonsulten hjälper brf:er att hämta grovsopor i Sundbyberg"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/vind_och_gards_samt_kallarupphamtning_v1.jpg",
+        "fil": "vind_och_gards_samt_kallarupphamtning_v1_731ea1.jpg",
+        "alt": "Grovsopor reda för upphämtning på en innergård i Sundbyberg."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/staddag_v1.jpg",
+        "fil": "staddag_v1_8651bd.jpg",
+        "alt": "Ifall din brf har städdag kan ni få hjälp av Avfallskonsulten att hämta grovsopor i Sundbyberg."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallskonsulten_bil.jpg",
+        "fil": "avfallskonsulten_bil_c7874a.jpg",
+        "alt": "lastbil redo för upphämtning av grovsopor."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/hamta-grovsopor-taby",
+    "fil": "sidor/hamta-grovsopor-taby.md",
+    "title": "Hämta grovsopor Täby | Gratis offert | Avfallskonsulten",
+    "h1": "Hämta grovsopor Täby",
+    "description": "Avfallskonsulten erbjuder hantering av grovavfall i Täby. Vi hanterar och tar bort grovavfall på ett miljövänligt sätt. Få en kostnadsfri offert idag!",
+    "ord": 1240,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/hushallsavfall_v1.jpg",
+        "fil": "hushallsavfall_v1_1c6614.jpg",
+        "alt": "Grovavfall redo för upphämtning utanför en brf i Täby"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/upphamtning_av_grovavfall_pa_plats_v1.jpeg",
+        "fil": "upphamtning_av_grovavfall_pa_plats_v1_6938da.jpeg",
+        "alt": "Få hjälp att hämta grovsopor i Täby ifall ditt förråd är fullt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/grovavfall_for_bostadsrattsforeningar_v1.jpg",
+        "fil": "grovavfall_for_bostadsrattsforeningar_v1_9a4d68.jpg",
+        "alt": "Avfallskonsulten hjälper brf:er att hämta grovsopor i Täby"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/vind_och_gards_samt_kallarupphamtning_v1.jpg",
+        "fil": "vind_och_gards_samt_kallarupphamtning_v1_731ea1.jpg",
+        "alt": "Grovsopor reda för upphämtning på en innergård i Täby."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/staddag_v1.jpg",
+        "fil": "staddag_v1_8651bd.jpg",
+        "alt": "Ifall din brf har städdag kan ni få hjälp av Avfallskonsulten att hämta grovsopor i Täby."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallskonsulten_bil.jpg",
+        "fil": "avfallskonsulten_bil_c7874a.jpg",
+        "alt": "lastbil redo för upphämtning av grovsopor."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/hamta-skrap-stockholm",
+    "fil": "sidor/hamta-skrap-stockholm.md",
+    "title": "Hämta skräp stockholm - Avfallskonsulten",
+    "h1": "Hämta skräp Stockholm",
+    "description": "Behöver du hjälp med att hämta skräp i Stockholm? Avfallskonsulten erbjuder snabb och pålitlig avfallshantering för både företag och privatpersoner!",
+    "ord": 565,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/staddag_lagenhet.jpg",
+        "fil": "staddag_lagenhet_cf68ea.jpg",
+        "alt": "Grovafall redo för upphämtning utanför lägenheter"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/soprum_komplett.jpg",
+        "fil": "soprum_komplett_aaa15d.jpg",
+        "alt": "Ett komplett och ordnat soprum"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/karlskap_for_miljon.jpg",
+        "fil": "karlskap_for_miljon_01bf63.jpg",
+        "alt": "Avfallskonsulten hjälper att installera miljövänliga kärlskåp"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/upphamtning_av_grovavfall_pa_plats_v1.jpeg",
+        "fil": "upphamtning_av_grovavfall_pa_plats_v1_6938da.jpeg",
+        "alt": "Få hjälp att hämta grovsopor i Stockholm ifall ditt förråd är fullt"
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/hamtning-av-restavfall-stockholm",
+    "fil": "sidor/hamtning-av-restavfall-stockholm.md",
+    "title": "Restavfall Stockholm | Upphämtning | Avfallskonsulten",
+    "h1": "Restavfall Stockholm",
+    "description": "Hämta restavfall i Stockholm enkelt med Avfallskonsulten. Effektiva och skräddarsydda lösningar för smidig avfallshantering.",
+    "ord": 719,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/hushallsavfall_v1.jpg",
+        "fil": "hushallsavfall_v1_1c6614.jpg",
+        "alt": "Grovavfall redo för upphämtning utanför en brf i Stockholm"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/upphamtning_av_grovavfall_pa_plats_v1.jpeg",
+        "fil": "upphamtning_av_grovavfall_pa_plats_v1_6938da.jpeg",
+        "alt": "Få hjälp att hämta grovsopor i Stockholm ifall ditt förråd är fullt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/byggavfall.jpg",
+        "fil": "byggavfall_873760.jpg",
+        "alt": "Påsar fyllda med grovsopor relaterade till bygg"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/atervinning_lampor.jpg",
+        "fil": "atervinning_lampor_bdd3f6.jpg",
+        "alt": "Olika typer av lampor redo att återvinnas på ett miljöväligt sätt"
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/hyra-container-blandat-avfall-pris",
+    "fil": "sidor/hyra-container-blandat-avfall-pris.md",
+    "title": "Hyra Container blandat avfall pris - Avfallskonsulten",
+    "h1": "Hyra container blandat avfall pris",
+    "description": "Hyra container för blandat avfall? Se aktuella priser för container, hemtagning och behandlingsavgift samt vad som påverkar den totala kostnaden.",
+    "ord": 1035,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/tradgardsavfall_v1.jpeg",
+        "fil": "tradgardsavfall_v1_14fb76.jpeg",
+        "alt": "Trädgårdsavfall utanför bostad i Stockholm."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/hyra-container-stockholm",
+    "fil": "sidor/hyra-container-stockholm.md",
+    "title": "Hyra Container Stockholm - Avfallskonsulten",
+    "h1": "Hyra container Stockholm",
+    "description": "Hyra Container Stockholm – Avfallskonsulten erbjuder smidiga lösningar för att hyra container för brf och privatpersoner. Kontakta oss för att boka idag!",
+    "ord": 727,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/tradgardsavfall_v1.jpeg",
+        "fil": "tradgardsavfall_v1_14fb76.jpeg",
+        "alt": "Trädgårdsavfall utanför bostad i Stockholm."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/karltvatt",
+    "fil": "sidor/karltvatt.md",
+    "title": "Kärltvätt Stockholm - Rengöring sopkärl - Avfallskonsulten",
+    "h1": "Kärltvätt i Stockholm",
+    "description": "Kärltvätt Stockholm – Avfallskonsulten erbjuder professionell rengöring av sopkärl. Vi ser till att dina sopkärl blir grundligt rengjorda och fräscha!",
+    "ord": 1147,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/karltvatt_stockholm_v1.jpg",
+        "fil": "karltvatt_stockholm_v1_b235ea.jpg",
+        "alt": "Medarbetare från Avfallskonsulten rullar ett sopkärl."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/tvatt_av_karl_v1.jpeg",
+        "fil": "tvatt_av_karl_v1_c2be70.jpeg",
+        "alt": "Nytvättade sopkärl i soprum i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/sanering_av_soprum_v1.jpeg",
+        "fil": "sanering_av_soprum_v1_06c10b.jpeg",
+        "alt": "Nystädat soprum i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/tvatt_av_karlskap-efter.jpg",
+        "fil": "tvatt_av_karlskap-efter_93324c.jpg",
+        "alt": "Nytvättade sopkärl i soprum i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/soprum_1fore.jpg",
+        "fil": "soprum_1fore_e4edd3.jpg",
+        "alt": "Soprum innan renovering och tvätt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/soprum_1efter.jpg",
+        "fil": "soprum_1efter_171f15.jpg",
+        "alt": "Soprum efter renovering och tvätt"
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/kontakt",
+    "fil": "sidor/kontakt.md",
+    "title": "Kontakt | Experter på avfallshantering och återvinning | Avfallskonsulten",
+    "h1": "Kontakta oss",
+    "description": "",
+    "ord": 83,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/kontorsatervinning",
+    "fil": "sidor/kontorsatervinning.md",
+    "title": "Kontorsåtervinning & avfallshantering | Avfallskonsulten",
+    "h1": "Kontorsåtervinning & avfallshantering för kontor",
+    "description": "Effektiv kontorsåtervinning och avfallshantering kontor i Stockholm. Få hjälp med sortering, upphämtning och kostnadsfri offert.",
+    "ord": 1408,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/kontorsatervinning_v1.jpeg",
+        "fil": "kontorsatervinning_v1_659a73.jpeg",
+        "alt": "Kontor i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/atervinning_pa_kontoret_v1.jpeg",
+        "fil": "atervinning_pa_kontoret_v1_72da24.jpeg",
+        "alt": "Återvinningsstation hos företag i Stockholm"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/kontor_bortforsling.jpeg",
+        "fil": "kontor_bortforsling_3df9d5.jpeg",
+        "alt": "Kontorsavfall som ska bortforslas."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/bild_skytlar_och_dekaler_v1.jpeg",
+        "fil": "bild_skytlar_och_dekaler_v1_5aa299.jpeg",
+        "alt": "Bild på källsorteringsskyltar"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/sekretesshamtning_v1.png",
+        "fil": "sekretesshamtning_v1_76e414.png",
+        "alt": "Röd text: Top Secret"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/atervinning_pa_kontoret_v1.jpeg",
+        "fil": "atervinning_pa_kontoret_v1_72da24.jpeg",
+        "alt": "Återvinningsstation hos företag i Stockholm"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/ratt_avfallslosning_v1.png",
+        "fil": "ratt_avfallslosning_v1_dabe0c.png",
+        "alt": "Källsorterade kärlar"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallshantering_i_stockholm_v1.jpeg",
+        "fil": "avfallshantering_i_stockholm_v1_e77896.jpeg",
+        "alt": "Avfallskonsultens personal"
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/matavfall-i-stockholm",
+    "fil": "sidor/matavfall-i-stockholm.md",
+    "title": "Matavfall Stockholm | Så funkar det | Avfallskonsulten",
+    "h1": "Hantering av matavfall i Stockholm",
+    "description": "Det är obligatoriskt att samla in matavfall separat i Stockholm. Lär dig mer om hur det fungerar och få hjälp med hantering från Avfallskonsulten.",
+    "ord": 705,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/staddag_lagenhet.jpg",
+        "fil": "staddag_lagenhet_cf68ea.jpg",
+        "alt": "Grovafall redo för upphämtning utanför lägenheter"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/matavfall.jpg",
+        "fil": "matavfall_c6cd71.jpg",
+        "alt": "Matavfallspåse som ska återvinnas"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/grovavfall_for_bostadsrattsforeningar_v1.jpg",
+        "fil": "grovavfall_for_bostadsrattsforeningar_v1_9a4d68.jpg",
+        "alt": "Avfallskonsulten hjälper brf:er att hämta grovsopor i Täby"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/soprum_litet.jpg",
+        "fil": "soprum_litet_dbb711.jpg",
+        "alt": "Litet skyltat soprum"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/matavfall.jpg",
+        "fil": "matavfall_c6cd71.jpg",
+        "alt": "Matavfallspåse som ska återvinnas"
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/om-oss",
+    "fil": "sidor/om-oss.md",
+    "title": "Om oss | Proffs på avfallshantering i Stockholm | Avfallskonsulten",
+    "h1": "Om Avfallskonsulten",
+    "description": "",
+    "ord": 357,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/produkter",
+    "fil": "sidor/produkter.md",
+    "title": "Produkter | Allt inom återvinning | Avfallskonsulten",
+    "h1": "Produkter",
+    "description": "",
+    "ord": 326,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/bild_sopkarl_v1.PNG",
+        "fil": "bild_sopkarl_v1_5be619.PNG",
+        "alt": "Grönt sopkärl med hjul."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/bild_skytlar_och_dekaler_v1.jpg",
+        "fil": "bild_skytlar_och_dekaler_v1_83852d.jpg",
+        "alt": "Skyltar med information om återvinning."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/bild_karlskap_v1.jpg",
+        "fil": "bild_karlskap_v1_6e28ec.jpg",
+        "alt": "Kärlskåp för återvinning utanför fastighet i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/bild_underjordsbehallare_v1.jpg",
+        "fil": "bild_underjordsbehallare_v1_c491cd.jpg",
+        "alt": "Underjordsbehållare för sopsortering vid park i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/tillbehor_och_reservdelar_v1.jpg",
+        "fil": "tillbehor_och_reservdelar_v1_c2d6a0.jpg",
+        "alt": "Behållare för matavfall."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/projekt",
+    "fil": "sidor/projekt.md",
+    "title": "Projekt | Tidigare uppdrag inom avfall och återvinning | Avfallskonsulten",
+    "h1": "Ett axplock av Avfallskonsulten",
+    "description": "",
+    "ord": 602,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/header_till_proejktsida_v1.jpeg",
+        "fil": "header_till_proejktsida_v1_15175d.jpeg",
+        "alt": "Kärlskåp utanför fastighet i Stockholm"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/brf_narva_11.jpg",
+        "fil": "brf_narva_11_7ff3b2.jpg",
+        "alt": "Säckar med byggavfall på trottoar."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/brf_narva_21.jpg",
+        "fil": "brf_narva_21_932221.jpg",
+        "alt": "Säckar med byggavfall på trottoar."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/engelbrektshojden_11.jpg",
+        "fil": "engelbrektshojden_11_d24fea.jpg",
+        "alt": "Byggsäckar utanför fastighet i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/engelbrektshojden_21.jpg",
+        "fil": "engelbrektshojden_21_e3cf19.jpg",
+        "alt": "Byggsäckar utanför fastighet i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/alviksskolan_11.jpg",
+        "fil": "alviksskolan_11_d4978b.jpg",
+        "alt": "Container för byggavfall."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/alviksskolan_22.jpg",
+        "fil": "alviksskolan_22_f42e6f.jpg",
+        "alt": "Container för byggavfall."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/brf_markisen_11.jpg",
+        "fil": "brf_markisen_11_080967.jpg",
+        "alt": "Nedkaströr till sopkärl."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/brf_markisen_22.jpg",
+        "fil": "brf_markisen_22_2bc770.jpg",
+        "alt": "Nedkaströr till sopkarusell."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/hogbergsgatan_30A_11.webp",
+        "fil": "hogbergsgatan_30A_11_05b368.webp",
+        "alt": "Nybyggd ramp för sopkärl."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/radgivning",
+    "fil": "sidor/radgivning.md",
+    "title": "Rådgivning | Experthjälp kring soprum | Avfallskonsulten",
+    "h1": "Rådgivning",
+    "description": "Avfallskonsulten förbättrar ditt soprum, vare sig det gäller att möta kommande lagkrav eller en ny avfallslösning. Kontakta oss för en gratis offert.",
+    "ord": 398,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallskonsulten_arbetsklader_v1.jpg",
+        "fil": "avfallskonsulten_arbetsklader_v1_470308.jpg",
+        "alt": "Medarbetare i jacka med texten avfallskonsulten"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/ombyggnation_av_soprum_v1.jpg",
+        "fil": "ombyggnation_av_soprum_v1_1589eb.jpg",
+        "alt": "Nyrenoverat soprum i Stockholm"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallsutredningar_v1.jpg",
+        "fil": "avfallsutredningar_v1_03dac1.jpg",
+        "alt": "Entredörr till fastighet."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/utsortering_av_matavfall_och_forpackningar_v1.jpg",
+        "fil": "utsortering_av_matavfall_och_forpackningar_v1_718816.jpg",
+        "alt": "Kärlskåp för sopor utanför fastighet i Stockholm"
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/renovera-soprum",
+    "fil": "sidor/renovera-soprum.md",
+    "title": "Renovera soprum för bättre funktionalitet | Avfallskonsulten",
+    "h1": "Renovera soprum för bättre funktionalitet",
+    "description": "Behöver du renovera ditt soprum? Avfallskonsulten erbjuder effektiva lösningar för att förbättra funktionaliteten och optimera förvaringen av avfall.",
+    "ord": 653,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/karltvatt_stockholm_v2.jpg",
+        "fil": "karltvatt_stockholm_v2_d4acea.jpg",
+        "alt": "ombyggt soprum"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/soprum_komplett.jpg",
+        "fil": "soprum_komplett_aaa15d.jpg",
+        "alt": "Ett komplett och ordnat soprum"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/tvatt_av_karl_v2.jpeg",
+        "fil": "tvatt_av_karl_v2_cf85f5.jpeg",
+        "alt": "Ett soprum med flera sopkärl"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/engelbrektshojden_22.jpeg",
+        "fil": "engelbrektshojden_22_77c809.jpeg",
+        "alt": "Fullt utrustat soprum"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/engelbrektshojden_11.jpg",
+        "fil": "engelbrektshojden_11_d24fea.jpg",
+        "alt": "Tomt soprum redo för utrustning"
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/sekretesshantering",
+    "fil": "sidor/sekretesshantering.md",
+    "title": "Sekretesspapper återvinning | Avfallskonsulten",
+    "h1": "Sekretesspapper återvinning",
+    "description": "Sekretesspapper återvinning och säker sekretesshantering med Avfallskonsulten. Vi erbjuder pålitlig hantering och destruktion av känsliga dokument.",
+    "ord": 908,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/sekretesshantering_v1.jpg",
+        "fil": "sekretesshantering_v1_100a99.jpg",
+        "alt": "sekretesshantering återvinning"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/sekretesshamtning_v1.png",
+        "fil": "sekretesshamtning_v1_76e414.png",
+        "alt": "Röd text: Top Secret"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/sekretesshantering_v1.jpeg",
+        "fil": "sekretesshantering_v1_926983.jpeg",
+        "alt": "Få hjälp att hämta grovsopor i Stockholm ifall ditt förråd är fullt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/sekretesshantering_v1.jpeg",
+        "fil": "sekretesshantering_v1_926983.jpeg",
+        "alt": "Få hjälp att hämta grovsopor i Stockholm ifall ditt förråd är fullt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/sekretesshantering_v1.jpeg",
+        "fil": "sekretesshantering_v1_926983.jpeg",
+        "alt": "Få hjälp att hämta grovsopor i Stockholm ifall ditt förråd är fullt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/sekretesshantering_v1.jpeg",
+        "fil": "sekretesshantering_v1_926983.jpeg",
+        "alt": "Få hjälp att hämta grovsopor i Stockholm ifall ditt förråd är fullt"
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/sophamtning-stockholm-foretag",
+    "fil": "sidor/sophamtning-stockholm-foretag.md",
+    "title": "Sophämtning Stockholm företag – Smidig service | Avfallskonsulten",
+    "h1": "Sophämtning Stockholm företag",
+    "description": "Effektiv & pålitlig sophämtning i Stockholm för företag. Avfallskonsulten erbjuder skräddarsydda lösningar för avfallshantering, anpassade efter era behov.",
+    "ord": 894,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/kontor_bortforsling.jpg",
+        "fil": "kontor_bortforsling_de5ae8.jpg",
+        "alt": "Grovavfall redo för upphämtning i ett kontor i Stockholm"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/upphamtning_av_grovavfall_pa_plats_v1.jpeg",
+        "fil": "upphamtning_av_grovavfall_pa_plats_v1_6938da.jpeg",
+        "alt": "Få hjälp att hämta grovsopor i Stockholm ifall ditt förråd är fullt"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/grovavfall_for_bostadsrattsforeningar_v1.jpg",
+        "fil": "grovavfall_for_bostadsrattsforeningar_v1_9a4d68.jpg",
+        "alt": "Avfallskonsulten hjälper brf:er att hämta grovsopor i Stockholm"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/byggavfall.jpg",
+        "fil": "byggavfall_873760.jpg",
+        "alt": "påsar fyllda med grovsopor relaterade till bygg"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallskonsulten_bil.jpg",
+        "fil": "avfallskonsulten_bil_c7874a.jpg",
+        "alt": "Avfallskonsultens egna bil"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/atervinning_lampor.jpg",
+        "fil": "atervinning_lampor_bdd3f6.jpg",
+        "alt": "Olika typer av lampor redo att återvinnas på ett miljöväligt sätt"
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/tidningsatervinning",
+    "fil": "sidor/tidningsatervinning.md",
+    "title": "Tidningsåtervinning - Avfallskonsulten",
+    "h1": "Tidningsåtervinning",
+    "description": "Få expertis och effektiva lösningar för tidningsåtervinning med Avfallskonsulten. Vi erbjuder skräddarsydda tjänster för att optimera upphämtning!",
+    "ord": 515,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/atervinning_tidning.jpg",
+        "fil": "atervinning_tidning_bf63f2.jpg",
+        "alt": "En bunt tidningar som ska återvinnas"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/atervinning_tidning.jpg",
+        "fil": "atervinning_tidning_bf63f2.jpg",
+        "alt": "En bunt tidningar som ska återvinnas"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/atervinning_tidning.jpg",
+        "fil": "atervinning_tidning_bf63f2.jpg",
+        "alt": "En bunt tidningar som ska återvinnas"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallshantering_i_stockholm_v1.jpg",
+        "fil": "avfallshantering_i_stockholm_v1_a38645.jpg",
+        "alt": "En arbetare med Avfallskonsultens kläder"
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/tomma-dodsbo",
+    "fil": "sidor/tomma-dodsbo.md",
+    "title": "Tömma dödsbo i Stockholm | Avfallskonsulten",
+    "h1": "Tömma dödsbo i Stockholm",
+    "description": "Behöver du tömma ett dödsbo i Stockholm? Vi hjälper till med tömning, bortforsling och sortering av möbler, bohag och grovavfall. Enkelt och smidigt.",
+    "ord": 876,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/staddag_lagenhet.jpg",
+        "fil": "staddag_lagenhet_cf68ea.jpg",
+        "alt": "Grovavfall redo för upphämtning utanför en brf"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/storlastbil.jpg",
+        "fil": "storlastbil_730a47.jpg",
+        "alt": "Avfallskonsultens lastbil"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/lastbil_staden.jpg",
+        "fil": "lastbil_staden_d230d7.jpg",
+        "alt": "Avfallkonsultens lastbil i staden"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallskonsulten_bil.jpg",
+        "fil": "avfallskonsulten_bil_c7874a.jpg",
+        "alt": "Avfallskonsultens lastbil."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallshantering_i_stockholm_v1.jpg",
+        "fil": "avfallshantering_i_stockholm_v1_a38645.jpg",
+        "alt": "Ifall din brf har städdag kan ni få hjälp av Avfallskonsulten att hämta grovsopor."
+      }
+    ]
+  },
+  {
+    "url": "https://avfallskonsulten.se/tradgardsavfall-stockholm",
+    "fil": "sidor/tradgardsavfall-stockholm.md",
+    "title": "Trädgårdsavfall Stockholm | Avfallskonsulten",
+    "h1": "Trädgårdsavfall Stockholm",
+    "description": "Behöver du hjälp med trädgårdsavfall i Stockholm? Avfallskonsulten erbjuder smidig och pålitlig hämtning av trädgårdsavfall oavsett var du befinner dig. Kontakta oss idag!",
+    "ord": 1015,
+    "bilder": [
+      {
+        "src": "https://avfallskonsulten.se/logga.svg",
+        "fil": "logga_cedf84.svg",
+        "alt": "Avfallskonsulten företagslogga"
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/tradgardsavfall_v1.jpeg",
+        "fil": "tradgardsavfall_v1_14fb76.jpeg",
+        "alt": "Trädgårdsavfall utanför bostad i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/pasar_med_lov.jpg",
+        "fil": "pasar_med_lov_882c09.jpg",
+        "alt": "Säckar med byggavfall på trottoar."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/byggsackar_v1.jpg",
+        "fil": "byggsackar_v1_718a23.jpg",
+        "alt": "Byggsäckar utanför fastighet i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/tradgardsavfall_v1.jpeg",
+        "fil": "tradgardsavfall_v1_14fb76.jpeg",
+        "alt": "Trädgårdsavfall utanför bostad i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/avfallskonsulten_bil.jpg",
+        "fil": "avfallskonsulten_bil_c7874a.jpg",
+        "alt": "Rullkärl utanför fastighet i Stockholm."
+      },
+      {
+        "src": "https://avfallskonsulten.se/images/tradgardsavfall_v1.jpeg",
+        "fil": "tradgardsavfall_v1_14fb76.jpeg",
+        "alt": "Trädgårdsavfall utanför bostad i Stockholm."
+      }
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+# Om Avfallskonsulten
+
+- **URL:** https://avfallskonsulten.se/om-oss
+- **Title-tagg:** Om oss | Proffs på avfallshantering i Stockholm | Avfallskonsulten
+- **Meta description:** 
+- **Canonical:** https://avfallskonsulten.se/om-oss
+- **Ord i brödtext:** 357
+- **Bilder:** 1
+
+---
+# Om Avfallskonsulten
+
+## Om oss
+
+Avfallskonsulten i Huvudstaden AB är ett ungt och drivkraftigt företag som har etablerat sig som en utmanare på avfallsmarknaden. Med bas i Skrubba och Järfälla kombinerar vi lager, kontor och fordon på ett och samma ställe, vilket ger oss möjlighet att erbjuda effektiva och flexibla lösningar till våra kunder.
+
+Vår filosofi bygger på att leverera högsta möjliga kvalitet genom nytänkande och hållbara lösningar. Vi strävar efter att minska avfall och skapa cirkulära flöden, vilket gynnar både våra kunder och miljön. Vår kundbas består idag av både små och stora fastighetsägare, företag, som värdesätter vårt personliga engagemang och vårt fokus på hållbarhet.
+
+En av våra viktigaste framgångsfaktorer är att våra transporter är 100% fossilfria. Genom att använda fordon med förnybara drivmedel bidrar vi till minskade utsläpp och ett renare samhälle. Vi är fast beslutna att fortsätta utveckla våra tjänster och arbeta mot en mer hållbar framtid tillsammans med våra kunder.
+
+Kundservice är en central del av vårt arbete. Vi vet att vårt arbete gör en verklig skillnad för våra kunders vardag, och vi strävar alltid efter att överträffa deras förväntningar. Genom att använda moderna optimeringsprogram för våra dagliga rutter ser vi till att varje transport är så effektiv som möjligt, vilket sparar både tid och resurser för våra kunder. Det är vår ambition att göra avfallshantering enkelt, bekvämt och hållbart.
+
+## Historia
+
+Avfallskonsulten grundades 2017 med ambitionen att erbjuda innovativa återvinningslösningar och den bästa möjliga kundupplevelsen. Sedan starten har vi vuxit till att idag ha flera egna insamlingsfordon och flera duktiga samarbetspartners. Mycket av vår tillväxt beror på rekommendationer från våra befintliga kunder som gjort att vi har kunnat växa organiskt, det ser vi som bästa betyg och därför jobbar vi alltid för att våra kunder ska få bästa service, både stora som små.
+
+## CSR
+
+Med bakgrund i söderort och ett stort idrottsintresse är vi stolta över att stödja dessa föreningar:
+
+Spårvägen Fotboll, Hammarby Fotboll & Hammarby Bandy. I takt med ökad omsättning ser vi det som självklart att bidra till goda aktörer i samhället som kan göra skillnad för våra barn och unga.
+
+### KONTAKTA OSS
+
+Berätta lite mer om vad du vill ha hjälp med
