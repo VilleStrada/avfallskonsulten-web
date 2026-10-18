@@ -85,6 +85,9 @@ def fixa_lankar(t, slug):
     t = t.replace("tel:08-68427888", "tel:+46868427888")
     t = re.sub(r"\]\(https?://(?:www\.)?avfallskonsulten\.se/?([^)]*)\)", lambda m: "](" + (m.group(1) or "./") + ")", t)
     t = t.replace("](/)", "](./)")
+    t = re.sub(r"\]\(/([a-z0-9_\-]+)\)", r"]()", t)  # /sida -> sida (relativt, fungerar även under /avfallskonsulten-web/)
+    t = re.sub(r"\*\*-\s*", "**", t)  # exportens "**-Källsortering**" -> "**Källsortering**"
+    t = re.sub(r"^(\s*[-*] )\*\*-\*\* ", r"", t, flags=re.M)  # "- **-** Papper" -> "- Papper"
     t = t.replace("Info@avfallskonsulten.se", "info@avfallskonsulten.se")
     return t
 
@@ -148,7 +151,7 @@ def konvertera(mdfil):
             while i < len(rader) and not rader[i].strip():
                 i += 1
             mk = re.match(r"\[([^\]]+)\]\(([^)]+)\)\s*$", rader[i].strip()) if i < len(rader) else None
-            if mk and mk.group(1).isupper():
+            if mk and (mk.group(1).isupper() or mk.group(1).split()[0].isupper()):
                 hero_knapp = (knapptext(mk.group(1)), mk.group(2)); i += 1
             continue
         ut.append(r); i += 1
@@ -210,7 +213,7 @@ def konvertera(mdfil):
                 ut.append(ph(f'<x-bild src="{stem}" alt="{mb.group(1).replace(chr(34), "")}" sizes="(min-width: 900px) 820px, 100vw" klass="figur">'))
             continue
         mk = re.match(r"\[([^\]]+)\]\(([^)]+)\)$", s)
-        if mk and mk.group(1).isupper():
+        if mk and (mk.group(1).isupper() or mk.group(1).split()[0].isupper()):
             ut.append(ph(f'<p class="knappar"><a class="knapp" href="{mk.group(2)}">{knapptext(mk.group(1))}</a></p>'))
             continue
         ut.append(r)
