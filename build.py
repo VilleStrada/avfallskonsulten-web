@@ -243,6 +243,9 @@ def bygg():
         shutil.copy(p, UT / "bilder" / p.name)
     shutil.copy(SRC / "bilder" / "favicon.png", UT / "favicon.png")
     shutil.copy(SRC / ".htaccess", UT / ".htaccess")            # 301, 404, headers på Loopia
+    if (SRC / "filer").exists():
+        for p in (SRC / "filer").iterdir():
+            shutil.copy(p, UT / p.name)  # pdf och andra filer som länkas i texten
     if (SRC / "video").exists():
         shutil.copytree(SRC / "video", UT / "video", dirs_exist_ok=True)  # hero-film (mp4 utan ljud)
     shutil.copytree(SRC / "includes", UT / "includes", dirs_exist_ok=True)  # PHP-formulärhanterare

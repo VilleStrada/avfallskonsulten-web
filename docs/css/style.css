@@ -146,6 +146,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .hero2__inner { max-width: var(--wrap); }
 .hero2 h1 { color: #fff; max-width: 18ch; text-shadow: 0 2px 12px rgba(0,0,0,0.25); }
 .hero2__ingress { font-size: clamp(1.05rem, 1rem + 0.4vw, 1.3rem); max-width: 52ch; color: rgba(255,255,255,0.92); margin-bottom: 1.75rem; }
+.hero2__ingress a { color: #fff; text-decoration-color: var(--gron); }
+.hero2__ingress a:hover { color: var(--gron); }
 .hero2 .knapp--stor { min-height: 54px; }
 .hero2__spela { position: absolute; right: var(--gutter); bottom: 1rem; z-index: 1; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 0.9rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.6); background: rgba(44,53,66,0.55); color: #fff; font: inherit; font-size: 0.9rem; font-weight: 500; cursor: pointer; backdrop-filter: blur(4px); }
 .hero2__spela:hover { background: rgba(44,53,66,0.85); }
@@ -321,6 +323,19 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .cookie__text { font-size: 0.95rem; color: var(--ink-mjuk); }
 .cookie__knappar { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .cookie__knappar .knapp { min-height: 44px; padding: 0.5rem 1.2rem; }
+
+/* Artikelsidor byggda från textexporten */
+.artikel h2 { margin-top: 2.25rem; }
+.artikel h3 { margin-top: 1.5rem; }
+.artikel .figur { border-radius: var(--radie); width: 100%; aspect-ratio: 3 / 2; object-fit: cover; margin: 1.5rem 0; }
+.artikel .galleri { display: grid; gap: 1rem; margin: 1.5rem 0; }
+.artikel .galleri .figur { margin: 0; }
+@media (min-width: 600px) { .artikel .galleri { grid-template-columns: 1fr 1fr; } }
+.artikel .knappar { margin: 1.5rem 0; }
+.artikel ul, .artikel ol { margin-bottom: 1.25rem; }
+.artikel li { margin-bottom: 0.35rem; }
+.reco--sida { margin: 2.5rem 0; }
+.reco--sida h2 { margin-top: 0; }
 
 /* 404 och enkla sidor */
 .fel-sida { padding: 4rem 0; text-align: center; }
