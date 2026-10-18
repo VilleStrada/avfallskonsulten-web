@@ -85,9 +85,9 @@ def fixa_lankar(t, slug):
     t = t.replace("tel:08-68427888", "tel:+46868427888")
     t = re.sub(r"\]\(https?://(?:www\.)?avfallskonsulten\.se/?([^)]*)\)", lambda m: "](" + (m.group(1) or "./") + ")", t)
     t = t.replace("](/)", "](./)")
-    t = re.sub(r"\]\(/([a-z0-9_\-]+)\)", r"]()", t)  # /sida -> sida (relativt, fungerar även under /avfallskonsulten-web/)
-    t = re.sub(r"\*\*-\s*", "**", t)  # exportens "**-Källsortering**" -> "**Källsortering**"
-    t = re.sub(r"^(\s*[-*] )\*\*-\*\* ", r"", t, flags=re.M)  # "- **-** Papper" -> "- Papper"
+    t = re.sub(r"\]\(/([a-z0-9_\-]+)\)", r"](\1)", t)  # /sida -> sida (relativt, fungerar under /avfallskonsulten-web/)
+    t = re.sub(r"^(\s*[-*] )\*\*-\*\* ", r"\1", t, flags=re.M)  # "- **-** Papper" -> "- Papper"
+    t = re.sub(r"\*\*-(?=\S)", "**", t)  # exportens "**-Kallsortering**" -> "**Kallsortering**"
     t = t.replace("Info@avfallskonsulten.se", "info@avfallskonsulten.se")
     return t
 
