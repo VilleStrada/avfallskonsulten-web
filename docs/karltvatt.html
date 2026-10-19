@@ -24,7 +24,7 @@
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="preload" href="typsnitt/roboto-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="typsnitt/roboto-700-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=f435240d">
+<link rel="stylesheet" href="css/style.css?v=bc72e28d">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -300,8 +300,17 @@
 </ul>
 <p>Som en generell regel bör sopkärl tvättas minst en gång per månad!</p>
 <p class="knappar"><a class="knapp" href="#offert">Boka kärltvätt</a></p>
-<div class="galleri"><img src="bilder/tvatt_av_karlskap-efter-1600.webp" srcset="bilder/tvatt_av_karlskap-efter-480.webp 480w, bilder/tvatt_av_karlskap-efter-800.webp 800w, bilder/tvatt_av_karlskap-efter-1200.webp 1200w, bilder/tvatt_av_karlskap-efter-1600.webp 1600w" sizes="(min-width: 900px) 820px, 100vw" width="1600" height="1200" alt="Nytvättade sopkärl i soprum i Stockholm." decoding="async" loading="lazy" class="figur">
-<img src="bilder/soprum_1fore-1200.webp" srcset="bilder/soprum_1fore-480.webp 480w, bilder/soprum_1fore-800.webp 800w, bilder/soprum_1fore-1200.webp 1200w" sizes="(min-width: 900px) 820px, 100vw" width="1200" height="1600" alt="Soprum innan renovering och tvätt" decoding="async" loading="lazy" class="figur">
+<div class="foreefter" data-foreefter>
+  <div class="foreefter__bilder">
+    <img src="bilder/karlskap_efter-1600.webp" srcset="bilder/karlskap_efter-480.webp 480w, bilder/karlskap_efter-800.webp 800w, bilder/karlskap_efter-1200.webp 1200w, bilder/karlskap_efter-1600.webp 1600w" sizes="(min-width: 900px) 820px, 100vw" width="1600" height="1200" alt="Kärlskåp efter tvätt" decoding="async" loading="lazy" class="foreefter__efter">
+    <div class="foreefter__fore-ram"><img src="bilder/karlskap_fore-1600.webp" srcset="bilder/karlskap_fore-480.webp 480w, bilder/karlskap_fore-800.webp 800w, bilder/karlskap_fore-1200.webp 1200w, bilder/karlskap_fore-1600.webp 1600w" sizes="(min-width: 900px) 820px, 100vw" width="1600" height="1200" alt="Kärlskåp före tvätt, med smuts och avfallsrester" decoding="async" loading="lazy" class="foreefter__fore"></div>
+    <div class="foreefter__linje" aria-hidden="true"><span class="foreefter__handtag"></span></div>
+    <span class="foreefter__etikett foreefter__etikett--fore" aria-hidden="true">Före</span>
+    <span class="foreefter__etikett foreefter__etikett--efter" aria-hidden="true">Efter</span>
+  </div>
+  <label class="foreefter__kontroll"><span class="hoppa-text">Dra för att jämföra före och efter</span>
+    <input type="range" min="0" max="100" value="50" aria-label="Jämför före och efter"></label>
+  <p class="foreefter__rubrik">Dra i reglaget: kärlskåp före och efter tvätt</p>
 </div><h2 id="vilka-typer-av-karl-kan-vi-tvatta">Vilka typer av kärl kan vi tvätta?</h2>
 <p>Vi kan tvätta de flesta typer av sopkärl, inklusive:</p>
 <ul>
@@ -478,6 +487,6 @@
   </div>
 </div>
 
-<script src="js/site.js?v=80d86865" defer></script>
+<script src="js/site.js?v=8279951b" defer></script>
 </body>
 </html>

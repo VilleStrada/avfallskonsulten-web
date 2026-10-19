@@ -1,0 +1,21 @@
+<section class="sektion sektion--grå" id="karlvaljare">
+  <div class="wrap">
+    <div class="centrerad">
+      <span class="kicker">Kärlväljare</span>
+      <h2>Hur många kärl behöver er förening?</h2>
+      <p class="ingress">Dra i reglaget så ser ni en vanlig kärluppsättning för en förening i er storlek. Det är ett riktvärde från våra avtal, vi finjusterar efter ett kostnadsfritt platsbesök.</p>
+    </div>
+    <div class="kv">
+      <div class="kv__reglage">
+        <label for="kv-lgh">Antal lägenheter: <output id="kv-lgh-ut" for="kv-lgh">30</output></label>
+        <input id="kv-lgh" type="range" min="5" max="150" step="1" value="30" aria-describedby="kv-summa">
+        <div class="kv__skala" aria-hidden="true"><span>5</span><span>50</span><span>100</span><span>150</span></div>
+      </div>
+      <ul class="kv__lista" id="kv-lista" aria-live="polite"></ul>
+      <p class="kv__summa" id="kv-summa"></p>
+      <div class="knappar" style="justify-content:center">
+        <a class="knapp" href="#offert">Kontakta oss för ett platsbesök</a>
+      </div>
+    </div>
+  </div>
+</section>

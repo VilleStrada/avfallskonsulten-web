@@ -180,6 +180,80 @@
     });
   }
 
+  /* ---------- Kärlväljare (schablon från våra avtal, inga priser) ---------- */
+  var kvLgh = document.getElementById("kv-lgh");
+  if (kvLgh) {
+    var SCHABLON = [
+      { max: 10, rader: [["Papper", 2, 370, "var 4:e vecka"], ["Plast", 1, 370, "var 4:e vecka"], ["Glas", 2, 240, "var 8:e vecka"], ["Metall", 1, 140, "var 8:e vecka"], ["Tidningar", 1, 240, "var 8:e vecka"]] },
+      { max: 25, rader: [["Papper", 1, 660, "varje vecka"], ["Plast", 1, 370, "varje vecka"], ["Glas", 2, 190, "var 4:e vecka"], ["Metall", 1, 190, "var 4:e vecka"], ["Tidningar", 1, 240, "var 8:e vecka"]] },
+      { max: 40, rader: [["Papper", 1, 660, "två gånger i veckan"], ["Plast", 1, 660, "varje vecka"], ["Glas", 2, 240, "varannan vecka"], ["Metall", 1, 190, "var 4:e vecka"], ["Tidningar", 1, 240, "var 4:e vecka"]] },
+      { max: 70, rader: [["Papper", 3, 660, "varje vecka"], ["Plast", 3, 370, "varje vecka"], ["Glas", 3, 190, "varannan vecka"], ["Metall", 1, 190, "varannan vecka"], ["Tidningar", 1, 240, "var 4:e vecka"]] },
+      { max: 99999, rader: [["Papper", 5, 660, "varje vecka"], ["Plast", 2, 660, "varje vecka"], ["Glas", 4, 190, "var 4:e vecka"], ["Metall", 2, 240, "var 4:e vecka"], ["Tidningar", 1, 370, "var 4:e vecka"]] }
+    ];
+    var FARG = { Papper: "#3b6fb6", Plast: "#e07b2a", Glas: "#2e8b57", Metall: "#7a8794", Tidningar: "#8c5aa6" };
+    var FORKL = { Papper: "pappersförpackningar", Plast: "plastförpackningar", Glas: "färgat och ofärgat glas, ett kärl vardera", Metall: "metallförpackningar", Tidningar: "tidningar och returpapper, tillval" };
+    var kvUt = document.getElementById("kv-lgh-ut"), kvLista = document.getElementById("kv-lista"), kvSumma = document.getElementById("kv-summa");
+    var kvSenast = -1;
+    function kvRita() {
+      var lgh = parseInt(kvLgh.value, 10);
+      kvUt.textContent = lgh;
+      var grupp = 0;
+      while (lgh > SCHABLON[grupp].max) grupp++;
+      if (grupp === kvSenast) return;
+      kvSenast = grupp;
+      var html = "", tot = 0;
+      SCHABLON[grupp].rader.forEach(function (r) {
+        tot += r[1];
+        html += '<li class="kv__rad ar-ny"><span class="kv__ikon" style="background:' + FARG[r[0]] + '">' + r[0].slice(0, 2) + '</span>' +
+          '<span><strong>' + r[0] + '</strong><small>' + FORKL[r[0]] + ', töms ' + r[3] + '</small></span>' +
+          '<span class="kv__antal">' + r[1] + ' × ' + r[2] + ' L</span></li>';
+      });
+      kvLista.innerHTML = html;
+      var spann = lgh <= SCHABLON[0].max ? "upp till " + SCHABLON[0].max : (grupp === SCHABLON.length - 1 ? "fler än 70" : (SCHABLON[grupp - 1].max + 1) + " till " + SCHABLON[grupp].max);
+      kvSumma.textContent = "Ungefär " + tot + " kärl för " + spann + " lägenheter. Vi anpassar storlekar och intervall efter hur snabbt kärlen fylls.";
+    }
+    kvLgh.addEventListener("input", kvRita);
+    kvRita();
+  }
+
+  /* ---------- Före och efter-reglage ---------- */
+  document.querySelectorAll("[data-foreefter]").forEach(function (box) {
+    var inp = box.querySelector("input[type=range]"), bilder = box.querySelector(".foreefter__bilder");
+    function satt(v) {
+      v = Math.max(0, Math.min(100, v));
+      box.style.setProperty("--pos", v + "%");
+      box.style.setProperty("--andel", (v / 100) || 0.0001);
+      inp.value = v;
+    }
+    inp.addEventListener("input", function () { satt(parseFloat(inp.value)); });
+    var drar = false;
+    function fran(e) {
+      var r = bilder.getBoundingClientRect();
+      satt((e.clientX - r.left) / r.width * 100);
+    }
+    bilder.addEventListener("pointerdown", function (e) { drar = true; bilder.setPointerCapture(e.pointerId); fran(e); });
+    bilder.addEventListener("pointermove", function (e) { if (drar) fran(e); });
+    bilder.addEventListener("pointerup", function () { drar = false; });
+    bilder.addEventListener("pointercancel", function () { drar = false; });
+    satt(50);
+  });
+
+  /* ---------- Rullande citat ---------- */
+  document.querySelectorAll("[data-citat]").forEach(function (band) {
+    var kort = band.querySelectorAll(".citat__kort"), prickar = band.querySelectorAll(".citat__prickar button");
+    var i = 0, timer;
+    function visa(n) {
+      i = (n + kort.length) % kort.length;
+      kort.forEach(function (k, j) { k.classList.toggle("ar-aktiv", j === i); });
+      prickar.forEach(function (p, j) { p.classList.toggle("ar-aktiv", j === i); p.setAttribute("aria-selected", j === i ? "true" : "false"); });
+    }
+    function starta() { clearInterval(timer); if (!mindreRorelse) timer = setInterval(function () { visa(i + 1); }, 6000); }
+    prickar.forEach(function (p, j) { p.addEventListener("click", function () { visa(j); starta(); }); });
+    band.addEventListener("mouseenter", function () { clearInterval(timer); });
+    band.addEventListener("mouseleave", starta);
+    visa(0); starta();
+  });
+
   /* ---------- Förvald tjänst via länk ?tjanst=... ---------- */
   var m = location.search.match(/[?&]tjanst=([^&]+)/);
   if (m) {

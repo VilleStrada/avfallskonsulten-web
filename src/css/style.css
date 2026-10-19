@@ -332,6 +332,81 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .reco--sida { margin: 2.5rem 0; }
 .reco--sida h2 { margin-top: 0; }
 
+/* Kärlväljare */
+.kv { max-width: 860px; margin: 2rem auto 0; background: #fff; border: 1px solid var(--linje); border-radius: var(--radie); padding: 1.5rem; }
+.kv__reglage label { display: block; font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem; }
+.kv__reglage output { color: var(--gron-text); font-size: 1.4rem; }
+.kv input[type=range] { width: 100%; accent-color: var(--gron-text); height: 2.2rem; cursor: pointer; }
+.kv__skala { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--ink-mjuk); margin-top: -0.3rem; }
+.kv__lista { list-style: none; padding: 0; margin: 1.5rem 0 1rem; display: grid; gap: 0.75rem; grid-template-columns: 1fr; }
+.kv__rad { display: grid; grid-template-columns: 2.6rem 1fr auto; gap: 0.75rem; align-items: center; padding: 0.7rem 0.9rem; border-radius: 12px; background: var(--bg-mjuk); }
+.kv__rad.ar-ny { animation: kv-puls 0.4s ease; }
+@keyframes kv-puls { 0% { transform: scale(0.97); opacity: 0.5; } 100% { transform: none; opacity: 1; } }
+.kv__ikon { width: 2.6rem; height: 2.6rem; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: #fff; font-size: 0.85rem; }
+.kv__rad strong { display: block; }
+.kv__rad small { color: var(--ink-mjuk); }
+.kv__antal { font-weight: 700; white-space: nowrap; }
+.kv__summa { text-align: center; font-weight: 500; margin: 0 0 1.25rem; }
+@media (min-width: 700px) { .kv { padding: 2rem 2.5rem; } .kv__lista { grid-template-columns: 1fr 1fr; } }
+
+/* Steg som ritas in */
+.steg { position: relative; }
+.js .steg .steg__nr { transform: scale(0.4); opacity: 0; transition: transform 0.5s cubic-bezier(.34,1.56,.64,1), opacity 0.4s; }
+.js .steg.ar-synlig .steg__nr { transform: none; opacity: 1; }
+.js .steg.ar-synlig .steg__punkt:nth-child(2) .steg__nr { transition-delay: 0.35s; }
+.js .steg.ar-synlig .steg__punkt:nth-child(3) .steg__nr { transition-delay: 0.7s; }
+@media (min-width: 800px) {
+  .steg::before { content: ""; position: absolute; left: 12%; right: 12%; top: 2.9rem; height: 3px; background: var(--gron); border-radius: 3px; transform: scaleX(0); transform-origin: left; transition: transform 1.1s ease 0.2s; z-index: 0; }
+  .js .steg.ar-synlig::before { transform: scaleX(1); }
+  .steg__punkt { z-index: 1; }
+}
+
+/* Före och efter-reglage */
+.foreefter { margin: 1.5rem 0 2rem; }
+.foreefter__bilder { position: relative; border-radius: var(--radie); overflow: hidden; aspect-ratio: 3 / 2; background: var(--bg-grå); user-select: none; touch-action: none; }
+.foreefter__bilder img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; margin: 0; border-radius: 0; aspect-ratio: auto; }
+.foreefter__fore-ram { position: absolute; inset: 0; width: var(--pos, 50%); overflow: hidden; }
+.foreefter__fore-ram img { width: calc(100% / var(--andel, 0.5)); max-width: none; }
+.foreefter__linje { position: absolute; top: 0; bottom: 0; left: var(--pos, 50%); width: 3px; background: #fff; box-shadow: 0 0 0 1px rgba(0,0,0,0.15); transform: translateX(-50%); pointer-events: none; }
+.foreefter__handtag { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; border-radius: 50%; background: #fff; transform: translate(-50%, -50%); box-shadow: 0 4px 14px rgba(0,0,0,0.25); display: grid; place-items: center; }
+.foreefter__handtag::before { content: "\2039\00a0\203A"; color: var(--ink); font-weight: 700; font-size: 1.3rem; letter-spacing: -2px; }
+.foreefter__etikett { position: absolute; top: 0.75rem; padding: 0.25rem 0.7rem; border-radius: 999px; background: rgba(44,53,66,0.75); color: #fff; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.foreefter__etikett--fore { left: 0.75rem; } .foreefter__etikett--efter { right: 0.75rem; }
+.foreefter__kontroll { display: block; margin-top: 0.5rem; }
+.foreefter__kontroll input { width: 100%; accent-color: var(--gron-text); cursor: ew-resize; }
+.foreefter__rubrik { font-size: 0.9rem; color: var(--ink-mjuk); text-align: center; margin: 0.25rem 0 0; }
+.hoppa-text { position: absolute; left: -9999px; }
+
+/* Citat */
+.citat { background: var(--bg-mjuk); }
+.citat__band { position: relative; max-width: 760px; margin: 1.5rem auto 0; min-height: 15rem; }
+.citat__kort { position: absolute; inset: 0; margin: 0; opacity: 0; transform: translateY(10px); transition: opacity 0.6s ease, transform 0.6s ease; pointer-events: none; text-align: center; }
+.citat__kort.ar-aktiv { opacity: 1; transform: none; pointer-events: auto; position: relative; }
+.citat__kort blockquote { margin: 0 0 1rem; font-size: clamp(1.15rem, 1rem + 0.8vw, 1.5rem); line-height: 1.5; font-weight: 500; }
+.citat__kort blockquote::before { content: "\201D"; display: block; font-size: 4rem; line-height: 0.6; color: var(--gron); margin-bottom: 0.5rem; }
+.citat__kort figcaption { color: var(--ink-mjuk); font-size: 0.95rem; }
+.citat__prickar { display: flex; justify-content: center; gap: 0.6rem; margin-top: 1.25rem; }
+.citat__prickar button { width: 12px; height: 12px; border-radius: 50%; border: 0; background: #c9d3dc; cursor: pointer; padding: 0; transition: background 0.2s, transform 0.2s; }
+.citat__prickar button.ar-aktiv { background: var(--gron-text); transform: scale(1.25); }
+
+/* Siffror */
+.siffror { background: var(--ink); color: #fff; padding: 2.5rem 0; }
+.siffror__lista { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 1rem; text-align: center; }
+.siffror__punkt strong { display: block; font-size: clamp(2rem, 1.5rem + 2.5vw, 3.2rem); line-height: 1; color: var(--gron); margin-bottom: 0.4rem; font-variant-numeric: tabular-nums; }
+.siffror__punkt span { color: rgba(255,255,255,0.88); font-size: 0.95rem; }
+@media (min-width: 800px) { .siffror { padding: 3.5rem 0; } .siffror__lista { grid-template-columns: repeat(4, 1fr); } }
+
+/* Områdeskarta */
+.omrade__rad { display: grid; gap: 2rem; align-items: center; }
+.karta { width: 100%; height: auto; max-width: 560px; margin: 0 auto; display: block; }
+.karta__grannar path { fill: #e3e8ec; stroke: #fff; stroke-width: 1.5; }
+.karta__hemma path { fill: var(--gron); stroke: var(--gron-text); stroke-width: 2; stroke-linejoin: round; transition: fill 0.3s; }
+.karta__hemma path:hover { fill: var(--gron-morkare); }
+.js .karta__hemma path { stroke-dasharray: 4000; stroke-dashoffset: 4000; }
+.js .ar-synlig .karta__hemma path { stroke-dashoffset: 0; transition: stroke-dashoffset 2.2s ease, fill 0.3s; }
+.karta__etikett { font-family: var(--font); font-weight: 700; font-size: 26px; fill: var(--ink); text-anchor: middle; paint-order: stroke; stroke: #fff; stroke-width: 5px; stroke-linejoin: round; }
+@media (min-width: 900px) { .omrade__rad { grid-template-columns: 1fr 1.1fr; gap: 4rem; } }
+
 /* 404 och enkla sidor */
 .fel-sida { padding: 4rem 0; text-align: center; }
 .fel-sida h1 { font-size: clamp(2rem, 1.5rem + 3vw, 3rem); }

@@ -77,8 +77,17 @@ body_klass: textsida
 </ul>
 <p>Som en generell regel bör sopkärl tvättas minst en gång per månad!</p>
 <p class="knappar"><a class="knapp" href="#offert">Boka kärltvätt</a></p>
-<div class="galleri"><x-bild src="tvatt_av_karlskap-efter" alt="Nytvättade sopkärl i soprum i Stockholm." sizes="(min-width: 900px) 820px, 100vw" klass="figur">
-<x-bild src="soprum_1fore" alt="Soprum innan renovering och tvätt" sizes="(min-width: 900px) 820px, 100vw" klass="figur">
+<div class="foreefter" data-foreefter>
+  <div class="foreefter__bilder">
+    <x-bild src="karlskap_efter" alt="Kärlskåp efter tvätt" sizes="(min-width: 900px) 820px, 100vw" klass="foreefter__efter">
+    <div class="foreefter__fore-ram"><x-bild src="karlskap_fore" alt="Kärlskåp före tvätt, med smuts och avfallsrester" sizes="(min-width: 900px) 820px, 100vw" klass="foreefter__fore"></div>
+    <div class="foreefter__linje" aria-hidden="true"><span class="foreefter__handtag"></span></div>
+    <span class="foreefter__etikett foreefter__etikett--fore" aria-hidden="true">Före</span>
+    <span class="foreefter__etikett foreefter__etikett--efter" aria-hidden="true">Efter</span>
+  </div>
+  <label class="foreefter__kontroll"><span class="hoppa-text">Dra för att jämföra före och efter</span>
+    <input type="range" min="0" max="100" value="50" aria-label="Jämför före och efter"></label>
+  <p class="foreefter__rubrik">Dra i reglaget: kärlskåp före och efter tvätt</p>
 </div><h2 id="vilka-typer-av-karl-kan-vi-tvatta">Vilka typer av kärl kan vi tvätta?</h2>
 <p>Vi kan tvätta de flesta typer av sopkärl, inklusive:</p>
 <ul>
