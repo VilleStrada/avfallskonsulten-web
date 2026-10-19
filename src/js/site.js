@@ -134,6 +134,52 @@
     else window.addEventListener("load", function () { setTimeout(startaFilm, 300); });
   }
 
+  /* ---------- Rörelse: intoning vid scroll och uppräkning av siffror ---------- */
+  var mindreRorelse = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!mindreRorelse && "IntersectionObserver" in window) {
+    document.documentElement.classList.add("js");
+    var hero = document.querySelector(".hero2");
+    /* setTimeout i stället för requestAnimationFrame: rAF pausas i bakgrundsflikar och då skulle texten aldrig tonas in */
+    if (hero) setTimeout(function () { hero.classList.add("ar-laddad"); }, 30);
+    var mal = document.querySelectorAll(
+      ".sektion > .wrap > *, .fni .wrap > *, .fortroende__punkt, .steg__punkt, .kort, .huvudkort, .reco, .faq, .omraden__rad > *, .boka__rad > *"
+    );
+    mal.forEach(function (el) { el.setAttribute("data-reveal", ""); });
+    var io = new IntersectionObserver(function (poster) {
+      poster.forEach(function (p) {
+        if (p.isIntersecting) { p.target.classList.add("ar-synlig"); io.unobserve(p.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+    mal.forEach(function (el) { io.observe(el); });
+    /* element som redan är i bild när sidan laddas ska inte vänta */
+    setTimeout(function () {
+      mal.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) el.classList.add("ar-synlig");
+      });
+    }, 50);
+
+    /* räkna upp tal, t.ex. "231 omdömen" */
+    document.querySelectorAll("[data-rakna]").forEach(function (el) {
+      var slut = parseInt(el.getAttribute("data-rakna"), 10);
+      var startat = false;
+      var r = new IntersectionObserver(function (poster) {
+        if (!poster[0].isIntersecting || startat) return;
+        startat = true;
+        var t0 = null;
+        function steg(t) {
+          if (!t0) t0 = t;
+          var andel = Math.min((t - t0) / 1200, 1);
+          var lätt = 1 - Math.pow(1 - andel, 3);
+          el.textContent = Math.round(slut * lätt);
+          if (andel < 1) requestAnimationFrame(steg);
+        }
+        requestAnimationFrame(steg);
+      }, { threshold: 0.5 });
+      r.observe(el);
+    });
+  }
+
   /* ---------- Förvald tjänst via länk ?tjanst=... ---------- */
   var m = location.search.match(/[?&]tjanst=([^&]+)/);
   if (m) {
