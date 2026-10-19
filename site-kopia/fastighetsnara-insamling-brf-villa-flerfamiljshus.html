@@ -1,0 +1,767 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="preload" as="image" href="images/atervinning_for_miljo_v3.webp" media="(max-width: 414px)"/>
+    <link rel="preload" as="image" href="images/atervinning_for_miljo_v2.webp" media="(min-width: 415px) and (max-width: 800px)"/>
+    <link rel="preload" as="image" href="images/atervinning_for_miljo_v1.webp" media="(min-width: 801px)" />
+    <style type="text/css">
+    :root{--buttonColor:#D3EF9D;--textColor:color: rgb(119,131,148);--hoverColor:/*rgb(56, 102, 148) */ rgb(58, 91, 37);--referenseColor:rgb(255, 255, 255);--referenseColor2:rgb(255, 255, 255)}*{font-family:Roboto,sans-serif}html{scroll-behavior:smooth}p{font-size:25px;font-weight:300;color:#484848;line-height:32.5px;margin-block-start:10px}h2{color:#05172a}.about li,.about p,.body-first p,.body-last p,.citat p,.content-div p,.jobb p,.note p,.remsa2 p{font-size:1.216rem;line-height:1.823rem;color:#484848}.about h2,.body-first h2,.body-last h2,.citat-holder h2,.content-div h2,.form1 h2,.note h2,.remsa2-container h2{font-size:2.5rem;line-height:3rem}.jobb h3,.remsa2 h3{font-size:1.75rem;line-height:2.25rem;margin-bottom:0}#kontakt-form{padding-top:200px;margin-top:-200px}nav{position:fixed;top:0;left:0;right:0;display:grid;grid-template-columns:10% 50%;width:100%;z-index:1;height:100px;justify-content:space-between;background-color:white;font-size:14px}nav ul{position:absolute;top:0;right:25px;display:flex;justify-content:space-between;align-items:flex-start;font-size:15px}nav li{position:relative;list-style-type:none;margin-top:25px;margin-left:20px;padding-bottom:30px;color:#fff}nav li a{text-decoration:none;color:#fff;font-weight:500}nav li a div.cta{width:150px;height:43px;position:relative;top:-11.5px;font-size:12px;line-height:43px}.logo{position: relative;left:10px;top:30px;height:40px;}.logo img{width:50%;height:auto}.bar1,.bar2,.bar3{width:35px;height:5px;background-color:#fff;margin:6px 0;transition:.4s}.menu{display:none}.dropbtn{top:-10px;color:#fff;padding:5px;border:none;border-radius:0;cursor:pointer;display:inline-block}#about-page nav ul li.item-3 a,#referens-page nav ul li.item-4 a,#task1-body nav ul li.item-1 a,#task2-body nav ul li.item-2 a{color:var(--buttonColor)}.dropdown{position:relative;display:flex;width:100%}.dropdown-content{display:none;position:fixed;right:510px;left:0;width:100%;height:100%;top:100px;background-color:#05172a;box-shadow:0 8px 16px 0 rgba(0,0,0,.2);z-index:2}body{margin:0;overflow-x:hidden}div.front{position:relative;color:#fff;overflow-y:hidden;overflow-x:hidden}div.front,div.front.tasks{top:100px;height:auto;margin-bottom:100px}div.front.tasks{padding-bottom:100px}div.front.tasks .tasks-header{margin-bottom:100px}.front div{position:relative;top:100px;margin:0 5%;width:90%}.front div.cta{margin-left:0;width:240px;height:55px;line-height:55px;top:40px}div.front div.cta-wrapper{top:0;margin-left:0;width:240px}div.front img{position:absolute;z-index:-1;top:0;bottom:0;left:0;right:0;margin:auto;filter:brightness(.4)}div.front.tasks img{filter:brightness(.3)}div.front.tasks div.cta-wrapper{top:20px;left:calc(50% - 240px/2)}div.front.tasks div.cta{width:240px}div.front.tasks h1{text-align:center;width:100%}div.front.tasks p{text-align:center;width:60%;padding:0 20%}.cta-wrapper a{text-decoration:none;color:#fff}.cta{position:absolute;text-align:center;width:240px;height:50px;background-color:var(--buttonColor);border-radius:30px;text-align:center;line-height:50px;font-size:14px;font-weight:700;letter-spacing:1px;color:#fff}.front div h1{font-size:70px;width:100%;line-height:99px;margin-bottom:20px;color:#fff}.front div p{position:relative;top:10px;color:#fff;margin-top:10px;font-size:24px;width:70%;font-weight:300;line-height:38.4px}.front div p a{text-decoration:none;color:var(--buttonColor);font-weight:400}div.body{position:relative;top:100px}.content-div{width:90%;margin:5% 5% 10% 5%;display:grid;grid-template-columns:1fr 1fr;grid-column-gap:5%}.content-div div p a{color:var(--buttonColor);text-decoration:none}.content-div div{position:relative;width:100%;overflow-x:hidden}.content-div h2{margin-top:0}.content-div div img{position:relative;height:400px;width:auto}.content-div div.cta{width:200px}.content-div div ul{margin-top:-10px}.content-div div ul li p{margin:0}.content-div div p{margin-bottom:20px}.remsa2-container{margin-top:6%;padding-bottom:50px;position:relative;background-color:#fafafa;height:auto}.remsa2-container h2{position:relative;color:#05172a;text-align:center;top:40px}.remsa2 div h3{color:var(--buttonColor);top:0}.remsa2-container .cta{position:relative;left:calc(50% - 240px/2)}.remsa2{position:relative;top:25px;height:auto;display:grid;grid-template-columns:repeat(4,1fr);grid-column-gap:2%;width:80%;margin:0 10% 25px 10%;color:#fff}.remsa2 div{text-align:left;height:70%;border-radius:10px}.content-div div div.cta-wrapper{top:0;width:200px}div.last-wrapper{background-color:#f2f2f2;overflow:hidden}#about-page .form1,#startPage .form1,div.last-wrapper .form1{background-color:var(--buttonColor);padding:25px 0 100px 0}#about-page .form1 form,#startPage .form1,div.last-wrapper .form1 form{padding-bottom:100px}#about-page .form1 textarea,#startPage .form1 textarea,div.last-wrapper .form1 textarea{bottom:20.5%}#about-page .form1 button,#startPage .form1 button,div.last-wrapper .form1 button{top:150px;background-color:#fff;color:var(--buttonColor)}#about-page .form1 a,#about-page .form1 h2,#startPage .form1 a,#startPage .form1 h2,div.last-wrapper .form1 a,div.last-wrapper .form1 h2{color:#fff}.body-last{text-align:center;width:60%;margin:5% 20% 10% 20%;letter-spacing:1.2px}.body-last a{color:var(--buttonColor);text-decoration:none}form{padding-top:20px;padding-bottom:20px;width:50%;margin-left:25%}.form1{text-align:center;position:relative}input{width:100%;height:50px;border-radius:8px;border:1px solid #e0e8ea;text-indent:10px;line-height:50px}button{position:relative;width:80%;height:60px;background-color:var(--buttonColor);color:#fff;font-size:15px;line-height:60px;font-weight:700;letter-spacing:1px;border:none;border-radius:32px;top:50px}textarea{position:absolute;bottom:19%;left:25%;border-radius:8px;border:1px solid #e0e8ea;height:100px;width:calc(50% - 10px);color:var(--textColor);padding-top:10px;padding-left:10px;line-height:20px}footer{position:relative;height:350px;width:100%;background-color:#05172a;color:#fff}footer ul{list-style-type:none;padding:0}footer ul li{font-size:1.2rem;line-height:30px}footer h5{font-size:1.3rem;font-weight:700}div.footer-wrapper{display:grid;grid-template-columns:1fr 1fr;width:70%;padding-top:50px;margin:0 15% 10% 15%;list-style-type:none}footer a{color:var(--buttonColor);text-decoration:none}@media screen and (max-width:1150px){.remsa2{width:90%;margin:0 5% 25px 5%}div.last-wrapper .form1 textarea{bottom:21%}}@media screen and (max-width:1105px){.front div h1{font-size:70px;line-height:79px}.front div p{font-size:22px;line-height:36px}}@media screen and (max-width:1050px){.content-div{width:50%;margin:5% 25% 10% 25%;grid-template-columns:1fr;grid-row-gap:10px}.content-div div p{margin-bottom:16px}.content-div div img{position:relative;width:100%;height:auto}div.footer-wrapper{width:70%;margin:0 15% 10% 15%}.rearrange{order:1}div.content-div div ul{padding-inline-start:17px}.about li,.about p,.body-first p,.body-last p,.citat p,.content-div p,.jobb p,.note p,.remsa2 p{font-size:1.158rem;line-height:1.736rem}.about h2,.body-first h2,.body-last h2,.citat-holder h2,.content-div h2,.form1 h2,.note h2,.remsa2-container h2{font-size:2.25rem;line-height:2.7rem}.jobb h3,.remsa2 h3{font-size:1.6625rem;line-height:2.1375rem}}@media screen and (max-width:963px){.remsa2{grid-template-columns:1fr 1fr}}@media screen and (max-width:900px){.front div h1{font-size:58px;line-height:65px}.front div p{font-size:20px;line-height:34px}div.footer-wrapper{width:70%;margin:0 15% 10% 15%}}@media screen and (max-width:850px){.about li,.about p,.body-first p,.body-last p,.citat p,.content-div p,.jobb p,.note p,.remsa2 p{font-size:1.1rem;line-height:1.654rem}.about h2,.body-first h2,.body-last h2,.citat-holder h2,.content-div h2,.form1 h2,.note h2,.remsa2-container h2{font-size:2.025rem;line-height:2.43rem}.jobb h3,.remsa2 h3{font-size:1.579rem;line-height:2.03rem}}@media screen and (max-width:800px){.front div h1{font-size:45px;line-height:55px}.front div p{font-size:18px;line-height:30px}}@media screen and (max-width:750px){.menu{position:fixed;right:10px;top:10px;display:inline-block;height:60px}li.desktop{display:none}.front div.cta{top:15px}form{width:70%;margin-left:15%}textarea{width:calc(70% - 10px);left:15%}.content-div{width:80%;margin:5% 10% 10% 10%}.body-last{width:80%;margin:10%}.content-div div div.cta-wrapper{left:0}.remsa2{grid-template-columns:1fr}#about-page .form1 textarea,#startPage .form1 textarea,div.last-wrapper .form1 textarea{bottom:21%}}@media screen and (max-width:700px){.front div h1{font-size:45px;line-height:50px;margin-bottom:10px}.front div p{font-size:18px;width:60%}div.footer-wrapper{width:70%;margin:0 15% 10% 15%}}@media screen and (max-width:600px){.front div h1{font-size:35px;line-height:35px;margin-top:35px}.front div p{width:80%}div.footer-wrapper{width:80%;margin:0 10% 10% 10%}}@media screen and (max-width:550px){footer{height:auto;padding-bottom:50px}div.footer-wrapper{display:grid;grid-template-columns:1fr;width:70%;padding-bottom:50px;margin:0 15%;text-align:left}}@media screen and (max-width:520px){.remsa2{grid-template-columns:1fr;width:80%;margin:0 10% 25px 10%}div.front .tasks-header p{width:80%;padding:0 10%}}@media screen and (max-width:500px){footer ul li{font-size:1rem}footer h5{font-size:1.2rem}.about li,.about p,.body-first p,.body-last p,.citat p,.content-div p,.jobb p,.note p,.remsa2 p{font-size:1.05rem;line-height:1.575rem}.about h2,.body-first h2,.body-last h2,.citat-holder h2,.content-div h2,.form1 h2,.note h2,.remsa2-container h2{font-size:1.8225rem;line-height:2.187rem}.jobb h3,.remsa2 h3{font-size:1.5rem;line-height:1.9rem}div.last-wrapper .form1 textarea{bottom:22%}}@media screen and (max-width:450px){.front div p{width:90%;line-height:30px}}@media screen and (max-width:414px){.front div.cta{top:15px}form{width:80%;margin-left:10%}textarea{width:calc(80% - 10px);left:10%}.front div.cta{width:200px;height:50px;line-height:50px}div.front div.cta-wrapper{width:200px}.about li,.about p,.body-first p,.body-last p,.citat p,.content-div p,.jobb p,.note p,.remsa2 p{font-size:1rem;line-height:1.5rem}.about h2,.body-first h2,.body-last h2,.citat-holder h2,.content-div h2,.form1 h2,.note h2,.remsa2-container h2{font-size:1.5rem;line-height:1.8rem}.jobb h3,.remsa2 h3{font-size:1.425rem;line-height:1.805rem}.front div p{width:100%;line-height:28px}}@media screen and (min-width:1400px){.front div p{font-size:26px}.front div h1{font-size:75px}}@media screen and (min-width:1500px){.front div p{font-size:28px}.front div h1{font-size:80px}}@media screen and (min-width:1600px){.front div p{font-size:30px}.front div h1{font-size:85px}}@media screen and (min-width:1281px){div.front{height:auto}div.footer-wrapper{width:800px;margin-left:calc(50% - 800px / 2);margin-right:calc(50% - 800px / 2)}}@media screen and (min-width:1281px){.about li,.about p,.body-first p,.body-last p,.citat p,.content-div p,.jobb p,.note p,.remsa2 p{font-size:1.277rem;line-height:1.914rem;color:#404040}.about h2,.body-first h2,.body-last h2,.citat-holder h2,.content-div h2,.form1 h2,.note h2,.remsa2-container h2{font-size:2.75rem;line-height:3.3rem}.jobb h3,.remsa2 h3{font-size:1.8375rem;line-height:2.3625rem}div.front{width:100%;}div.front div{width:1280px;margin-left:calc(50% - 1216px / 2);margin-right:calc(50% - 1342px / 2)}.content-div{width:1152px;margin-left:calc(50% - 1152px / 2);margin-right:calc(50% - 1152px / 2)}.form1 form{width:640px;margin-left:calc(50% - 640px / 2);margin-right:calc(50% - 640px / 2)}.form1 textarea{width:630px;left:calc(50% - 640px / 2)}.remsa2-container{padding-left:calc(50% - 1280px / 2);padding-right:calc(50% - 1280px / 2)}.body-last{width:768px;margin-left:calc(50% - 768px / 2);margin-right:calc(50% - 768px / 2)}}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="shortcut icon" href="favicon.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SBLCP81LS8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SBLCP81LS8');
+</script>
+
+<!-- Google Tag Manager -->
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KDPBR22');</script>
+
+<!-- End Google Tag Manager -->
+
+
+
+<script>
+  window.addEventListener('load', function (){
+    var textStyle1 = document.createElement('link');
+    textStyle1.rel = 'stylesheet';
+    textStyle1.href ='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap';
+    document.getElementsByTagName('head')[0].appendChild(textStyle1);
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href ='public/public.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    const script2 = document.createElement('script');
+    script2.src = 'https://kit.fontawesome.com/972e68daa4.js';
+    script2.crossOrigin = 'anonymous';
+    document.getElementsByTagName('head')[0].appendChild(script2);
+  });
+</script>
+    <meta charset="utf-8">
+    <meta name="description" content="Uppfyll de nya reglerna för fastighetsnära insamling 2027. Vi erbjuder skräddarsydda lösningar för BRF, villa och flerbostadshus – smidigt och hållbart">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="https://avfallskonsulten.se/fastighetsnara-insamling" />
+    <script>
+
+  /* (2/3) faktorn beror på formatet på bilden*/
+  function changeImg(){
+    const front = document.getElementsByClassName('front')[0];
+    const frontInitialHeight = front.clientHeight
+    const front_image = front.getElementsByTagName('img')[0];
+    const aspect = front_image.width / front_image.height
+
+    let width = screen.width;
+    let aspectElement = width / frontInitialHeight
+    if(aspect >= aspectElement){
+      front_image.style.width = "auto";
+      front_image.style.height = "100%";
+    }
+    else{
+      front_image.style.width = "100%";
+      front_image.style.height = "auto";
+    }
+  }
+  window.addEventListener('resize', changeImg);
+  window.addEventListener('load', changeImg);
+</script>
+    <title>Fastighetsnära insamling 2027 – BRF, villa & flerbostadshus</title>
+
+  </head>
+  <body id="task3-body">
+    <!-- Google Tag Manager (noscript) -->
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDPBR22"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <header>
+  <nav>
+    <div class="logo">
+      <a href="/" aria-label="Läs mer om hur Avfallskonsulten tillhandahåller avfallshantering i Stockholm">
+        <div>
+          <img src="logga.svg" alt="Avfallskonsulten företagslogga"/>
+        </div>
+      </a>
+    </div>
+    <ul>
+      <li id="tasks" class="desktop item-1">
+        <a href="atervinning-stockholm" aria-label="Läs mer om hur Avfallskonsulten kan hjälpa till med din återvinning">Återvinning <i class="fas fa-chevron-down"></i></a>
+        <div class="tasks-dropdown">
+          <div>
+            <a href="atervinning_fastighet_och_brf" aria-label="Läs mer om hur Avfallskonsulten kan hjälpa till med återvinning för fastigheter och BRF:er"><div class="item-1-1">Fastighet & BRF</div></a>
+            <a href="kontorsatervinning" aria-label="Läs mer om hur Avfallskonsulten kan hjälpa till med kontorsåtervinning"> <div class="item-1-2">Kontorsåtervinning</div></a>
+            <a href="atervinning_for_foretag_och_verksamheter" aria-label="Läs mer om hur Avfallskonsulten kan hjälpa till med återvinning för företag och verksamheter"><div class="item-1-3">Företag & verksamheter</div></a>
+            <!--<a href="#" aria-label="Läs mer om hur Avfallskonsulten kan hjälpa till med återvinning för privatpersoner"><div>Privatpersoner</div></a>-->
+          </div>
+        </div>
+      </li>
+      <li class="desktop item-2"><a href="hamta-grovsopor-stockholm" aria-label="Läs mer om upphämtning av grovavfall">Grovavfall</a></li>
+      <li id="tasks2" class="desktop item-3">
+        <a href="bygg-och-tradgardsavfall" aria-label="Läs mer om upphämtning av bygg- och trädgårdsavfall">Bygg & trädgårdsavfall <i class="fas fa-chevron-down"></i></a>
+        <div class="tasks-dropdown">
+          <div>
+            <a href="tradgardsavfall-stockholm" aria-label="Avfallskonsulten hämtar trädgårdsavfall"><div class="item-3-1">Trädgårdsavfall</div></a>
+            <a href="bortforsling" aria-label="Avfallskonsulten tjänster inom bortforsling"><div class="item-3-2">Bortforsling</div></a>
+          </div>
+        </div>
+      </li>
+
+      <li class="desktop item-4"><a href="karltvatt" aria-label="Läs mer om kärltvätt från Avfallskonsulten">Kärltvätt</a></li>
+      <li id="tasks1" class="desktop item-5">
+        <a href="produkter" aria-label="Läs mer om produkter Avfallskonsulten erbjuder">Produkter <i class="fas fa-chevron-down"></i></a>
+        <div class="tasks-dropdown">
+          <div>
+            <a href="produkter#sopkarl" aria-label="Avfallskonsulten erbjuder sopkärl"><div class="item-5-1">Sopkärl</div></a>
+            <a href="produkter#skyltar-och-dekaler" aria-label="Avfallskonsulten erbjuder skyltar & dekaler"><div class="item-5-2">Skyltar & dekaler</div></a>
+            <a href="produkter#karlskap" aria-label="Avfallskonsulten erbjuder kärlskåp"><div class="item-5-3">Kärlskåp</div></a>
+            <a href="produkter#underjordsbehallare" aria-label="Avfallskonsulten erbjuder underjordsbehållare"><div class="item-5-4">Underjordsbehållare</div></a>
+            <a href="produkter#tillbehor-och-reservdelar" aria-label="Avfallskonsulten erbjuder tillbehör och reservdelar"><div class="item-5-5">Tillbehör & reservdelar</div></a>
+          </div>
+        </div>
+      </li>
+
+      <li id="tasks3" class="desktop item-6">
+        <a href="radgivning" aria-label="Läs mer om rådgivning för soprum och avfallsutredningar">Rådgivning <i class="fas fa-chevron-down"></i></a>
+        <div class="tasks-dropdown">
+          <div>
+            <a href="atervinningsguide" aria-label="Återvinningsguide"><div class="item-6-1">Återvinningsguide</div></a>
+            <a href="renovera-soprum" aria-label="Avfallskonsulten renoverar soprum"><div class="item-6-2">Renovera soprum</div></a>
+          </div>
+        </div>
+      </li>
+       <li class="desktop item-7"><a href="fastighetsnara-insamling" aria-label="Läs mer om Avfallskonsulten">Fastighetsnära insamling</a></li>
+      <li class="desktop item-8"><a href="om-oss" aria-label="Läs mer om Avfallskonsulten">Om oss</a></li>
+      <li class="desktop item-9"><a href="projekt" aria-label="Läs mer om Avfallskonsultens referensprojekt">Projekt</a></li>
+      <li class="desktop"><a href="kontakt" class="item-9" aria-label="Kontakta Avfallskonsultens">Kontakt</a></li>
+      <li class="only-mobile"><a href="tel:08-68427888"><div class="cta">08-684 278 88</div></a></li>
+      <li class="menu">
+        <div class="dropdown">
+          <div onclick="myFunction(this)" class="dropbtn">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          <div id="myDropdown" class="dropdown-content">
+            <div id="expand" onclick="expand(this.id)" aria-label="Läs mer om hur Avfallskonsulten kan hjälpa till med din återvinning"><p class="item-1">Återvinning</p></div>
+            <div class="grey">
+              <a href="atervinning_fastighet_och_brf" aria-label="Läs mer om hur Avfallskonsulten kan hjälpa till med återvinning för fastigheter och BRF:er"><div class="item-1-1">Fastighet & BRF</div></a>
+              <a href="kontorsatervinning" aria-label="Läs mer om hur Avfallskonsulten kan hjälpa till med kontorsåtervinning"><div class="item-1-2">Kontorsåtervinning</div></a>
+              <a href="atervinning_for_foretag_och_verksamheter" aria-label="Läs mer om hur Avfallskonsulten kan hjälpa till med återvinning för företag och verksamheter"><div class="item-1-3">Företag & verksamheter</div></a>
+              <!--<a href="#" aria-label="Läs mer om hur Avfallskonsulten kan hjälpa till med återvinning för privatpersoner"><div>Privatpersoner</div></a>-->
+            </div>
+            <a class="item-2" href="hamta-grovsopor-stockholm" aria-label="Läs mer om upphämtning av grovavfall">
+              <p >Grovavfall</p>
+            </a>
+            <a href="bygg-och-tradgardsavfall" aria-label="Läs mer om upphämtning av bygg- och trädgårdsavfall">
+              <p class="item-3">Bygg & trädgårdsavfall</p>
+            </a>
+            <a href="karltvatt" aria-label="Läs mer om kärltvätt från Avfallskonsulten">
+              <p class="item-4">Kärltvätt</p>
+            </a>
+            <div id="expand1" onclick="expand(this.id)" aria-label="Läs mer om produkter Avfallskonsulten erbjuder"><p class="item-5">Produkter</p></div>
+            <div class="grey">
+              <a href="produkter#sopkarl" aria-label="Avfallskonsulten erbjuder sopkärl"><div class="item-5-1">Sopkärl</div></a>
+              <a href="produkter#skyltar-och-dekaler" aria-label="Avfallskonsulten erbjuder skyltar & dekaler"><div class="item-5-2">Skyltar & dekaler</div></a>
+              <a href="produkter#karlskap" aria-label="Avfallskonsulten erbjuder kärlskåp"><div class="item-5-3">Kärlskåp</div></a>
+              <a href="produkter#underjordsbehallare" aria-label="Avfallskonsulten erbjuder underjordsbehållare"><div class="item-5-4">Underjordsbehållare</div></a>
+              <a href="produkter#tillbehor-och-reservdelar" aria-label="Avfallskonsulten erbjuder tillbehör och reservdelar"><div class="item-5-5">Tillbehör & reservdelar</div></a>
+            </div>
+            <a href="radgivning" aria-label="Läs mer om rådgivning för soprum och avfallsutredningar">
+              <p class="item-6">Rådgivning</p>
+            </a>
+            <a href="om-oss" aria-label="Läs mer om Avfallskonsulten">
+              <p class="item-7">Om-oss</p>
+            </a>
+            <a href="projekt" aria-label="Läs mer om Avfallskonsultens referensprojekt">
+              <p class="item-8">Projekt</p>
+            </a>
+            <a href="kontakt" aria-label="Kontakta Avfallskonsultens">
+              <p class="item-9">Kontakt</p>
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+
+  function myFunction(x) {
+    x.classList.toggle("change");
+  }
+
+
+  function expand(id){
+    const firstGrey = document.getElementsByClassName('grey')[0];
+    const secondGrey = document.getElementsByClassName('grey')[1];
+    if(id == "expand"){
+      if(firstGrey.classList.contains('show')){
+        firstGrey.classList.add('hideTasks');
+        firstGrey.classList.remove('show');
+      }
+      else if(firstGrey.classList.contains('hideTasks')){
+        firstGrey.classList.add('show');
+        firstGrey.classList.remove('hideTasks');
+        secondGrey.classList.add('hideTasks');
+        secondGrey.classList.remove('show');
+      }
+      else{
+        firstGrey.classList.add('show');
+        secondGrey.classList.add('hideTasks');
+        secondGrey.classList.remove('show');
+      }
+    }
+    else if(id == "expand1"){
+      if(secondGrey.classList.contains('show')){
+        secondGrey.classList.add('hideTasks');
+        secondGrey.classList.remove('show');
+      }
+      else if(secondGrey.classList.contains('hideTasks')){
+        secondGrey.classList.add('show');
+        secondGrey.classList.remove('hideTasks');
+        firstGrey.classList.add('hideTasks');
+        firstGrey.classList.remove('show');
+      }
+      else{
+        secondGrey.classList.add('show');
+        firstGrey.classList.add('hideTasks');
+        firstGrey.classList.remove('show');
+      }
+    }
+  }
+
+</script>
+    <div class="front tasks">
+      <picture>
+        <source type="image/webp" media="(max-width:414px)" srcset="images/atervinning_for_miljo_v3.webp">
+        <source type="image/webp" media="(min-width:415px) and (max-width:800px)" srcset="images/atervinning_for_miljo_v2.webp">
+        <source type="image/webp" media="(min-width:801px)" srcset="images/atervinning_for_miljo_v1.webp">
+        <source type="image/jpg" media="(max-width:414px)" srcset="images/atervinning_for_miljo_v3.jpeg">
+        <source type="image/jpg" media="(min-width:415px) and (max-width:800px)" srcset="images/atervinning_for_miljo_v2.jpeg">
+        <source type="image/jpg" media="(min-width:801px)" srcset="images/atervinning_for_miljo_v1.jpeg">
+        <img onload="changeImg()" srcset="images/atervinning_for_miljo_v3.jpeg 414w, images/atervinning_for_miljo_v2.jpeg 800w, images/atervinning_for_miljo_v1.jpeg 1400w" src="images/atervinning_for_miljo_v1.jpeg" alt="Ny lag för fastighetsnära insamling."/>
+      </picture>
+      <div class="tasks-header">
+        <h1>Så påverkar nya regler för fastighetsnära insamling din BRF, villa eller flerbostadshus</h1>
+      </div>
+    </div>
+    <div class="body">
+      <div class="about">
+        <div>
+          <p>Från och med 2027 träder nya regler i kraft för fastighetsnära insamling som ställer tydligare krav på hur avfall ska sorteras och hanteras direkt vid bostaden. Oavsett om du bor i en BRF, villa eller flerbostadshus är det viktigt att förbereda fastigheten för de nya kraven. Vår lösning gör det enkelt att uppfylla lagkraven samtidigt som boende får en smidig och hållbar avfallshantering.</p>
+          <p>Läs mer om reglerna för <a href="https://avfallskonsulten.se/fastighetsnara-insamling">fastighetsnära insamling 2027</a></p>
+          <div class="cta-wrapper">
+            <a href="#kontakt-form" aria-label="Kontakta Avfallskonsulten"><div class="cta">Kontakta oss!</div></a>
+          </div>
+        </div>
+        <div>
+          <p><p>
+        </div>
+        <div>
+          <h2>Fastighetsnära insamling BRF</h2>
+          <p>
+          För bostadsrättsföreningar (BRF) erbjuder vi anpassade lösningar som uppfyller de nya lagkraven från 2027. Vi installerar insamlingsstationer nära bostaden för att underlätta sortering av matavfall, återvinning och hushållsavfall.
+          </p>
+          <p><b>Fördelarna:</b></p>
+          <ul>
+            <li><p>Enkel och laglig avfallshantering för alla boende</p></li>
+            <li><p>Effektiv och miljövänlig lösning</p></li>
+            <li><p>Förenklar styrelsens uppföljning och rapportering</p></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Fastighetsnära insamling villa</h2>
+          <p>
+          För villor erbjuder vi flexibla lösningar som gör det enkelt för villaägare att följa de nya reglerna. Med strategiskt placerade kärl nära bostaden blir det enkelt att sortera och lämna avfall utan extra transporter.
+          </p>
+          <p><b>Fördelarna:</b></p>
+          <ul>
+            <li><p>Praktiskt för vardagsbruk</p></li>
+            <li><p>Anpassat för olika avfallstyper</p></li>
+            <li><p>Uppfyller lagkraven för fastighetsnära insamling</p></li>
+          </ul>
+        </div>
+         <div>
+          <h2>Fastighetsnära insamling flerbostadshus</h2>
+          <p>
+          fastighetsnära insamling för flerbostadshus kräver mer planering för att alla boende ska kunna sortera avfall korrekt. Vi hjälper till med:
+          </p>
+          <ul>
+            <li><p>Optimerad placering av stationer</p></li>
+            <li><p>Minskad lukt och skadedjur</p></li>
+            <li><p>Smidig integration med nya 2027-regler och kommunala krav</p></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Så fungerar fastighetsnära insamling</h2>
+          <p>Principen för fastighetsnära insamling är att avfallet samlas in nära bostaden, vilket både minskar transporter, ökar återvinningen och gör det enklare för boende att sortera rätt. Vi tar hand om hela processen och säkerställer att allt fungerar smidigt från start till mål. Det börjar med planering och rådgivning, där vi anpassar lösningen efter fastighetens behov. Därefter installerar vi insamlingsstationer på strategiska platser för maximal användarvänlighet. Vi erbjuder också löpande tömning och service för att underlätta vardagen för både boende och fastighetsförvaltning. Slutligen gör vi uppföljning för att säkerställa att lösningen uppfyller de nya lagkraven.</p>
+        </div>
+        <div>
+          <h2>Varför du ska välja oss på Avfallskonsulten för din brf, villa eller flerbostadshus</h2>
+          <p>Vi erbjuder skräddarsydda lösningar för BRF, villa och flerbostadshus som gör det enkelt för fastigheterna att uppfylla de nya kraven. Våra lösningar är miljövänliga, användarvänliga och kostnadseffektiva, och vi har lång erfarenhet av hela processen - från planering och installation till löpande service och uppföljning. Med oss som partner får din fastighet en trygg och hållbar lösning som fungerar i praktiken för alla boende.</p>
+        </div>
+        <div>
+          <h3>Sammanfattning - fastighetsnära insamling 2027</h3>
+          <p>Den nya lagen om fastighetsnära insamling kommer att förändra hur vi hanterar avfall i Sverige.</p>
+          <p>För hushållen blir det enklare att sortera rätt, men för kommuner och fastighetsägare innebär det en omfattande omställning.</p>
+          <p>Genom att börja planera i tid och ta hjälp av en erfaren partner kan du säkerställa att övergången till det nya systemet blir smidig, effektiv och hållbar.</p>
+          <h4>Vill du veta mer om hur lagändringen påverkar din verksamhet?</h4>
+          <p><a href="#kontakt-form" aria-label="Kontakta Avfallskonsulten">Kontakta oss</a> så kan du förbereda dig redan idag!</p>
+        </div>
+      </div>
+    <!--
+<div class="remsa2-container">
+  <h2>Hur går processen till?</h2>
+  <div class="remsa2">
+    <div>
+      <h3>Steg 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+    </div>
+    <div>
+      <h3>Steg 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div>
+      <h3>Steg 3</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div>
+      <h3>Steg 4</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+  <div class="cta-wrapper">
+    <a href="#kontakt-form"><div class="cta">BOKA UPPHÄMTNING</div></a>
+  </div>
+</div>
+-->
+<div class="last-wrapper">
+  <div class="body-last">
+    <h2>Frågor?</h2>
+    <p>
+      Vid frågor eller funderingar når du oss på <a href="tel:08-68427888">08-68427888</a> eller så kan du fylla i kontaktformuläret nedan så återkommer vi till dig.
+    </p>
+  </div>
+  <div class="form1">
+  <h3 id="kontakta-oss">KONTAKTA OSS</h3>
+  <p>Berätta lite mer om vad du vill ha hjälp med</p>
+  <div class="err"></div>
+  <form action="includes/help" method="POST" enctype="multipart/form-data" id="kontakt-form">
+    <div class="control">
+      <label for="namn"></label>
+      <br>
+      <input type="text" name="namn" id="namn" placeholder="Namn...">
+    </div>
+    <div class="control">
+      <label for="telefon"></label>
+      <br>
+      <input type="tel" name="telefon" id="telefon" placeholder="Telefon">
+    </div>
+    <div class="control">
+      <label for="email"></label>
+      <br>
+      <input  name="email" id="email" placeholder="E-post">
+    </div>
+    <div class="control">
+      <button type="submit" name="send-email"> SKICKA </button>
+    </div>
+  </form>
+  <textarea name="meddelande-form" form="kontakt-form" placeholder="Beskriv vad du vill få hjälp med"></textarea>
+  </div>
+</div>
+<script>
+    const form = document.getElementById('kontakt-form');
+    const name = document.getElementById('namn');
+    const email = document.getElementById('email');
+    const sms = document.getElementById('meddelande-form');
+    const telefon = document.getElementById('telefon');
+
+    function checkInputs(){
+      //get values from the inputs
+      const nameValue = name.value.trim();
+      const emailValue = email.value.trim();
+      const telefonValue = telefon.value.trim();
+      const cleaned = ('' + telefonValue).replace(/\D/g, '');
+      const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+
+      //console.log(match)
+
+      var point = 0;
+      if(telefonValue === ""){
+        setErrorFor(telefon, 'Telefonnummer måste vara ifyllt');
+      }else if(!match){
+        setErrorFor(telefon, 'Skriv ett giltigt telefonnummer');
+      }else{
+        point += 2;
+        setSuccessFor(telefon);
+      }
+
+      if(nameValue === ""){
+        //show error
+        //add error class
+        setErrorFor(name, "Namn kan inte vara tomt");
+      }else{
+        point += 2;
+        //add success class
+        setSuccessFor(name);
+      }
+
+      if(emailValue === ""){
+        setErrorFor(email, "Email kan inte vara tom");
+      }else if(!emailValue.match(/^[^ ]+@[^ ]+\.[a-z]{2,3}$/)){
+        setErrorFor(email, "Email inte giltig");
+      }
+      else{
+        point += 2;
+        setSuccessFor(email);
+      }
+
+      if(point == 6){
+        return 0;
+      }
+      else{
+        return 1;
+      }
+      //show a success message
+    }
+
+    function setErrorFor(input, message){
+      const inputbox = input;
+      const formControl = input.parentElement; //control
+
+      //add red border
+      inputbox.className = "errorz";
+      // add error class
+      formControl.className = 'control error';
+    }
+
+
+    function setSuccessFor(input){
+      const inputbox = input;
+      inputbox.className = "";
+      const formControl = input.parentElement;
+      formControl.className = 'control success';//success egentligen
+    }
+
+    form.addEventListener('submit', (e) => {
+        if(checkInputs() == 0){
+
+        }
+        else{
+          e.preventDefault();
+        }
+        })
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vilka typer av avfall hanterar ni?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vi hanterar alla typer av avfall, inklusive hushållsavfall, byggavfall, farligt avfall, elektronik och återvinningsmaterial som plast, papper, glas och metall. Vi erbjuder skräddarsydda lösningar för både privatpersoner och företag, för att säkerställa att avfallet tas om hand på rätt sätt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur kan vi minska vårt avfall och bli mer hållbara?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "För att minska ert avfall rekommenderar vi att ni fokuserar på att minska konsumtionen, återanvända material och optimera er källsortering. Genom att implementera hållbara rutiner och välja miljövänliga alternativ kan ni både minska mängden avfall och öka er återvinning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad händer med vårt avfall efter att ni har hämtat det?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "När vi hämtar ert avfall transporteras det till certifierade återvinningsanläggningar och deponier där det sorteras och behandlas enligt gällande miljöregler. Återvinningsbara material sorteras för att kunna återanvändas, medan farligt avfall tas om hand på ett säkert och miljövänligt sätt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur ofta kan ni hämta vårt avfall?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vi erbjuder flexibla lösningar för avfallshämtning och kan hämta ert avfall så ofta som ni behöver, från daglig till veckovis eller månadsvis hämtning. Tjänsten kan anpassas efter era specifika behov och avfallsmängder."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Varför ska vi anlita Avfallskonsulten för avfallshantering i Stockholm?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Avfallskonsulten har lång erfarenhet och kunskap om avfallshantering, vilket gör att vi kan erbjuda effektiva, miljövänliga och kostnadseffektiva lösningar för både små och stora kunder. Vi hjälper er att optimera avfallshanteringen och säkerställer att allt avfall tas om hand på ett korrekt och hållbart sätt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan ni hjälpa oss att skapa en plan för avfallshantering?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, vi hjälper gärna till att skapa en skräddarsydd plan för avfallshantering som passar era behov och mål. Vi analyserar era nuvarande rutiner och ger råd om hur ni kan effektivisera och minska ert avfall på bästa sätt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur kan vi förbättra vår källsortering?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "För att förbättra er källsortering rekommenderar vi att ni utbildar personalen och gör det enkelt för alla att sortera rätt genom tydlig märkning av avfallsbehållare. Genom att implementera effektiva system och rutiner för sortering kan ni öka mängden återvunnet material och minska mängden restavfall."
+        }
+      }
+    ]
+  }
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vilka typer av avfall hämtar ni för BRF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vi hämtar en mängd olika avfallstyper för bostadsrättsföreningar, inklusive hushållsavfall, pappersprodukter, plast, glas, metall och organiskt avfall. Vi hanterar också specialavfall som elektronik och batterier."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur ofta hämtar ni återvinning för BRF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vi erbjuder flexibla hämtningsscheman som kan anpassas efter er förenings behov, med alternativ som sträcker sig från veckovis till månatlig hämtning. Kontakta oss för att skapa ett schema som passar er bäst."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Behöver vi sortera avfallet innan ni hämtar det?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, vi ber er att sortera avfallet i olika kategorier som papper, plast, glas och metall innan hämtning. Detta hjälper oss att hantera återvinningen på ett effektivt och miljövänligt sätt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad händer med det återvunna avfallet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Efter att vi hämtat ditt avfall transporteras det till våra återvinningsanläggningar där det sorteras och bearbetas för återanvändning. Materialen återvinns till nya produkter, vilket minskar behovet av nya råvaror och bidrar till en hållbar framtid."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan ni erbjuda en skräddarsydd lösning för återvinning för vår BRF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, vi kan skapa en anpassad återvinningslösning som uppfyller ditt företags specifika behov och krav. Vårt team arbetar nära dig för att utveckla en effektiv och hållbar återvinningsstrategi."
+        }
+      }
+    ]
+  }
+
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vad räknas som grovavfall?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grovavfall omfattar större föremål som inte ryms i vanliga sopkärl eller som inte kan behandlas av vanliga sophanteringsanläggningar. Detta inkluderar exempelvis möbler, vitvaror, större elektronikprodukter och byggavfall."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur beställer jag hämtning av grovsopor i Stockholm?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Du beställer det enkelt och smidigt via vår hemsida, kontakta oss!"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad kostar det att hämta grovavfall i Stockholm?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Priset för att hämta grovavfall i Stockholm varierar beroende på mängden avfall och typen av material som ska hämtas. Kontakta oss för en exakt offert baserat på dina specifika behov och förutsättningar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur ofta kan jag beställa hämtning av grovavfall?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Du kan beställa hämtning av grovavfall så ofta som du behöver det, antingen på regelbunden basis eller som enstaka hämtningar. Vi erbjuder flexibla scheman för att passa dina behov, oavsett om det är veckovis, månadsvis eller vid behov."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad händer med grovavfallet efter att det har hämtats?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Efter att vi har hämtat grovavfallet transporteras det till våra återvinnings- och behandlingsanläggningar. Där sorteras och bearbetas avfallet för att maximera återvinningen och minimera miljöpåverkan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Behöver jag sortera mitt grovavfall innan hämtning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, vi rekommenderar att du sorterar ditt grovavfall i olika kategorier som metall, trä, elektronik och farligt avfall innan hämtning. Detta underlättar för oss att hantera och återvinna avfallet på ett effektivt och miljövänligt sätt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan ni hämta grovavfall från en bostadsrättsförening?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, vi hämtar grovavfall från bostadsrättsföreningar, läs mer här!"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I vilka områden hämtar vi grovsopor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vi hämtar grovsopor över hela Stockholm. Vi har avtal med kommuner som Sundbyberg, Järfälla, Täby, Lidingö, Sollentuna och Norrtälje."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vilka är de miljömässiga fördelarna med att professionellt hantera hämtning av grovavfall?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Professionell hantering av hämtning av grovavfall bidrar till ökad återvinning och minskad mängd avfall som hamnar på deponier, vilket är bra för miljön. Dessutom säkerställer korrekt sortering och återvinning att farliga material hanteras på ett säkert sätt, vilket minskar risken för miljöföroreningar och främjar hållbar resursanvändning."
+        }
+      }
+    ]
+  }
+
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vilka olika typer av containrar erbjuder ni?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vi erbjuder en mängd olika containrar inklusive avfallscontainrar, återvinningscontainrar, flyttcontainrar och byggcontainrar i olika storlekar. Våra containrar är anpassade för olika typer av avfall och användningsområden för att passa dina specifika behov."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad kostar det att hyra en container?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kostnaden för att hyra en container varierar beroende på storlek, hyresperiod och typ av avfall. Kontakta oss för en exakt offert baserat på dina specifika krav och behov."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur lång är minsta hyresperiod?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Minsta hyresperiod för våra containrar är vanligtvis en vecka, men vi erbjuder flexibla hyresalternativ som kan anpassas efter dina behov. Kontakta oss för att diskutera dina specifika krav och hyresalternativ."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ingår transport av containern i priset?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, transport av containern till och från din plats ingår vanligtvis i priset. Vi erbjuder en komplett tjänst som inkluderar leverans, placering och hämtning av containern för att göra processen så smidig som möjligt för dig."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Var kan jag placera containern?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Containern kan placeras på din fastighet, på en byggarbetsplats, eller annan överenskommen plats där den inte blockerar trafik eller orsakar olägenheter. Om containern behöver placeras på offentlig mark kan det krävas tillstånd från lokala myndigheter, vilket vi kan hjälpa dig att ordna."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad händer om containern blir skadad?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Om containern blir skadad under hyresperioden är det viktigt att du kontaktar oss omedelbart. Skador orsakade av normalt slitage täcks vanligtvis av oss, men om skadan orsakas av felaktig användning kan det tillkomma kostnader för reparation eller ersättning. Vi rekommenderar att du läser våra hyresvillkor för fullständig information."
+        }
+      }
+    ]
+  }
+</script>
+
+
+
+<footer>
+  <div class="footer-wrapper">
+    <!--<div></div>
+    <div class="uc-wrapper">
+      <a href="https://www.uc.se/risksigill2?showorg=5591280374&language=swe"
+        title="Sigillet är utfärdat av UC AB. Klicka på bilden för information om UC:s Riskklasser."
+        target=" _blank"><img src="https://www.uc.se/ucsigill2/sigill?org=5591280374&language=swe&product=psa&fontcolor=w&type=svg"
+        style="border:0;" alt="Högsta kreditvärdighet hos UC" loading="lazy"/></a>
+    </div>
+    <div></div>-->
+    <div>
+      <span>Hitta hit</span>
+      <ul>
+        <li>Avfallskonsulten i huvudstaden AB</li>
+        <li>Solkraftsvägen 14 A</li>
+        <li>135 70 Stockholm</li>
+        <li>Org. nr: 559128-0374</li>
+      </ul>
+    </div>
+    <div>
+      <span>Kontakta oss</span>
+      <ul>
+        <li>E-post: <a href="mailto:Info@avfallskonsulten.se">Info@avfallskonsulten.se</a></li>
+        <li>Telefon: <a href="tel:08-68427888">08-684 278 88</a></li>
+      </ul>
+    </div>
+    <div>
+      <span>Följ oss på våra Sociala medier</span>
+      <ul>
+        <li><a href="https://www.instagram.com/avfallskonsulten/" target="_blank" aria-label="mer info om Avfallskonsulten på Instagram">Instagram</a></li>
+        <li><a href="https://www.facebook.com/avfallskonsulten" target="_blank" aria-label="mer info om Avfallskonsulten på Facebook">Facebook</a></li>
+      </ul>
+    </div>
+
+    <div></div>
+    <div class="uc-wrapper">
+      <span>Vanliga förfrågningar</span>
+      <ul>
+        <li><a href="karltvatt">Rengöring sopkärl Stockholm</a></li>
+        <li><a href="hamta-grovsopor-stockholm">Hämta grovsopor Stockholm</a></li>
+        <li><a href="bygg-och-tradgardsavfall">Hämta byggavfall Stockholm</a></li>
+        <!--<li><a href="bygg-och-tradgardsavfall">Hyra container Stockholm</a></li>-->
+      </ul>
+    </div>
+    <div></div>
+
+  </div>
+</footer>
+  </div>
+  </body>
+</html>
