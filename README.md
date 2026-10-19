@@ -41,7 +41,8 @@ Skriv kundtext utan tankstreck, använd komma. Byggskriptet varnar om det hittar
 1. Kopiera `src/sidor/hamta-grovsopor-stockholm.html` till ett nytt filnamn, samma som adressen ska vara
    (till exempel `karltvatt.html` för `/karltvatt`). Gamla sajtens adresser ska behållas exakt.
    Undantag: `/atervinning` och `/atervinning_brf` ska inte byggas, de omdirigeras i `.htaccess`
-   till `/atervinning-stockholm` respektive `/atervinning_fastighet_och_brf`.
+   till `/atervinning-stockholm` respektive `/atervinning_fastighet_och_brf`. Kommunsidorna för grovsopor
+   (Sundbyberg, Järfälla, Täby, Sollentuna, Norrtälje) togs bort 2026-10-19 och omdirigeras till `/hamta-grovsopor-stockholm`.
 2. Ändra `titel`, `beskrivning` och `og_bild` längst upp, och innehållet under.
 3. Texten från gamla sidan finns färdig som Markdown i `innehall/sidor/<samma-namn>.md` (startsidan heter `startsida.md`).
    Bilderna som sidan använder ligger i `innehall/bilder/`, men 19 av dem är trasiga (se `innehall/trasiga-bilder.md`),
