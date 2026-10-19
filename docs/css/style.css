@@ -149,7 +149,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .hero2__ingress a { color: #fff; text-decoration-color: var(--gron); }
 .hero2__ingress a:hover { color: var(--gron); }
 .hero2 .knapp--stor { min-height: 54px; }
-.hero2__spela { position: absolute; right: var(--gutter); bottom: 1rem; z-index: 1; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 0.9rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.6); background: rgba(44,53,66,0.55); color: #fff; font: inherit; font-size: 0.9rem; font-weight: 500; cursor: pointer; backdrop-filter: blur(4px); }
+.hero2__spela { position: absolute; right: var(--gutter); bottom: 1rem; z-index: 1; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 0.9rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.6); background: rgba(44,53,66,0.55); color: #fff; font: inherit; font-size: 0.9rem; font-weight: 500; cursor: pointer; }
 .hero2__spela:hover { background: rgba(44,53,66,0.85); }
 .hero2__spela[hidden] { display: none; }
 .hero2--sida { min-height: 60vh; }
@@ -431,7 +431,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .js .hero2__inner > :nth-child(3) { transition-delay: 0.24s; }
 .js .hero2__inner > :nth-child(4) { transition-delay: 0.36s; }
 .kort, .steg__punkt, .huvudkort { transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
-.kort:hover, .steg__punkt:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(64,76,92,0.14); }
+.kort:hover, .steg__punkt:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(64,76,92,0.12); }
 .kort img { transition: transform 0.5s ease; }
 .kort:hover img { transform: scale(1.04); }
 .kort { overflow: hidden; }

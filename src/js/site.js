@@ -130,6 +130,16 @@
       }, 2000);
     };
     if (spelaKnapp) spelaKnapp.addEventListener("click", function (e) { e.stopPropagation(); forsokSpela(); });
+    /* pausa filmen när hero inte syns, så att den inte drar kraft medan man läser längre ner */
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (poster) {
+        poster.forEach(function (p) {
+          if (!film.src) return;
+          if (p.isIntersecting) { var pr = film.play(); if (pr && pr.catch) pr.catch(function () {}); }
+          else film.pause();
+        });
+      }, { threshold: 0.05 }).observe(film);
+    }
     if (document.readyState === "complete") setTimeout(startaFilm, 300);
     else window.addEventListener("load", function () { setTimeout(startaFilm, 300); });
   }
