@@ -54,6 +54,9 @@ FORETAG = {
     ],
 }
 
+RECO_SIDA = "https://www.reco.se/avfallskonsulten-i-huvudstaden-ab"
+RECO_WIDGET = "https://widget.reco.se/v2/widget/4044118?mode=HORIZONTAL_QUOTE&inverted=false&border=true"
+
 ROT = Path(__file__).resolve().parent
 SRC = ROT / "src"
 UT = ROT / "docs"
@@ -250,6 +253,44 @@ WEBBPLATS = {
 }
 
 
+def hamta_reco():
+    """Antal omdömen och snittbetyg från Reco-widgeten, hämtat vid varje bygge.
+    Reco tillåter inte att webbläsaren läser datan (ingen CORS), därför görs det här.
+    Returnerar (antal, betyg) eller None om något går fel: då visas text utan siffror hellre än en gammal siffra.
+    Sätt miljövariabeln RECO=av för att bygga utan nät."""
+    if os.environ.get("RECO") == "av":
+        return None
+    import urllib.request
+    try:
+        req = urllib.request.Request(RECO_WIDGET, headers={"User-Agent": "Mozilla/5.0 (avfallskonsulten.se build.py)"})
+        html = urllib.request.urlopen(req, timeout=15).read().decode("utf-8", "replace")
+        m = re.search(r'entityId:"4044118"[^{}]*?reviewCount:(\d+),rating:([\d.]+)', html)
+        antal, betyg = int(m.group(1)), float(m.group(2))
+        if not (1 <= antal <= 100000 and 1.0 <= betyg <= 5.0):
+            raise ValueError(f"orimliga värden {antal} {betyg}")
+        return antal, betyg
+    except Exception as e:
+        varningar.append(f"Reco: kunde inte hämta antal omdömen ({e}), sajten visar text utan siffror")
+        return None
+
+
+def reco_texter(reco):
+    lank = f'<a href="{RECO_SIDA}" rel="noopener">'
+    if not reco:
+        return {
+            "reco_kicker": "Omdömen på Reco",
+            "reco_lanktext": "Läs våra omdömen på Reco",
+            "reco_fortroende": f"<strong>Omdömen på Reco</strong><span>{lank}Läs vad våra kunder säger</a></span>",
+        }
+    antal, betyg = reco
+    b = f"{betyg:.1f}".replace(".", ",")
+    return {
+        "reco_kicker": f"Reco {b} av 5",
+        "reco_lanktext": f"Läs alla {antal} omdömen på Reco",
+        "reco_fortroende": f'<strong>{b} av 5 på Reco</strong><span>{lank}<span data-rakna="{antal}">{antal}</span> omdömen från kunder</a></span>',
+    }
+
+
 def ld_script(obj):
     s = json.dumps(obj, ensure_ascii=False, indent=1)
     json.loads(s)  # validering: måste vara giltig JSON
@@ -304,6 +345,9 @@ def bygg():
         versioner["video/hero.mp4"] = hash_av(UT / "video" / "hero.mp4")
 
     bas = las(SRC / "mallar" / "bas.html")
+    reco = hamta_reco()
+    reco_ers = reco_texter(reco)
+    print(f"  Reco: {reco[0]} omdömen, snitt {reco[1]:.2f}" if reco else "  Reco: ingen data, text utan siffror")
     sidor = []
     for fil in sorted((SRC / "sidor").glob("*.html")):
         meta, body = front_matter(las(fil))
@@ -359,6 +403,7 @@ def bygg():
             "slug": slug,
             "body_klass": meta.get("body_klass", ""),
             "form_lage": "staging" if STAGING else "live",
+            **reco_ers,
             "staging_notis": ('<p class="notis">Staging: här skickas inget mejl. På den riktiga sajten tar '
                               'includes/skicka.php emot formuläret.</p>') if STAGING else "",
         }

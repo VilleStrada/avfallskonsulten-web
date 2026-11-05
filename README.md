@@ -101,6 +101,13 @@ Lokalt test med PHP installerat: `php -S localhost:8765 -t docs tools/php_router
 som textfiler i `docs/includes/utkorg/` i stället för att skickas. Samma sak händer om filen
 `includes/testlage.txt` finns på servern, så den får inte ligga kvar på Loopia.
 
+## Reco-betyg och antal omdömen
+
+Betyget och antalet omdömen i förtroenderaden, citatbandet och på startsidan hämtas från Reco-widgeten varje gång
+`build.py` körs, så de är aktuella vid varje publicering. Reco låter inte webbläsaren läsa datan direkt (ingen CORS).
+Går hämtningen inte, visas text utan siffror ("Läs våra omdömen på Reco") i stället för en gammal siffra.
+`RECO=av python build.py` bygger utan nät.
+
 ## Cookies och Google Analytics
 
 GTM-id ligger i `build.py` (`GTM_ID`). Taggen laddas bara om besökaren klickar Acceptera i cookie-rutan.
