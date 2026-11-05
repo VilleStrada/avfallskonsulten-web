@@ -44,10 +44,7 @@ FORETAG = {
         "addressLocality": "Stockholm",
         "addressCountry": "SE",
     },
-    "areaServed": [
-        {"@type": "City", "name": n}
-        for n in ["Stockholm", "Sundbyberg", "Järfälla", "Täby", "Lidingö", "Sollentuna", "Norrtälje", "Solna", "Danderyd"]
-    ],
+    "areaServed": [{"@type": "City", "name": n} for n in ("Stockholm", "Lidingö")],
     "foundingDate": "2017",
     "priceRange": "$$",
     "sameAs": [
@@ -210,7 +207,7 @@ def faq_schema(body):
 
 
 TJANSTER = {"atervinning", "grovavfall", "byggavfall", "bortforsling", "karltvatt", "soprum", "radgivning", "annat"}
-HEMMAPLAN = [{"@type": "City", "name": n} for n in ("Stockholm", "Lidingö")]
+HEMMAPLAN = FORETAG["areaServed"]
 
 
 def h1_text(body):
