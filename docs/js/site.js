@@ -144,6 +144,46 @@
     else window.addEventListener("load", function () { setTimeout(startaFilm, 300); });
   }
 
+  /* ---------- Kontaktrad på mobil: syns när hero är förbi, döljs när formuläret eller cookie-rutan syns ---------- */
+  var mobilrad = document.querySelector("[data-mobilrad]");
+  if (mobilrad && "IntersectionObserver" in window) {
+    var heroSynlig = !!document.querySelector(".hero2"), offertSynlig = false;
+    var uppdateraRad = function () {
+      var visa = !heroSynlig && !offertSynlig && (!banner || banner.hidden);
+      mobilrad.classList.toggle("ar-synlig", visa);
+    };
+    var radIo = new IntersectionObserver(function (poster) {
+      poster.forEach(function (p) {
+        if (p.target.id === "offert") offertSynlig = p.isIntersecting;
+        else heroSynlig = p.isIntersecting;
+      });
+      uppdateraRad();
+    }, { threshold: 0 });
+    var heroEl = document.querySelector(".hero2"), offertEl = document.getElementById("offert");
+    if (heroEl) radIo.observe(heroEl);
+    if (offertEl) radIo.observe(offertEl);
+    document.querySelectorAll("[data-cookie]").forEach(function (k) { k.addEventListener("click", function () { setTimeout(uppdateraRad, 0); }); });
+    uppdateraRad();
+  }
+
+  /* ---------- Reco-widgeten: laddas först när sidan är klar och widgeten närmar sig skärmen.
+     Den väger runt 240 kB och tävlade annars med hero-bilden om bandbredden på mobil. ---------- */
+  var recoRamar = document.querySelectorAll("iframe.reco__ram[data-src]");
+  if (recoRamar.length) {
+    var laddaReco = function (ram) {
+      if (ram.getAttribute("data-src")) { ram.src = ram.getAttribute("data-src"); ram.removeAttribute("data-src"); }
+    };
+    var startaReco = function () {
+      if (!("IntersectionObserver" in window)) { recoRamar.forEach(laddaReco); return; }
+      var recoIo = new IntersectionObserver(function (poster) {
+        poster.forEach(function (p) { if (p.isIntersecting) { laddaReco(p.target); recoIo.unobserve(p.target); } });
+      }, { rootMargin: "600px 0px" });
+      recoRamar.forEach(function (ram) { recoIo.observe(ram); });
+    };
+    if (document.readyState === "complete") startaReco();
+    else window.addEventListener("load", startaReco);
+  }
+
   /* ---------- Rörelse: intoning vid scroll och uppräkning av siffror ---------- */
   var mindreRorelse = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!mindreRorelse && "IntersectionObserver" in window) {
@@ -161,12 +201,15 @@
       });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
     mal.forEach(function (el) { io.observe(el); });
-    /* element som redan är i bild när sidan laddas ska inte vänta */
+    /* element som redan är i bild när sidan laddas ska inte vänta.
+       Läs alla positioner först och sätt klasser efteråt, annars räknas layouten om för varje element. */
     setTimeout(function () {
-      mal.forEach(function (el) {
+      var h = window.innerHeight;
+      var synliga = Array.prototype.filter.call(mal, function (el) {
         var r = el.getBoundingClientRect();
-        if (r.top < window.innerHeight && r.bottom > 0) el.classList.add("ar-synlig");
+        return r.top < h && r.bottom > 0;
       });
+      synliga.forEach(function (el) { el.classList.add("ar-synlig"); });
     }, 50);
 
     /* räkna upp tal, t.ex. "231 omdömen" */
@@ -255,7 +298,7 @@
     function visa(n) {
       i = (n + kort.length) % kort.length;
       kort.forEach(function (k, j) { k.classList.toggle("ar-aktiv", j === i); });
-      prickar.forEach(function (p, j) { p.classList.toggle("ar-aktiv", j === i); p.setAttribute("aria-selected", j === i ? "true" : "false"); });
+      prickar.forEach(function (p, j) { p.classList.toggle("ar-aktiv", j === i); p.setAttribute("aria-pressed", j === i ? "true" : "false"); });
     }
     function starta() { clearInterval(timer); if (!mindreRorelse) timer = setInterval(function () { visa(i + 1); }, 6000); }
     prickar.forEach(function (p, j) { p.addEventListener("click", function () { visa(j); starta(); }); });
