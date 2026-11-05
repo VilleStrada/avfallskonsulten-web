@@ -6,6 +6,9 @@ Uppgifterna läses från .env i repots rot (filen är gitignorad):
     FTP_PASS=lösenord
     FTP_MAPP=/avfallskonsulten.se/public_html      (mappen på servern som är sajtens rot)
 
+I GitHub Actions läses FTP_HOST, FTP_USER, FTP_PASS och FTP_MAPP från miljön (secrets) och FTP_KRAV_TLS=1
+gör att uppladdningen avbryts i stället för att falla tillbaka till okrypterad FTP.
+
 Kör:  python tools/ladda_upp_ftp.py            laddar upp alla filer
       python tools/ladda_upp_ftp.py --torr      visar bara vad som skulle laddas upp
 Filer tas aldrig bort på servern, bara skapas/ersätts.
@@ -24,8 +27,11 @@ def las_env():
     env = {}
     p = ROT / ".env"
     if not p.exists():
-        sys.exit("Hittar ingen .env i " + str(ROT) + ". Kopiera .env.exempel till .env och fyll i FTP-uppgifterna.")
-    for rad in p.read_text(encoding="utf-8").splitlines():
+        # GitHub Actions: uppgifterna kommer som miljövariabler från repots secrets
+        env = {k: os.environ.get(k, "") for k in ("FTP_HOST", "FTP_USER", "FTP_PASS", "FTP_MAPP")}
+        if not env["FTP_HOST"]:
+            sys.exit("Hittar ingen .env i " + str(ROT) + ". Kopiera .env.exempel till .env och fyll i FTP-uppgifterna.")
+    for rad in (p.read_text(encoding="utf-8").splitlines() if p.exists() else []):
         rad = rad.strip()
         if rad and not rad.startswith("#") and "=" in rad:
             k, v = rad.split("=", 1)
@@ -43,6 +49,8 @@ def anslut(env):
         ftp.prot_p()
         print("Ansluten med FTP + TLS")
     except Exception as e:
+        if os.environ.get("FTP_KRAV_TLS") == "1":
+            sys.exit(f"TLS gick inte ({e}), avbryter. Lösenordet skickas aldrig okrypterat från GitHub.")
         print("TLS gick inte (", e, "), provar vanlig FTP")
         ftp = ftplib.FTP(env["FTP_HOST"], timeout=60)
         ftp.login(env["FTP_USER"], env["FTP_PASS"])

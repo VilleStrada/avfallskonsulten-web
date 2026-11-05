@@ -1,0 +1,122 @@
+# Bygger sajten varje natt så att Reco-betyget och antalet omdömen hålls aktuella.
+#
+# staging: kör build.py (STAGING = True) och committar docs/ till main bara om något ändrats.
+#          GitHub Pages publicerar då staging som vanligt.
+# loopia:  bygger med STAGING = False och laddar upp till Loopia via FTPS. Körs bara när
+#          1) repots variabel LOOPIA_LANSERAD är satt till "ja" (Settings > Secrets and variables > Actions > Variables), och
+#          2) secrets LOOPIA_FTP_HOST, LOOPIA_FTP_USER och LOOPIA_FTP_PASS finns.
+#          Valfri variabel LOOPIA_FTP_MAPP (standard /avfallskonsulten.se/public_html).
+#          Inget committas från det bygget, docs/ på main är alltid staging.
+#
+# Kör för hand: Actions > Nattligt bygge > Run workflow.
+name: Nattligt bygge
+
+on:
+  schedule:
+    # 03:00 svensk tid. GitHub räknar i UTC, så båda tiderna finns och fel en hoppas över nedan.
+    - cron: "0 1 * * *"   # 03:00 sommartid
+    - cron: "0 2 * * *"   # 03:00 vintertid
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nattligt-bygge
+  cancel-in-progress: false
+
+jobs:
+  staging:
+    runs-on: ubuntu-latest
+    outputs:
+      kor: ${{ steps.tid.outputs.kor }}
+    steps:
+      - name: Rätt timme i Stockholm?
+        id: tid
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ] || [ "$(TZ=Europe/Stockholm date +%H)" = "03" ]; then
+            echo "kor=ja" >> "$GITHUB_OUTPUT"
+          else
+            echo "kor=nej" >> "$GITHUB_OUTPUT"
+            echo "Klockan är $(TZ=Europe/Stockholm date +%H:%M) i Stockholm, den andra schemaraden gäller i dag."
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.tid.outputs.kor == 'ja'
+        with:
+          ref: main
+          fetch-depth: 0   # build.py läser sidornas ändringsdatum ur git (sitemap)
+
+      - uses: actions/setup-python@v5
+        if: steps.tid.outputs.kor == 'ja'
+        with:
+          python-version: "3.12"
+
+      - name: Bygg (staging)
+        if: steps.tid.outputs.kor == 'ja'
+        run: |
+          pip install --quiet pillow
+          # färdiga bilder ska inte göras om (utcheckningen ger filerna nya tider)
+          find docs/bilder -type f -exec touch {} +
+          grep -q '^STAGING = True' build.py || { echo "build.py har inte STAGING = True på main, avbryter"; exit 1; }
+          python build.py
+
+      - name: Committa docs/ om något ändrats
+        if: steps.tid.outputs.kor == 'ja'
+        run: |
+          if git diff --quiet -- docs && [ -z "$(git ls-files --others --exclude-standard docs)" ]; then
+            echo "Inga ändringar i docs/."
+            exit 0
+          fi
+          git diff --stat -- docs
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "Nattligt bygge $(TZ=Europe/Stockholm date +%Y-%m-%d)"
+          git push origin HEAD:main
+
+  loopia:
+    needs: staging
+    if: needs.staging.outputs.kor == 'ja' && vars.LOOPIA_LANSERAD == 'ja'
+    runs-on: ubuntu-latest
+    env:
+      FTP_HOST: ${{ secrets.LOOPIA_FTP_HOST }}
+      FTP_USER: ${{ secrets.LOOPIA_FTP_USER }}
+      FTP_PASS: ${{ secrets.LOOPIA_FTP_PASS }}
+      FTP_MAPP: ${{ vars.LOOPIA_FTP_MAPP || '/avfallskonsulten.se/public_html' }}
+      FTP_KRAV_TLS: "1"
+    steps:
+      - name: Finns FTP-uppgifterna?
+        id: koll
+        run: |
+          if [ -z "$FTP_HOST" ] || [ -z "$FTP_USER" ] || [ -z "$FTP_PASS" ]; then
+            echo "Secrets LOOPIA_FTP_HOST, LOOPIA_FTP_USER eller LOOPIA_FTP_PASS saknas, laddar inte upp."
+            echo "finns=nej" >> "$GITHUB_OUTPUT"
+          else
+            echo "finns=ja" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.koll.outputs.finns == 'ja'
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        if: steps.koll.outputs.finns == 'ja'
+        with:
+          python-version: "3.12"
+
+      - name: Bygg för den riktiga sajten
+        if: steps.koll.outputs.finns == 'ja'
+        run: |
+          pip install --quiet pillow
+          find docs/bilder -type f -exec touch {} +
+          sed -i 's/^STAGING = True/STAGING = False/' build.py
+          grep -q '^STAGING = False' build.py
+          python build.py
+          if grep -q 'noindex' docs/index.html; then echo "docs/index.html har noindex, avbryter"; exit 1; fi
+
+      - name: Ladda upp till Loopia (FTPS)
+        if: steps.koll.outputs.finns == 'ja'
+        run: python tools/ladda_upp_ftp.py

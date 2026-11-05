@@ -297,6 +297,22 @@ def ld_script(obj):
     return '<script type="application/ld+json">\n' + s.replace("</", "<\\/") + "\n</script>"
 
 
+def senast_andrad(fil):
+    """Datum då sidan senast ändrades enligt git (för sitemap). Filens tid ändras vid varje utcheckning,
+    så den används bara för sidor som inte är committade än."""
+    import subprocess
+    try:
+        ut = subprocess.run(["git", "log", "-1", "--format=%cs", "--", str(fil)], cwd=ROT,
+                            capture_output=True, text=True, timeout=20).stdout.strip()
+        dirty = subprocess.run(["git", "status", "--porcelain", "--", str(fil)], cwd=ROT,
+                               capture_output=True, text=True, timeout=20).stdout.strip()
+        if ut and not dirty:
+            return ut
+    except Exception:
+        pass
+    return date.fromtimestamp(fil.stat().st_mtime).isoformat()
+
+
 def kontrollera_tankstreck(namn, body):
     if "–" in body or "—" in body:
         varningar.append(f"{namn}: innehåller tankstreck, använd komma i stället")
@@ -336,7 +352,8 @@ def bygg():
     # Cache-busting: kort innehållshash på css, js och film så att besökare alltid får nya filer efter publicering
     import hashlib
     def hash_av(p):
-        return hashlib.md5(Path(p).read_bytes()).hexdigest()[:8]
+        # radslut normaliseras så att samma fil ger samma hash på Windows och Linux (nattliga bygget)
+        return hashlib.md5(Path(p).read_bytes().replace(b"\r\n", b"\n")).hexdigest()[:8]
     versioner = {
         "css/style.css": hash_av(UT / "css" / "style.css"),
         "js/site.js": hash_av(UT / "js" / "site.js"),
@@ -417,7 +434,7 @@ def bygg():
         if rest:
             fel.append(f"{namn}: okända platshållare {sorted(set(rest))}")
         (UT / utfil).write_text(html, encoding="utf-8")
-        sidor.append({"slug": slug, "fil": utfil, "sitemap": meta.get("sitemap", "ja") == "ja", "mtime": fil.stat().st_mtime})
+        sidor.append({"slug": slug, "fil": utfil, "sitemap": meta.get("sitemap", "ja") == "ja", "andrad": senast_andrad(fil)})
         print(f"  {utfil:40s} {meta.get('titel','')}")
 
     # sitemap.xml
@@ -426,7 +443,7 @@ def bygg():
         if not s["sitemap"]:
             continue
         loc = f"{SITE_URL}/{s['slug']}" if s["slug"] else f"{SITE_URL}/"
-        lastmod = date.fromtimestamp(s["mtime"]).isoformat()
+        lastmod = s["andrad"]
         rader.append(f"  <url><loc>{loc}</loc><lastmod>{lastmod}</lastmod></url>")
     (UT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

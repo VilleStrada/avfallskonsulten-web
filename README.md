@@ -109,6 +109,11 @@ Betyget och antalet omdömen i förtroenderaden, citatbandet och på startsidan 
 Går hämtningen inte, visas text utan siffror ("Läs våra omdömen på Reco") i stället för en gammal siffra.
 `RECO=av python build.py` bygger utan nät.
 
+GitHub Actions (`.github/workflows/nattligt-bygge.yml`) bygger staging varje natt klockan 03 och committar `docs/`
+bara om något ändrats, så att Reco-siffrorna hålls aktuella. Samma workflow kan ladda upp till Loopia: det steget körs
+först när repots variabel `LOOPIA_LANSERAD` är `ja` och secrets `LOOPIA_FTP_HOST`, `LOOPIA_FTP_USER` och
+`LOOPIA_FTP_PASS` finns (Settings > Secrets and variables > Actions). Det laddar bara upp med TLS.
+
 ## Cookies och Google Analytics
 
 GTM-id ligger i `build.py` (`GTM_ID`). Taggen laddas bara om besökaren klickar Acceptera i cookie-rutan.
