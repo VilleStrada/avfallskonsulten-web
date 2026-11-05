@@ -22,6 +22,7 @@ den riktiga sajten laddas upp via FTP till Villes Loopia-webbhotell där avfalls
 | `innehall/` | **Texterna till alla sidor**, en Markdown-fil per sida i `innehall/sidor/` med title, description, H1, brödtext och bildlänkar, plus `sidfot-och-meny.md`, `oversikt.md` (tabell över alla 37 sidor) och `sidor.json`. Export från gamla sajten 2026-10-18 |
 | `site-kopia/` | Komplett HTML-kopia av gamla sajten (36 sidor + bilder som webp), tagen 2026-10-16 |
 | `build.py` | Byggskriptet |
+| `tools/kolla_gamla_urler.py` | Jämför alla gamla adresser i `innehall/gamla-urler.csv` med nya sajten, `--live` kontrollerar den riktiga sajten |
 | `tools/md_till_sida.py` | Gjorde om textexporten till sidor i `src/sidor/` (hoppar över sidor som redan finns, `--skriv-over <slug>` för att göra om en) |
 | `Forhandsgranska.cmd` | Bygger och visar sajten lokalt i webbläsaren |
 | `Publicera.cmd` | Bygger och skickar till GitHub, staging uppdateras inom någon minut |
@@ -106,6 +107,8 @@ GTM-id ligger i `build.py` (`GTM_ID`). Taggen laddas bara om besökaren klickar 
 Valet sparas i webbläsaren och kan ändras via Cookie-inställningar i sidfoten.
 
 ## Återstår innan lansering
+
+Se `LANSERING.md` för checklistan före, under och efter lanseringen (backup, Search Console, mätning, 301-kontroll).
 
 - Alla 38 sidor är byggda (35 av dem automatiskt från `innehall/sidor/` 2026-10-18). Läs igenom dem, de har gamla sajtens texter rakt av med ny design.
 - Staging-notisen i tack-rutan (`{{staging_notis}}` i `src/mallar/boka.html`) visas bara när `STAGING = True`.

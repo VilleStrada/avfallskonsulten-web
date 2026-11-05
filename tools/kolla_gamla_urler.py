@@ -3,6 +3,8 @@
 För varje gammal adress: finns sidan/filen i docs/, eller fångas den av en 301 i src/.htaccess?
 Skriver kolumnerna ny_sajt och ny_adress i CSV-filen och listar det som saknas.
 Kör efter build.py:  python tools/kolla_gamla_urler.py
+Efter lansering:     python tools/kolla_gamla_urler.py --live
+  (frågar den riktiga sajten om varje gammal sida och fil och visar antal hopp och slutstatus)
 """
 import csv
 import re
@@ -52,6 +54,46 @@ def kolla(adress, regellista):
     return "SAKNAS (loop)", ""
 
 
+def live_kontroll(rader, bas="https://avfallskonsulten.se"):
+    import urllib.error
+    import urllib.parse
+    import urllib.request
+
+    class IngenOmdirigering(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, *a, **k):
+            return None
+
+    op = urllib.request.build_opener(IngenOmdirigering)
+    fel = 0
+    for r in rader:
+        if r["typ"] == "bild":
+            continue
+        url, hopp = bas + urllib.parse.quote(r["adress"]), []
+        for _ in range(6):
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (kolla_gamla_urler)"})
+            try:
+                svar = op.open(req, timeout=20)
+                hopp.append(svar.status)
+                break
+            except urllib.error.HTTPError as e:
+                hopp.append(e.code)
+                if e.code in (301, 302, 307, 308) and e.headers.get("Location"):
+                    url = urllib.parse.urljoin(url, e.headers["Location"])
+                    continue
+                break
+            except Exception as e:  # nätverksfel
+                hopp.append(0)
+                break
+        slut = url.replace(bas, "") or "/"
+        forvantat = r["adress"] if r["ny_sajt"] == "sida finns" else r["ny_adress"]
+        ok = hopp[-1] == 200 and slut.rstrip("/") == (forvantat or "").rstrip("/") and 302 not in hopp and len(hopp) <= 2
+        if not ok and not r["ny_sajt"].startswith("SAKNAS"):
+            fel += 1
+        print(f"  {'OK ' if ok else 'FEL'} {r['adress']:52s} {'>'.join(map(str, hopp)):10s} {slut}")
+    print(f"\n{fel} fel (sidor som inte hamnar rätt, går via 302 eller kräver fler än ett hopp)")
+    return 1 if fel else 0
+
+
 def main():
     rader = list(csv.DictReader(CSV.open(encoding="utf-8")))
     falt = [f for f in rader[0].keys() if f not in ("ny_sajt", "ny_adress")] + ["ny_sajt", "ny_adress"]
@@ -74,6 +116,9 @@ def main():
     for r in saknas:
         if r["typ"] != "bild":
             print("  SAKNAS:", r["adress"])
+    if "--live" in sys.argv:
+        print("\nKontroll mot den riktiga sajten:")
+        return live_kontroll(rader)
     return 0
 
 
