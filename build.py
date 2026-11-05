@@ -48,6 +48,7 @@ FORETAG = {
         {"@type": "City", "name": n}
         for n in ["Stockholm", "Sundbyberg", "Järfälla", "Täby", "Lidingö", "Sollentuna", "Norrtälje", "Solna", "Danderyd"]
     ],
+    "foundingDate": "2017",
     "priceRange": "$$",
     "sameAs": [
         "https://www.instagram.com/avfallskonsulten/",
@@ -208,6 +209,50 @@ def faq_schema(body):
     return {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": fragor}
 
 
+TJANSTER = {"atervinning", "grovavfall", "byggavfall", "bortforsling", "karltvatt", "soprum", "radgivning", "annat"}
+HEMMAPLAN = [{"@type": "City", "name": n} for n in ("Stockholm", "Lidingö")]
+
+
+def h1_text(body):
+    m = re.search(r"<h1[^>]*>(.*?)</h1>", body, re.S)
+    return text_av(m.group(1)) if m else ""
+
+
+def tjanst_schema(meta, body, url):
+    """Service-JSON-LD för tjänstesidor (front matter 'tjanst: <värde i formulärets lista>')."""
+    return {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": h1_text(body),
+        "description": meta.get("beskrivning", ""),
+        "url": url,
+        "provider": {"@id": SITE_URL_LIVE + "/#foretag"},
+        "areaServed": HEMMAPLAN,
+    }
+
+
+def brodsmulor(namn, url):
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Startsida", "item": SITE_URL + "/"},
+            {"@type": "ListItem", "position": 2, "name": namn, "item": url},
+        ],
+    }
+
+
+WEBBPLATS = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": SITE_URL_LIVE + "/#webbplats",
+    "name": "Avfallskonsulten",
+    "url": SITE_URL_LIVE + "/",
+    "inLanguage": "sv-SE",
+    "publisher": {"@id": SITE_URL_LIVE + "/#foretag"},
+}
+
+
 def ld_script(obj):
     s = json.dumps(obj, ensure_ascii=False, indent=1)
     json.loads(s)  # validering: måste vara giltig JSON
@@ -285,6 +330,17 @@ def bygg():
         canonical = f"{SITE_URL}/{slug}" if slug else f"{SITE_URL}/"
         og_bild = gor_og_bild(meta.get("og_bild", "hero_lastbil"))
         ld = [ld_script(FORETAG)]
+        if not slug:
+            ld.append(ld_script(WEBBPLATS))
+        elif meta.get("sitemap", "ja") == "ja":
+            ld.append(ld_script(brodsmulor(h1_text(body), canonical)))
+        tjanst = meta.get("tjanst")
+        if tjanst:
+            if tjanst not in TJANSTER:
+                fel.append(f"{namn}: okänd tjanst '{tjanst}', välj en av {sorted(TJANSTER)}")
+            ld.append(ld_script(tjanst_schema(meta, body, canonical)))
+            # bokningsformuläret på sidan får rätt tjänst förvald
+            body = body.replace(f'<option value="{tjanst}">', f'<option value="{tjanst}" selected>', 1)
         faq = faq_schema(body)
         if faq:
             ld.append(ld_script(faq))
@@ -306,6 +362,8 @@ def bygg():
             "slug": slug,
             "body_klass": meta.get("body_klass", ""),
             "form_lage": "staging" if STAGING else "live",
+            "staging_notis": ('<p class="notis">Staging: här skickas inget mejl. På den riktiga sajten tar '
+                              'includes/skicka.php emot formuläret.</p>') if STAGING else "",
         }
         for k, v in ers.items():
             html = html.replace("{{" + k + "}}", v)

@@ -20,6 +20,8 @@ RewriteRule ^ https://avfallskonsulten.se%{REQUEST_URI} [R=301,L]
 # 3. Gamla dubblettadresser -> en adress per sida
 RewriteRule ^atervinning/?$ /atervinning-stockholm [R=301,L]
 RewriteRule ^atervinning_brf/?$ /atervinning_fastighet_och_brf [R=301,L]
+# Felstavad adress som gamla sajten länkade till internt
+RewriteRule ^atervinnings_for_foretag_och_verksamheter/?$ /atervinning_for_foretag_och_verksamheter [R=301,L]
 # Kommunsidor för grovsopor borttagna 2026-10-19 (bara Stockholm och Lidingö kvar)
 RewriteRule ^hamta-grovsopor-(sundbyberg|jarfalla|taby|sollentuna|norrtalje)/?$ /hamta-grovsopor-stockholm [R=301,L]
 

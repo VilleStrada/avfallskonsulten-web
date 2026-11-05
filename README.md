@@ -52,7 +52,10 @@ Skriv kundtext utan tankstreck, använd komma. Byggskriptet varnar om det hittar
 5. Frågor och svar skrivs som `<details class="faq"><summary>Fråga</summary><p>Svar</p></details>`.
    Byggskriptet gör automatiskt FAQ-schema (JSON-LD) av dem.
 6. Lägg in länk till sidan i `src/mallar/header.html` och/eller `footer.html` om den ska synas i menyn.
-7. Sitemap.xml skapas automatiskt. Sidor som inte ska vara med får `sitemap: nej` längst upp.
+7. Tjänstesidor får `tjanst: <värde>` längst upp, samma värde som i formulärets lista i `src/mallar/boka.html`
+   (atervinning, grovavfall, byggavfall, bortforsling, karltvatt, soprum, radgivning, annat). Då blir rätt tjänst
+   förvald i formuläret och byggskriptet gör Service-schema (JSON-LD). Alla undersidor får brödsmulor (BreadcrumbList).
+8. Sitemap.xml skapas automatiskt. Sidor som inte ska vara med får `sitemap: nej` längst upp.
 
 ## Publicera till staging (GitHub Pages)
 
@@ -80,7 +83,7 @@ och att formuläret kommer fram till info@. Registrera sedan sajten i Google Sea
 
 `src/.htaccess` kopieras till `docs/.htaccess` vid bygge. Den gör på Loopia:
 http och www → `https://avfallskonsulten.se` i ett steg, avslutande snedstreck bort, `.html` bort ur adresser,
-`/atervinning` → `/atervinning-stockholm`, `/atervinning_brf` → `/atervinning_fastighet_och_brf`,
+`/atervinning` → `/atervinning-stockholm`, `/atervinning_brf` → `/atervinning_fastighet_och_brf`, felstavade `/atervinnings_for_foretag_och_verksamheter` → rätt adress,
 `ErrorDocument 404 /404.html`, HSTS och andra säkerhetsheaders, cache för bilder/typsnitt, gzip.
 GitHub Pages ignorerar filen. Lägg nya omdirigeringar under rubrik 3 i filen.
 
@@ -105,6 +108,6 @@ Valet sparas i webbläsaren och kan ändras via Cookie-inställningar i sidfoten
 ## Återstår innan lansering
 
 - Alla 38 sidor är byggda (35 av dem automatiskt från `innehall/sidor/` 2026-10-18). Läs igenom dem, de har gamla sajtens texter rakt av med ny design.
-- Ta bort prototyp-notisen i `src/sidor/404.html` och staging-notisen i `src/mallar/boka.html`.
+- Staging-notisen i tack-rutan (`{{staging_notis}}` i `src/mallar/boka.html`) visas bara när `STAGING = True`.
 - Läs igenom `src/sidor/integritetspolicy.html`, den är ett utkast.
 - FTP-uppgifter i `.env`, `STAGING = False`, `Publicera-Loopia.cmd`, Search Console.
