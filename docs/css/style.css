@@ -166,7 +166,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .fortroende__punkt span { color: var(--ink-mjuk); }
 .fortroende__punkt a { color: inherit; text-decoration: none; }
 .fortroende__punkt a:hover { text-decoration: underline; }
-@media (min-width: 900px) { .fortroende__lista { grid-template-columns: repeat(4, 1fr); padding: 1.5rem 0; } }
+.fortroende__punkt:last-child:nth-child(odd) { grid-column: 1 / -1; }
+@media (min-width: 900px) { .fortroende__lista { grid-template-columns: repeat(3, 1fr); padding: 1.5rem 0; } .fortroende__punkt:last-child:nth-child(odd) { grid-column: auto; } }
+@media (min-width: 1100px) { .fortroende__lista { grid-template-columns: repeat(5, 1fr); gap: 1rem 1.25rem; } }
 
 /* Så funkar det */
 .steg { list-style: none; margin: 2.5rem 0 0; padding: 0; display: grid; gap: 1.5rem; }
