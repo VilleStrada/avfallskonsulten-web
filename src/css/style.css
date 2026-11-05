@@ -46,6 +46,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   outline: 3px solid var(--gron-text); outline-offset: 2px;
 }
 
+[id] { scroll-margin-top: 76px; } /* ankarlänkar hamnar under den fasta menyn, inte bakom den */
+@media (min-width: 1000px) { [id] { scroll-margin-top: 88px; } }
 .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
 .sektion { padding: 3rem 0; }
 .sektion--mjuk { background: var(--bg-mjuk); }
@@ -204,6 +206,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .kort--liten:hover { border-color: var(--gron-text); }
 .kort--liten:hover h3 { color: var(--gron-text); text-decoration: underline; }
 .kort-rad--fem { grid-template-columns: 1fr 1fr; }
+@media (max-width: 699px) { .kort-rad--fem > .kort:last-child:nth-child(odd) { grid-column: 1 / -1; } .kort-rad--fem > .kort:last-child:nth-child(odd) img { aspect-ratio: 2 / 1; } }
 @media (min-width: 700px) { .kort-rad--fem { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1000px) { .kort-rad--fem { grid-template-columns: repeat(5, 1fr); gap: 1.25rem; } }
 
@@ -270,7 +273,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 .form textarea { min-height: 110px; resize: vertical; }
 .form input:invalid:not(:placeholder-shown), .form select:invalid:focus { border-color: #b3261e; }
-.form__samtycke { display: flex; gap: 0.6rem; align-items: flex-start; font-weight: 400; font-size: 0.92rem; }
+.form__samtycke, .form label.form__samtycke { display: flex; gap: 0.6rem; align-items: flex-start; font-weight: 400; font-size: 0.92rem; }
 .form__samtycke input { width: 20px; min-height: 20px; height: 20px; margin-top: 0.2rem; flex: 0 0 auto; }
 .form__fel { display: none; color: #b3261e; font-weight: 700; }
 .form.ar-fel .form__fel { display: block; }
@@ -318,6 +321,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .cookie__text { font-size: 0.95rem; color: var(--ink-mjuk); }
 .cookie__knappar { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .cookie__knappar .knapp { min-height: 44px; padding: 0.5rem 1.2rem; }
+
+/* Kontaktrad längst ned på mobil, visas när hero är förbi och döljs vid formuläret (site.js) */
+.mobilrad { position: fixed; left: 0; right: 0; bottom: 0; z-index: 80; display: flex; gap: 0.6rem; padding: 0.6rem var(--gutter) calc(0.6rem + env(safe-area-inset-bottom)); background: #fff; box-shadow: 0 -6px 20px rgba(44,53,66,0.12); transform: translateY(110%); visibility: hidden; transition: transform 0.25s ease, visibility 0s linear 0.25s; }
+.mobilrad.ar-synlig { transform: none; visibility: visible; transition: transform 0.25s ease, visibility 0s; }
+.mobilrad .knapp { flex: 1 1 0; min-height: 46px; padding: 0.5rem 1rem; }
+@media (max-width: 999px) { .fot { padding-bottom: calc(1.5rem + 70px); } }
+@media (min-width: 1000px) { .mobilrad { display: none; } }
 
 /* Artikelsidor byggda från textexporten */
 .artikel h2 { margin-top: 2.25rem; }

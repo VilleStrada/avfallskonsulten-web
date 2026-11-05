@@ -144,6 +144,28 @@
     else window.addEventListener("load", function () { setTimeout(startaFilm, 300); });
   }
 
+  /* ---------- Kontaktrad på mobil: syns när hero är förbi, döljs när formuläret eller cookie-rutan syns ---------- */
+  var mobilrad = document.querySelector("[data-mobilrad]");
+  if (mobilrad && "IntersectionObserver" in window) {
+    var heroSynlig = !!document.querySelector(".hero2"), offertSynlig = false;
+    var uppdateraRad = function () {
+      var visa = !heroSynlig && !offertSynlig && (!banner || banner.hidden);
+      mobilrad.classList.toggle("ar-synlig", visa);
+    };
+    var radIo = new IntersectionObserver(function (poster) {
+      poster.forEach(function (p) {
+        if (p.target.id === "offert") offertSynlig = p.isIntersecting;
+        else heroSynlig = p.isIntersecting;
+      });
+      uppdateraRad();
+    }, { threshold: 0 });
+    var heroEl = document.querySelector(".hero2"), offertEl = document.getElementById("offert");
+    if (heroEl) radIo.observe(heroEl);
+    if (offertEl) radIo.observe(offertEl);
+    document.querySelectorAll("[data-cookie]").forEach(function (k) { k.addEventListener("click", function () { setTimeout(uppdateraRad, 0); }); });
+    uppdateraRad();
+  }
+
   /* ---------- Reco-widgeten: laddas först när sidan är klar och widgeten närmar sig skärmen.
      Den väger runt 240 kB och tävlade annars med hero-bilden om bandbredden på mobil. ---------- */
   var recoRamar = document.querySelectorAll("iframe.reco__ram[data-src]");
