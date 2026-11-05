@@ -50,6 +50,8 @@ def kolla(adress, regellista):
                 return ("sida finns" if sokvag == adress else "301"), ("" if sokvag == adress else sokvag)
             if sokvag.endswith("/") and finns(sokvag.rstrip("/")):
                 return "301", sokvag.rstrip("/")
+            if sokvag.startswith("/images/"):
+                return "410 (borttagen bild)", ""
             return "SAKNAS (404)", ""
     return "SAKNAS (loop)", ""
 
@@ -111,8 +113,11 @@ def main():
     print(f"{len(rader)} gamla adresser, varav {len(sidor)} sidor och filer.")
     for r in sidor:
         print(f"  {r['adress']:52s} gamla: {r['status_gamla_sajten']:3s} {r['gamla_sajten_skickar_till']:32s} ny: {r['ny_sajt']} {r['ny_adress']}")
-    bilder = [r for r in saknas if r["typ"] == "bild"]
-    print(f"\nSaknas på nya sajten: {len(saknas) - len(bilder)} sidor/filer och {len(bilder)} bilder (gamla /images/, nya bilder ligger i /bilder/).")
+    bilder = [r for r in rader if r["typ"] == "bild"]
+    flyttade = sum(1 for r in bilder if r["ny_sajt"] in ("301", "sida finns"))
+    borta = sum(1 for r in bilder if r["ny_sajt"].startswith("410"))
+    print(f"\nBilder: {flyttade} av {len(bilder)} har 301 till samma bild på nya sajten, {borta} ger 410 (se innehall/gamla-bilder.csv).")
+    print(f"Saknas på nya sajten: {sum(1 for r in saknas if r['typ'] != 'bild')} sidor/filer och {sum(1 for r in saknas if r['typ'] == 'bild')} bilder.")
     for r in saknas:
         if r["typ"] != "bild":
             print("  SAKNAS:", r["adress"])

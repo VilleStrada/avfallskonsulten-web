@@ -23,6 +23,7 @@ den riktiga sajten laddas upp via FTP till Villes Loopia-webbhotell där avfalls
 | `site-kopia/` | Komplett HTML-kopia av gamla sajten (36 sidor + bilder som webp), tagen 2026-10-16 |
 | `build.py` | Byggskriptet |
 | `tools/kolla_gamla_urler.py` | Jämför alla gamla adresser i `innehall/gamla-urler.csv` med nya sajten, `--live` kontrollerar den riktiga sajten |
+| `tools/matcha_gamla_bilder.py` | Matchar gamla sajtens bildadresser mot nya bilder och skriver bildomdirigeringarna i `src/.htaccess`. Kör igen om en bild byter namn eller storlek |
 | `tools/md_till_sida.py` | Gjorde om textexporten till sidor i `src/sidor/` (hoppar över sidor som redan finns, `--skriv-over <slug>` för att göra om en) |
 | `Forhandsgranska.cmd` | Bygger och visar sajten lokalt i webbläsaren |
 | `Publicera.cmd` | Bygger och skickar till GitHub, staging uppdateras inom någon minut |

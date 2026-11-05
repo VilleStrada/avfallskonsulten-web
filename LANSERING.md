@@ -10,12 +10,14 @@ Räkna med ett tillfälligt tapp i organisk trafik de första veckorna. Underlag
 | Fil | Vad |
 |---|---|
 | `innehall/gamla-urler.csv` | Alla kända adresser på gamla sajten: sitemap.xml, en genomsökning av live-sajten 2026-11-05 och Wayback Machine (WordPress-adresser från 2018 till 2022). 54 sidor och filer, 308 bilder |
+| `innehall/gamla-bilder.csv` | Gamla bildadresser och vilken ny bild de omdirigeras till (skapas av `tools/matcha_gamla_bilder.py`) |
 | `tools/kolla_gamla_urler.py` | Jämför listan med nya sajten (sidor i `docs/` och 301:or i `src/.htaccess`). `--live` frågar den riktiga sajten |
 | `site-kopia/` | HTML-kopia av gamla sajten 2026-10-16 (36 sidor, bilder som webp). Inte en filbackup |
 
 Läget 2026-11-05: alla 53 gamla sidor och filer har en sida eller en 301 på nya sajten, testat i Apache 2.4 med
-sajtens `.htaccess`. Varje omdirigering är ett hopp. Det enda som saknas är `/public/public.css` (gamla sajtens stilmall,
-inget att göra) och 308 gamla bildadresser under `/images/` (nya bilderna ligger i `/bilder/`).
+sajtens `.htaccess`. Varje omdirigering är ett hopp. Det enda som saknas är `/public/public.css` (gamla sajtens stilmall, inget att göra).
+Av 308 gamla bildadresser får 276 en 301 till samma bild på nya sajten (matchade på filnamn eller bildinnehåll,
+lista i `innehall/gamla-bilder.csv`). De 32 som inte går att matcha ger 410 (borttagen).
 
 ## Före lansering
 
