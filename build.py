@@ -278,6 +278,7 @@ def reco_texter(reco):
     lank = f'<a href="{RECO_SIDA}" rel="noopener">'
     if not reco:
         return {
+            "reco_titel": "",  # startsidans titel blir "Avfallshantering Stockholm | Avfallskonsulten"
             "reco_kicker": "Omdömen på Reco",
             "reco_lanktext": "Läs våra omdömen på Reco",
             "reco_fortroende": f"<strong>Omdömen på Reco</strong><span>{lank}Läs vad våra kunder säger</a></span>",
@@ -285,6 +286,7 @@ def reco_texter(reco):
     antal, betyg = reco
     b = f"{betyg:.1f}".replace(".", ",")
     return {
+        "reco_titel": f" | {b}/5 på Reco",  # {{reco_titel}} i startsidans titel
         "reco_kicker": f"Reco {b} av 5",
         "reco_lanktext": f"Läs alla {antal} omdömen på Reco",
         "reco_fortroende": f'<strong>{b} av 5 på Reco</strong><span>{lank}<span data-rakna="{antal}">{antal}</span> omdömen från kunder</a></span>',

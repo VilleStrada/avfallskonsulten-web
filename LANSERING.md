@@ -29,7 +29,8 @@ lista i `innehall/gamla-bilder.csv`). De 32 som inte går att matcha ger 410 (bo
 - [ ] **GA4, baslinje.** Notera organiska sessioner per landningssida och antal förfrågningar och samtal per vecka.
       GTM-id är detsamma på nya sajten (`GTM_ID` i `build.py`), men taggen laddas först efter cookie-samtycke.
 - [ ] **Titlar och beskrivningar.** Behåll gamla titlar på sidorna som rankar. Ändrade i dag jämfört med gamla sajten:
-      - Startsidan har gamla titeln `Avfallshantering Stockholm | 5/5 på Reco | Avfallskonsulten` (Villes beslut 2026-11-05). Reco visar 4,9 av 5, inte 5/5.
+      - Startsidan: gamla titeln `Avfallshantering Stockholm | 5/5 på Reco | Avfallskonsulten` blev `Avfallshantering Stockholm | 4,9/5 på Reco | Avfallskonsulten`
+        med verkligt betyg från Reco vid varje bygge (Villes beslut 2026-11-05). Går hämtningen fel blir den `Avfallshantering Stockholm | Avfallskonsulten`.
       - Grovsopor Stockholm: `Hämta grovsopor Stockholm | Grovavfall | Avfallskonsulten` fick tillägget `från 275 kr`.
       - Två titlar har bara fått komma i stället för bindestreck (sophämtning företag, fastighetsnära insamling 2027).
       - Nya beskrivningar på startsidan och grovsopor Stockholm, och på kontakt, om oss, produkter och projekt där gamla sajten saknade beskrivning.
